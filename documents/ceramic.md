@@ -1,13 +1,79 @@
 # Ceramics
 
-This article has multiple issues:
+[TOC]
 
-- I'm an idiot.
-- This project was done under considerable time pressure while going to university, and so was not quite as rigorous as it should have been. 
+### Issues with this article
+
+- I'm an idiot with no experience in ceramics.
+- This project was done under considerable time pressure while going to university, and so was not nearly as rigorous as it should have been. Maybe someday I'll produce some content I'm proud of
 - I also had a total budget of <$200.
 
+### A note on safety
+
+Like most inorganic dusts, aluminum oxide powder isn't good for your respiratory system. It's not nearly as damaging as silica, but a respirator or fume hood is recommended. There have also been some studies showing some (admittedly tenuous) connection between aluminum inhalation and Alzheimer's.
+
+If using a lost-PLA process, beware decomposition products. Perform the bakeoff and sintering process in a well-ventilated area.
+
+The green body will almost certainly explode. This will send hot ceramic shrapnel in all directions.
+
+Contact with 230v electric kiln elements will almost definitely kill you.
+
+# The recipe
+
+Works only for parts smaller than ~$5 \text{cm}^3$. Expect 0.5% shrinkage in X/Y; accurate Z (along mold gravity vector) may require grinding. Vacuum-safe, but permeable. If you have a CNC capable of machining steel dies, pressing may be a more desirable route.
+
+This is by no means an optimal process, just one that I settled on.
+
+1. Print a PLA negative mold of the part you'd like to print. 
+
+   I was not able to overcome Z-axis shrinkage, and so extended the mold vertically to allow settling - standard reservoir/sprue arrangments did not work for unknown reasons. Avoid ceramic walls of inconsistent thickness, as they will likely crack while drying. 
+
+   A test coupon that I had good results with is available here[^2]. 
+
+   Thicker PLA walls will reduce deformation during drying, but will increase the likelihood of cracking during burnoff.
+
+   ![mold](../media/mold.png)
+
+2. Mix 1 volume $Al_2O_3$ with 1 volume warm water.
+
+   You may need to reduce the water volume if excessive Z-axis settling and shrinkage is observed while drying. 
+
+3. Add approximately 0.5 wt. % gelatine.
+
+   The solution must have a sufficiently low viscosity in order to flow into the mold without resistance while simultaneously retaining sufficient green strength for firing. This value may require tweaking.
+
+4. *(optional)* Add up to 5 wt. % $MnO_2$
+
+   *sources indicate a sinter point depression, though no effect was observed in these tests*
+
+5. Add a refractory binder if unable to reach pure alumina sinter temperature (~2000c).
+
+   2.5 wt. % porcelain slip (XX% kaolin clay, XX% silica) was sufficient.
+
+6. Add reinforcement to mold to taste.
+
+7. Stir gently until homogeneous and pour into PLA mold.
+
+   *alternately, if a low thermal conductivity is desired, beat the hell out of the mix to form a foam.*
+
+8. Dry in an oven for ~6 hours at well above the gelation temperature - roughly ~70 C.
+
+   Urethane molds can generally tolerate roughly 80 C, whereas PLA will begin to deform at ~65c. The precise drying temperature depends on the geometry of the part; variable thickness will cause differential drying and cracking.
+
+   The green must be thoroughly dry; any residual moisture will cause it to explode.
+
+9. Place the part in a graphite crucible or support it on tungsten wires.
+
+10. Heat slowly with an oxy-acetylene torch to ~500c over the course of 1-2 minutes.
+
+    The green is usually too delicate to be moved without a support structure, so PLA burnoff must be done in-place.
 
 
+
+Future additions: urethane casting, more precise temperature regulation, carbon fiber reinforcement.
+
+[^1]: wt. % of alumina+water solution.
+[^2]: `files/coupon_style_7.fcstd` https://github.com/0xDBFB7/ceramics
 [^3]: [Internal](../references/)  [External]()
 
 [^3]: Xie, Zhi-Peng, et al. "A new gel casting of ceramics by reaction of sodium alginate and calcium iodate at increased temperatures." *Journal of materials science letters* 20.13 (2001): 1255-1257. [Internal](../references/Xie2001_Article_ANewGelCastingOfCeramicsByReac.pdf)  [External](https://link.springer.com/content/pdf/10.1023/A:1010943427450.pdf)
@@ -16,25 +82,25 @@ t[^1]
 
 [^1]: Sgobba, Stefano. *Materials for high vacuum technology, an overview*. No. CERN-TS-2006-004. Cern, 2006. [External](https://cds.cern.ch/record/983744/files/p117.pdf)
 
+
+
 ### Preamble on motivation
 
 #### Glass
 
-[reliable seal matching percentage] Kovar has a coefficient of expansion. Based off these data, some ancedotes on the difficulty of obtaining a solid 
+[reliable seal matching percentage] Kovar has a coefficient of expansion. Based off these data, some anecdotes I've heard on the difficulty of obtaining a reliable glass-to-metal seal, 
 
 
 
 
 
-#### Machinable ceramics
+#### Machinable/castable ceramics
 
-While easy to use, Rescor 780.  http://www.cotronics.com/vo/cotr/pdf/onepg700.pdf Many of Cotronics' materials display quite severe outgassing values. Some anecdotes on Fusor Forums regarding permeability also seemed to concur; these materials are generally not suitable for high vacuum.
+[^1]: Rescor, Macor 780 et al [External](http://www.cotronics.com/vo/cotr/pdf/onepg700.pdf)
 
-I may be wrong!
+Many of Cotronics' materials display quite severe outgassing values. Some anecdotes on Fusor Forums regarding permeability also seemed to concur that these materials are generally not suitable for high vacuum.
 
-I didn't find 
 
-Their temperature resistance is also quite low.
 
 As an integral part of a future product, the marginal cost of these parts was a key concern. A rod of Rescor/Macor might cost \$50, so a feedthrough might well cost \$10 after machining. Though is unacceptably expensive in my case.
 
@@ -62,13 +128,15 @@ Caulk/urethane molds
 
 Caulking can be made to solidify quickly by way of glycerin.
 
-### The mold and green body
+## The mold and green body
 
 #### Pressing
 
 Pressing alumina is a common technique. You can either make a slurry (wet pressing), or just compact dry powder. 
 
-I don't currently have a CNC capable of making dies to reasonable tolerances and finish quality. 
+https://nptel.ac.in/courses/112107085/module3/lecture5/lecture5.pdf
+
+I don't currently have a CNC capable of making hard dies to reasonable tolerances and finish quality - I could perhaps make some aluminum dies.
 
 #### Porcelain
 
@@ -76,7 +144,7 @@ Perhaps the simplest process to create ceramic green bodies, [slipcasting](https
 
 There are a few limitations to this process. As you might imagine, part thickness 
 
-In addition, the plaster mold has to be dried for many hours before it is sufficiently absorptive to allow the slip to dry. This process can be accelerated by maintaining a flow of hot, dry air over the mold. The mold can't be heated very much, however, else the surface begins to calcine. Another interesting option is microwave drying of plaster, which is conveniently self-limiting.
+In addition, the plaster mold must be dried for many hours before it is sufficiently absorptive to allow the slip to gelate. This process can be accelerated by maintaining a flow of hot, dry air over the mold. The mold can't be heated very much, however, else the surface begins to calcine. Another interesting option is microwave drying of plaster, which is conveniently self-limiting.
 
 
 
@@ -91,7 +159,7 @@ There’re a few different ways of making this green body.
 <style>p.seven {
   border-style: solid;
   border-width: 20px 10px 10px 10px;
-    }</style><p class="seven"><b>I feel like I learned something:</b><br>When characterizing trial-and-error processes, it might be useful to think of R&D in terms of software unit testing; that is, you want to create a sort of <a href=https://stackoverflow.com/help/mcve>MCVE<a></a> of your controls. As an example, it may be helpful to use the smallest batch size and the simplest test coupon likely to exhibit the same behavior as your final product. In this particular case, I began iterating the alumina recipe using my desired full-size feedthough part. The simplified test coupon required much less drying time and consumed 0.05x as much alumina - allowing me to try dozens of variations within the same batch.<br><br>On the other hand, making your test coupons overly simplistic may lead you down incorrect444 paths. Had I not used a coupon with a cavity, I would likely not have discovered the difficulties in casting perfectly void-free paraffin molds. It's a subtle tradeoff! I guess you just have to use your best engineering judgement.<br><br>This is probably obvious to all who know what they're doing - a select few whose ranks I am most definitely not a member of.</p>
+    }</style><p class="seven"><b>I feel like I learned something:</b><br>When characterizing trial-and-error processes, it might be useful to think of R&D in terms of software unit testing; that is, you want to create a sort of <a href=https://stackoverflow.com/help/mcve>MCVE<a></a> of your controls. As an example, it may be helpful to use the smallest batch size and the simplest test coupon likely to exhibit the same behavior as your final product. In this particular case, I began iterating the alumina recipe using my desired full-size feedthough part. The simplified test coupon required much less drying time and consumed 0.05x as much alumina - allowing me to try dozens of variations within the same batch.<br><br>On the other hand, making your test coupons overly simplistic may lead you down incorrect444 paths of inquiry. Had I not used a coupon with a cavity, I would likely not have discovered the difficulties inherent in casting perfectly void-free paraffin molds. It's a subtle tradeoff! I guess you just have to use your best engineering judgement.<br><br>This is probably obvious to all who know what they're doing - a select few whose ranks I am most definitely not a member of.</p>
 
 
 
@@ -108,11 +176,9 @@ Urethane/caulk
 
 
 
-The unfortunate crystallizes when frozen tends to lead to large voids and high porosity in the final product, which is undesirable in a vacuum environment - it’s easy to get virtual leaks and stuff that way.
+The unfortunate crystallizes when frozen tends to lead to large voids and high porosity in the final product, which is undesirable in a vacuum environment. t’s easy to get virtual leaks and stuff that way.
 
-
-
-
+#### Gel-casting
 
 You can also mix in some kind of binder that will burn off when fired. Really any organic binder will do, as long as it’s
 
@@ -120,11 +186,11 @@ sufficiently low viscosity to flow into the mold when mixed with your ceramic po
 
 usable at sufficiently low percentages so that you don't get porosity or huge shrinkage after vaporization, and something that burns off cleanly during firing. Oh, and I have to be able to get my hands on the stuff easily.
 
-#### Gel-casting
+#### 
 
-- Alginate + calcium iodate[^3] (couldn’t get my hands on the iodate in short order)
-- fancy water-soluble epoxies (tried regular epoxies, failed miserably as expected)
-- 
+- Alginate + calcium iodate[^3] (I couldn’t get my hands on the iodate in short order)
+- Fancy water-soluble epoxies (tried regular epoxies, failed miserably as expected)
+- PVA
 
 [^3]: Xie, Zhi-Peng, et al. "A new gel casting of ceramics by reaction of sodium alginate and calcium iodate at increased temperatures." *Journal of materials science letters* 20.13 (2001): 1255-1257. [Internal](../references/Xie2001_Article_ANewGelCastingOfCeramicsByReac.pdf)  [External](https://link.springer.com/content/pdf/10.1023/A:1010943427450.pdf)
 
@@ -132,7 +198,7 @@ Dhara, Santanu, and Parag Bhargava. "Egg white as an environmentally friendly lo
 
 g[^3]
 
-Some examples are alginate with calcium iodate , , PVA, either powder or school glue (too viscous).
+Some examples are alginate with calcium iodate , , PVA (either powder or school glue).
 
 
 
@@ -150,11 +216,26 @@ Now, my 1930s German is a little rusty, but I managed to find a modern translati
 
 No, I didn’t make that up - well, not the paper, that is. That’s published. Frankly, I’m as surprised as you are.
 
-<hr>
+
+
+
+
 
 > oh the redhead said you shred the cello, and I'm -
 
 #### Jello
+
+[^4]: Stoner thermoplastic mold release, McMaster-Carr #1409K44 [External](https://www.mcmaster.com/1409k44)
+
+I was not able to replicate their results. The fully gelated green body was far too delicate to be removed from the mold. However, my modified process is quite effective. It involves drying at 70c
+
+<video src="../media/20181110_213428.mp4"></video>
+
+When poured into a small test tube, the mix ratio was very obviously excessively wet.
+
+The amount of gelatin used was too low to reliably measure on my $14 milligram balance.
+
+
 
 at this juncture I would like to point out the existence of the Gelatine Handbook[^4]. 350 pages of excruciating detail on every possible intricacy of the gelatine production process. 
 
@@ -168,7 +249,7 @@ Of Englishe dogges: the diuersities, the names, the natures, and the properties 
 
 Something quite interesting can be observed with this open-cavity mold. No meniscus is present.
 
-
+Drying at 70c, however, produced a very strong green body:
 
 <video src="../media/processed/20181110_143321.mp4"></video>
 
@@ -190,7 +271,7 @@ I inexplicably mentally transferred that requirement to my alumina tests, which 
 
 <video src="../media/processed/20181121_134556.mp4.mp4"></video>
 
-Borne from , this process might actually be useful for producing a sort of low-density insulating alumina foam; the rheology of the gel produces a very porous structure - but it also represents the antithesis of my end goal. I found that stirring gently a few times is more than sufficient to produce a homogeneous suspension of alumina.
+This process might actually be useful for producing a sort of low-density insulating alumina foam; the rheology of the gel produces a very porous structure. It also represents the antithesis of my desired end goal.
 
 
 
@@ -203,9 +284,15 @@ Porosity is
 
 <video src="../media/20181121_135626.mp4"></video>
 
-There's a slight problem with degassing pseudoplastics like gelatine. As moisture evaporates, the solution is chilled, which greatly increases the viscosity, making the solution ever harder to degas.
+There's a slight problem that arises when degassing pseudoplastics like gelatine. As moisture evaporates, the solution is chilled, which greatly increases the viscosity, making the solution ever harder to degas.
 
-[degassing paper here]
+https://abbess.com/wp-content/uploads/2016/03/Degassing-Mixing-V2-Secure.pdf
+
+In any case, stirring the colloid gently a few times is more than sufficient to produce a homogeneous suspension of alumina.
+
+
+
+
 
 ## The refractory binder
 
@@ -231,27 +318,39 @@ Luckily, $$MnO_2$$ is readily available in the form of carbon-zinc batteries.[^2
 
 Now we come to the matter of heating these. Prometheus notwithstanding, 
 
+#### Electric kilns
 
-
-A properly equipped high-temperature lab would be incomplete without a Molybdenum disilicide. `zirconia sintering kiln`seems to be a useful keyword.
-
-This kiln draws 5.5 kilowatts.
+This kiln draws 5.5 kilowatts while operating, and can reach roughly 1300c over about 3 hours.
 
 Most of the elements were broken.
+
+
+
+<video src="../media/20181111_162140.mp4"></video>
+
+A high-temperature lab would be incomplete without a Molybdenum disilicide kiln.`zirconia sintering kiln`seems to be a useful keyword.
+
+
 
 #### Vacuum furnace
 
 There's
 
-
-
 If convection can be eliminated, our problem becomes very simple. By Stefan-Boltzmann (I asked him personally!), a generous area of 5 cm^2, we need about
 $$
-\text{P}=\text{R} \text{E} \text{A} \text{T}^4 = 5.67\times10^{−8} \times (1800)^4 \times 0.5 \times 2*\pi*0.01\text{m}^2=9.42\text{ watts}
+\text{P}=\text{R} \text{E} \text{A} \text{T}^4 = 5.67\times10^{−8} \times (1800)^4 \times 0.5 \times 2*\pi*0.01\text{m}^2=942\text{ watts}
 $$
 That's really quite insignificant.
 
-However, at 5% the thermal conductivity of copper,
+However, at 5% the thermal conductivity of copper, transferring heat from a tungsten heater to the bulk of the ceramic is quite a difficult task.
+
+In addition, my high vacuum chamber was not serviceable during this period. which can only attain a vacuum of around 50 Pa - not sufficient for this process. This was assembled 2 hours before leaving for finals
+
+<video src="../media/20181211_173959.mp4"></video>
+
+ I had to use the vacuum tube as a high-current feedthrough. 
+
+
 
 #### Gas firing
 
@@ -261,7 +360,11 @@ After . Lo and behold, the fragment took on the desired glassy texture and incre
 
 I supported the part with some 3/32" Tungsten TIG rods. 
 
-#### Measuring temperature
+#### Electric arc furnace
+
+
+
+### Measuring temperature
 
 McMaster carr thermocouple
 
@@ -269,32 +372,41 @@ The values from this thermocouple
 
 #### Ratio pyrometry
 
-A problem arises when the emissivity of the substance varies throughout the frequency range - a "Selective Radiator". http://gsp.humboldt.edu/olm_2015/courses/gsp_216_online/lesson8-1/emissivity.html
+I was planning on building a ratio pyrometer 
+
+A problem arises when the emissivity of the substance varies throughout the frequency range - a "Selective Radiator". http://gsp.humboldt.edu/olm_2015/courses/gsp_216_online/lesson8-1/emissivity.html , but these 
+
+Spectrometry
 
 
 
-### The final recipe
 
-1. Mix $Al_2O_3$ 
-2. 
 
-### The finished product
+# The finished product
 
 Here are the best parts I was able to produce.
 
 ![20181212_182620_HDR](../media/20181212_182620_HDR.jpg)
 
-Okay, so it's not going to win a beauty pageant, and it's almost definitely not impermeable. However, X and Y dimensional accuracy was superb, with only ~1% shrinkage. 0.3mm of the desired dimensions. Z dimensions were poor - the addition of slip increased the viscosity of the caused a meniscus on the inside wall of the 
+
+
+t's not going to win a beauty pageant, and it's almost definitely not sufficiently impermeable to be useful as a vacuum feedthrough. However, X and Y dimensional accuracy was superb, with only ~1% shrinkage. 0.3mm of the desired dimensions. Z dimensional accuracy was quite poor - the addition of slip increased the viscosity and caused a meniscus to form on the inside wall of the mold. 
+
+As a light-duty refractory support, however, it's acceptable.
 
 
 
-The shiny patch in the middle is melted glassy alumina, where I brought the torch far too close to the part. More process controls would be required in order to produce a truly usable part. Some sort of heat spreader would be excellent; I've since purchased a graphite crucible, which might improve the sinter quality. 
+The shiny patch in the middle is molten glassy alumina, where I brought the torch far too close to the part. More rigorous process controls would be required in order to produce a truly usable part. Some sort of heat spreader would be excellent; I've since purchased a graphite crucible, which might improve the sinter quality. 
 
 The two green lines are $WO_3$, residue from the 1/16" tungsten rods I used to support the part while firing.
 
+![Screenshot from 2019-02-10 15-27-12](../media/Screenshot from 2019-02-10 15-27-12.png)
 
+![Screenshot from 2019-02-10 15-27-45](../media/Screenshot from 2019-02-10 15-27-45.png)
 
+![Screenshot from 2019-02-10 15-29-01](../media/Screenshot from 2019-02-10 15-29-01.png)
 
+​	Kinda sucks.
 
 In any case, I abandoned this project at this point. Alumina parts are a key component in a certain product that I am developing; I merely needed to convince myself that I would be able to vertically integrate this process within a certain timeframe.
 
@@ -302,13 +414,11 @@ I carefully sectioned (rather, broke haphazardly) a few of the most successful p
 
 ![20181212_195540.mp440](../media/processed/20181212_195540.mp440.jpg)
 
-Note the striations captured from the original PLA mold. Extremely fine feature definition and very low porosity. 10/10.
+Note the striations captured from the original PLA mold. Extremely fine feature definition and low porosity. 10/10.
 
 ![20181212_195540.mp4](../media/processed/20181212_195540.mp4.jpg)
 
 Here's the outside face.
-
-X and Y 
 
 I performed some digital strength tests:
 
@@ -326,9 +436,15 @@ Interestingly, the low-slip batch was noticeably stronger.
 
 #### Anodic bonding / electroadhesion
 
-Followers of my youtube channel will have learned of my brief affair with electroadhesion. While easily achievable with glass/copper interfaces, I was curious as to whether this process would be practical to perform with alumina. And indeed it is! I have found precisely one mention of succesful anodic bonding to alumina, leading me to believe that this process is beyond my capabilities and patience. [paper here]. 
+Followers of my youtube channel will have learned of my brief affair with electroadhesion. While easily achievable with glass/copper interfaces, I was curious as to whether this process would be practical to perform with alumina. And indeed it is! I have found precisely one mention of successful anodic bonding to the beta allotrope/phase of alumina, leading me to believe that this process is beyond my capabilities and patience. [paper here]. 
 
+https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/j.1151-2916.1979.tb12726.x
 
+one more paper though
+
+### Addendum: 
+
+Cutting 
 
 
 
@@ -388,7 +504,7 @@ Glass is also sometimes acceptable. However, some parts of my chamber will have 
 
 You can press and sinter alumina pretty easily. There's a number of sub-techniques here, with wet or dry die pressing, hot or cold isostatic, etc. The main limitation here is that you need to make press dies out of quite a hard material. You might be able to get away with aluminum for a few shots, but usually these dies are made of some sort of hardened steel. My dirt-cheap 6040 CNC is not going to cut it, what with its 50 thou chatter and whatnot.
 
-<https://nptel.ac.in/courses/112107085/module3/lecture5/lecture5.pdf>
+
 
 Simple freeze-casting is possible, where an aqueous solution of alumina is frozen; however, crystal formation leads to high porosity and defects.
 
@@ -408,15 +524,7 @@ At the end of the day, these alumina pieces actually have a tensile strength hig
 
 Gel-cast process 1
 
-1. Mix solution of 3% gelatine into water at 40-50c. 60c?
-2. Stir in an equal volume of Alumina.
-3. Vacuum degas at 10mmHg for 3 minutes. Stir slightly.
-4. Apply mold release to mold. Wait a few minutes for it to dry. Flexible molds preferred.
-5. Pour into mold.
-6. Bake at 70c for at least 2 hours.
-7. Remove from mold.
-8. Sinter to 600c at 1c/min.
-9. Sinter as hot as your kiln can manage (over 1300c is best) at 2c/min.
+
 
 The paper details a 3% shrinkage during drying, and a 17% shrinkage during sintering.
 
@@ -577,4 +685,4 @@ Gel-cast process 6:
 
 
 
-#### Wanna chat about this? Hit me up on irc.0xDBFB7.com:6667 #general.
+# Wanna chat about this? Hit me up on twitter @0xDBFB7, or on irc.0xDBFB7.com:6667 #general.
