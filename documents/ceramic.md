@@ -1,4 +1,4 @@
-# Ceramics
+# Ceramics as she is spoke
 
 > The difference between science and screwing around is writing stuff down.
 
@@ -13,30 +13,33 @@
 ### Issues with this article
 
 - I'm an idiot with no experience in ceramics. You could do better.
-- This project was under considerable time pressure while attending university, and so was not nearly as rigorous as it should have been. Many refinements still need to be made; the process has very marginal utility in its current state.
+- This project was under considerable time pressure while attending university, and so was not nearly as rigorous as it should have been. I overcomplicated everything and 
 - I had a total budget of <$200. This constrained the solution extensively.
-- 
 
 ### A note on safety
 
-Like most inorganic dusts, aluminum oxide powder isn't good for your respiratory system. It's not nearly as damaging as silica, but a respirator or fume hood is recommended. There have also been some studies showing some (admittedly tenuous) connection between aluminum inhalation and Alzheimer's.
+Like most inorganic dusts, aluminum oxide powder isn't all that good for your respiratory system. It's not nearly as damaging as silica, but a respirator or fume hood is recommended. There have also been some studies showing some (admittedly tenuous) connection between aluminum inhalation and Alzheimer's.
 
-It need not be said that fire is almost certain while working with these temperatures. Take precautions.
+Kaolin clay includes fine silica; it's not nearly as safe as natural 
+
+CF reinforcement fibers have similar dangers. See 
+
+It scarcely must be said that fire is almost certain while working at these temperatures; don't leave anything unattended and have fire safety protocols in place.
 
 If using a lost-PLA process, beware decomposition products. Perform the bakeoff and sintering steps in a well-ventilated area.
 
-The green body will almost certainly explode on the first few attempts. This will send hot ceramic shrapnel in all directions.
+The green body will almost certainly explode on the first few attempts. This will send hot ceramic shrapnel in all directions. A face shield is recommended.
 
-Contact with 230v electric kiln elements will almost definitely kill you.
-
-A consequence of haste can be seen here.
+Finally, contact with 230v kiln elements will almost certainly be lethal.
 
 # The recipe
 
+This is process 5, which is almost verbatim.
+
 Limitations:
 
-* See [the finished product](#the finished product) to see if the part quality is sufficient for your needs.
-* This can only function for parts smaller than ~$5 \text{cm}^3​$ due to differential heating. An [alternate heat source]() would alleviate this requirement.
+* See [the finished product](#the finished product) to confirm that the part quality is sufficient for your needs.
+* This can only function for parts smaller than ~$5 \text{cm}^3$ due to differential heating. An [alternate heat source]() would alleviate this requirement.
 * Expect 0.5% shrinkage in X/Y; accurate Z (along mold gravity vector) may require grinding. 
 * Vacuum-safe (volatiles are removed, as almost all carbon-carbon bonds are broken), but highly permeable. 
 * If you have a CNC capable of machining steel dies, pressing may be a more desirable route.
@@ -54,11 +57,11 @@ Limitations:
 
    ![mold](../media/mold.png)
 
-2. **Mix 1 volume $\text{Al}_2\text{O}_3$ with 1 volume warm water.**
+2. **Mix 1 volume pure $\text{Al}_2\text{O}_3$ with 1 volume water at 45 deg C.**
 
    You may need to reduce the water volume if excessive Z-axis settling and shrinkage is observed while drying. 
 
-3. **Add approximately 0.5 wt. % gelatine.**
+3. **Add approximately 0.5 wt. %[^1] gelatine.**
 
    The solution must have a sufficiently low viscosity in order to flow into the mold without resistance while simultaneously retaining sufficient green strength for firing. This value may require tweaking.
 
@@ -78,9 +81,9 @@ Limitations:
 
    *alternately, if a low thermal conductivity is desired, beat the hell out of the mix to form a foam.*
 
-8. Dry in an oven for ~3 hours per cubic centimeter at well above the gelation temperature - roughly ~70 C.
+8. Dry in an oven for ~3 hours per cubic centimeter at well above the gelation temperature - approximately 70 deg C.
 
-   Urethane molds can generally tolerate roughly 80 C, whereas PLA will begin to deform at ~65c. The precise drying temperature depends greatly on the geometry of the part; again, variable thickness will cause differential drying and cracking at high drying speeds - see[^drying].
+   Urethane molds can generally tolerate 80 C, whereas PLA will begin to deform at ~65c. The precise drying temperature depends greatly on the geometry of the part; again, variable thickness will cause differential drying and cracking at high drying rates - see[^drying].
 
    In any case, the green must be thoroughly dry. Any residual moisture will cause it to explode.
 
@@ -90,7 +93,7 @@ Limitations:
 
     The green is now too delicate to be moved without the support structure, so PLA burnoff must be done in-place.
 
-11. Heat to approximately 1800 C with the torch. Hold temperature for 2-3 minutes. The entire part should glow white-hot.
+11. Heat to approximately 1800 C. Hold temperature for 2-3 minutes. The entire part must glow white-hot.
 
     Determining the exact temperature is quite difficult and seems to be unnecessary. See [measuring temperature](#measuring temperature).
 
@@ -198,9 +201,9 @@ There are a few sources that describe[^citric] the use of citric acid as a dispe
 
 [^citric]: Garrido, L. B., and E. F. Aglietti. "mullite-zirconia COMPOSITES: Effect of dispersants on slip and cast properties."
 
-The cohesive forces between alumina particles are negligible at low temperatures, and so a binder must be used  - much like baking a cake with nothing but flour. The precise mechanism by which the binder can operate at well above 
+The cohesive forces between alumina particles are negligible at low temperatures, and so a binder must be used. The precise mechanism by which the binder operates at extreme temperatures is not known to me.
 
-When such a suspension is available, a few more options arise.
+When this type of suspension is available, a few more options arise.
 
 #### Freeze casting
 
@@ -231,7 +234,7 @@ Additional requirements were
 
 - Fancy water-soluble epoxies (tried regular epoxies, failed miserably as expected)
 
-- PVA powder or Elmer's glue
+- PVA powder or Elmer's glue[^PVA]
 
 - Dhara, Santanu, and Parag Bhargava. "Egg white as an environmentally friendly low‐cost binder for gelcasting of ceramics." Journal of the American Ceramic Society 84.12 (2001): 3048-3050.
 
@@ -251,7 +254,9 @@ Fluffy, delicious organic binders, specifically.
 
 [^4]: Stoner thermoplastic mold release, McMaster-Carr #1409K44 [External](https://www.mcmaster.com/1409k44)
 
-I was not able to replicate their results after many, many attempts. The fully gelated green body was far too delicate to be removed from the mold. However, I hit on a modified process that is quite effective. It involves drying 
+I was not able to replicate their process after many, many attempts. The fully gelated green body was far too delicate to be removed from the mold, was excessively porous. This is certainly not due to any failing on the part of the paper's authors, but almost definitely some unknown in my experimental setup.
+
+However, a modified process was discovered that was found to be quite effective. It involves drying the gelated body at a significantly elevated temperature.
 
 <video src="../media/20181110_213428.mp4"></video>
 
@@ -277,11 +282,19 @@ Drying at 70c, however, produced a very strong green body:
 
 
 
+#### Molds
+
+#### Dry-green machining
+
+It is often useful to machine a part when dry. A greater dimensional accuracy can be obtained this way.
+
+
+
 #### Drying
 
 Different cross-sections tend to dry at different rates, causing a differential expansion and contraction. At 70c, the thin mounting lobes on the part above invariably cracked before the entire body was dry. 
 
-
+Wood glues typically have a solids percentage of 40-70%.
 
 #### Bubbles & Porosity
 
@@ -332,11 +345,11 @@ Luckily, $$MnO_2$$ is readily available in an impure form in carbon-zinc batteri
 
 Now we come to the matter of heating the green to the sinter temperature.
 
-Most porcelains fire at pyrometric cone 4 to 8, a peak temperature of 1186c to 1263c.
+The majority of clays and porcelains fire at pyrometric cone 4 to 8, corresponding to a peak temperature of approximately 1186c to 1263c. 
 
-The sinter temperature of pure alumina is a matter of some ambiguity, but reasonable strength can be found at 1700c. This is past the cone scale entirely.
+The sinter temperature of pure alumina appears to be a matter of some ambiguity, but reasonable strength can be found at 1700c. This is well past the cone scale entirely.
 
-The amazing Ben Krasnow has an excellent treatment of the pyrometric cone system in his 
+The amazing Ben Krasnow has an excellent treatment of the pyrometric cone system and the basics of refractory science in his video on glass production.[^krasnow_cone]
 
 [^cone_chart]: [External](http://www.overglazes.com/PDF/Orton-Cone-Chart-C.pdf)
 [^krasnow_cone]: [External](https://youtu.be/mUcUy7SqdS0)
