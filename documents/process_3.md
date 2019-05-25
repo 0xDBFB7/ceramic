@@ -72,6 +72,54 @@ Future additions:
 - [ ] Carbon fiber cloth reinforcement testing
 
 <hr>
+Here are the best parts I was able to produce.
+
+![20181212_182620_HDR](/home/arthurdent/deep/ceramics/media/20181212_182620_HDR.jpg)
+
+
+
+t's not going to win a beauty pageant, and it's almost definitely not sufficiently impermeable to be useful as a vacuum feedthrough. However, X and Y dimensional accuracy was superb, with only ~1% shrinkage. 0.3mm of the desired dimensions. Z dimensional accuracy was quite poor - the addition of slip increased the viscosity and caused a meniscus to form on the inside wall of the mold. 
+
+As a light-duty refractory support, however, it's acceptable.
+
+
+
+The shiny patch in the middle is molten glassy alumina, where I brought the torch far too close to the part. More rigorous process controls would be required in order to produce a truly usable part. Some sort of heat spreader would be excellent; I've since purchased a graphite crucible, which might improve the sinter quality. 
+
+The two green lines are $WO_3$, residue from the 1/16" tungsten rods I used to support the part while firing.
+
+![Screenshot from 2019-02-10 15-27-12](/home/arthurdent/deep/ceramics/media/Screenshot%20from%202019-02-10%2015-27-12.png)
+
+![Screenshot from 2019-02-10 15-27-45](/home/arthurdent/deep/ceramics/media/Screenshot%20from%202019-02-10%2015-27-45.png)
+
+![Screenshot from 2019-02-10 15-29-01](/home/arthurdent/deep/ceramics/media/Screenshot%20from%202019-02-10%2015-29-01.png)
+
+Kinda sucks.
+
+In any case, I abandoned this project at this point. Alumina parts are a key component in a certain product that I am attempting to develop; I merely needed to convince myself that I would be able to vertically integrate this process within a certain timeframe.
+
+I carefully sectioned (er, broke haphazardly) a few of the most successful parts. Here are a few micrographs of Batch 12 and 13.
+
+![20181212_195540.mp440](/home/arthurdent/deep/ceramics/media/processed/20181212_195540.mp440.jpg)
+
+Note the striations captured from the original PLA mold. Extremely fine feature definition and reasonably low porosity.
+
+![20181212_195540.mp4](/home/arthurdent/deep/ceramics/media/processed/20181212_195540.mp4.jpg)
+
+Here's the outside face.
+
+I performed some digital strength tests:
+
+<video src="../media/20181212_200256.mp4"></video>
+
+The alumina had the strength of a particularly stale tea biscuit - a far cry from the results reported in the original gelatine paper. I hypothesize that this is due to my abysmal sintering setup, and not any fundamental mixture limitation.
+
+Interestingly, the low-slip batch was noticeably stronger.
+
+
+
+
+
 
 [^1]: wt. % of alumina+water solution.
 [^coupon]: `files/coupon_style_7.fcstd` https://github.com/0xDBFB7/ceramics
