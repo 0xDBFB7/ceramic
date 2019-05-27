@@ -22,13 +22,11 @@ Below, some common-sense paranoia:
 
 Like most inorganic dusts, aluminum oxide powder isn't all that good for your respiratory system. It's not nearly as damaging as silica, but a respirator or fume hood is recommended. There have also been a few studies showing some (admittedly tenuous) connection between aluminum inhalation and Alzheimer's.
 
-Kaolin clay powder includes fine silica; it's not nearly as safe as the suppliers of "natural clay face masks" would have you believe.
-
-CF reinforcement fibers have similar dangers. See @yoder2015carbon.
+The Kaolin clay and optional CF reinforcement fibers have similar dangers. See @yoder2015carbon.
 
 It must scarcely be said that fire is almost certain while working at these temperatures. Don't leave anything unattended and have fire extinguishers nearby.
 
-If using a lost-PLA process, beware decomposition products. Perform the bakeoff and sintering steps in a well-ventilated area.
+just If using a lost-PLA process, beware decomposition products. Perform the bakeoff and sintering steps in a well-ventilated area.
 
 Green bodies are wont to explode. This will send superheated ceramic shrapnel in all directions. 
 
@@ -49,14 +47,8 @@ Previous trials; the most successful of these failures is process_4.
 Limitations:
 
 - For production use, FAST or SPS is almost certainly more effective. See FAST.
+
   - Thanks to ice9 on twitter for leading me to SPS.
-
-
-
-![second_pulldown](../../ion_printer/data/second_pulldown.png)
-
-
-
 
 
 1. 
@@ -71,51 +63,51 @@ Limitations:
 
 ### Preamble on motivation
 
-As an integral part of a future product, the marginal cost of these parts was a key concern. The design hinges on the ability to rapidly produce complex alumina geometries for mere cents.
+A few months ago, it became apparent that a certain future product would require several thousand high-voltage insulators. These insulators would need to withstand ~1500c continuously while remaining safe in high vacuum, and be rapidly produced in-house with arbitrary geometries. 
 
-Aluminum oxide is readily available and very inexpensive - the supplier I used charged ~$10/kg.
+Additionally, the economics of the product dictate a per-part cost of under $0.03.
 
-#### Glass
 
-[reliable seal matching percentage] Kovar has a coefficient of expansion. Based off these data, some anecdotes I've heard on the difficulty of obtaining a reliably airtight glass-to-metal seal, and how electrochemically active glass is at high voltages, I figured 
 
-#### Machinable/castable ceramics
+#### Machinable ceramics
+
+Macor
+
+#### Castable ceramics
 
 [^macor]: Rescor, Macor 780 et al [External](http://www.cotronics.com/vo/cotr/pdf/onepg700.pdf)
 
-Machinable ceramics like 
+Cotronics carries a lineup of castable and machinable ceramics, some of which fulfill the temperature . None fulfill the cost or vertical integration requirements.
 
-### Mold and green binder
+#### Porcelain
 
-Unfortunately, paraffin melts at nearly the same temperature as the gelatine. This means that the gel must be almost completely dry (shrinking considerably) in the process.
+Porcelain is an introductory ceramic, with a low firing temperature of ~1200-1400c. This is readily available for 
 
-Some problems with paraffin molds:
+The temperature resistance of 
 
-When casting fine details, it’s common for bubbles to form at the bottom. One way to fix this is to leave the heat on for a while, ensuring that the paraffin has time to flow into every nook and cranny. This, however, melts the hot glue sticking the mold together.
 
-I guess I could just add a long sprue and reservoir to the mold to compensate for shrinkage.
 
-Caulk/urethane molds
+## The green binder
 
-Caulking can be made to solidify quickly by way of glycerin.
+As with most powder sintering processes, the process starts by creating a green body. Much like trying to bake a cake with nothing but flour, one can’t generally pour alumina into a mold and fire it; cohesion requires intimate contact between grains, and even the slightest of internal stresses will cause it to crumble. A binder is required that will maintain structural integrity 
 
-## The mold and green body
-
-Like most powder sintering processes, you want to start with a green body. Much like trying to bake a cake with nothing but flour, you can’t just put a bunch of alumina powder into a mold and fire it; there won’t be the intimate contact between the particles that’s required for cohesion, and even the slightest internal stress will cause it to crumble.
+Note that this is not true of FAST/SPS.
 
 #### Pressing
 
 [^pressing]: @ nptelpressing - https://nptel.ac.in/courses/112107085/module3/lecture5/lecture5.pdf
 
-Pressing alumina is a common technique. You can either make a slurry (wet pressing), or just compact dry powder. 
+Pressing the powder sidesteps these cohesion issues, making a green of reasonable strength without any binder. You can either make an aqueous slurry (wet pressing), or just compact dry powder.  
 
 Many sub-techniques are available: wet, dry, hot, etc.
 
-Unfortunately, a CNC mill capable of cutting hard dies to reasonable tolerances and finish quality was not available.
+Unfortunately, a CNC mill capable of cutting hard dies to reasonable tolerances and finish quality was not available. In addition, the pace of iterative testing is limited by how quickly new dies can be made.
 
-A few attempts were made at pressing with 12L14 dies, the hardest material workable in this lab; the parts created were acceptable, but granular jamming 
+A few attempts were made at pressing with 12L14 dies, the hardest material workable with the equipment available; the parts created were acceptable, but granular jamming and die deformation rapidly destroyed the mold.
 
-#### Porcelain
+
+
+#### Slip-casting
 
 Perhaps the simplest process to create ceramic green bodies, [slipcasting](https://en.wikipedia.org/wiki/Slipcasting) entails pouring a fluid solution of porcelain into a hygroscopic plaster mold. 
 
@@ -320,8 +312,6 @@ The sensitivity of the green during firing cannot be overstated; after the binde
 #### Dan's silly SiC kiln
 
 Commercial zirconia sintering kilns typically use Silicon Carbide elements. These can withstand ~2500c in a vacuum, and. 
-
-However, they generally cost >$300, and typical sizes are overkill for small engineering parts.
 
 Furnace heaters use Silicon carbide Hot Surface Igniters. These are readily available for $25 on Amazon, and can reach 1700c.
 
