@@ -1,116 +1,217 @@
 # Ceramics as she is spoke
 
-A few months ago, it became apparent that a project would require several thousand high-temperature vacuum-safe ceramic insulators; and the economics would only work out if they could be produced in-house for less than <$0.03 each.
+[References](./references.pdf) | [BibTeX](./bibtex.bib) 
 
-![20190518_142932_HDR](../../ion_printer/media/20190518_142932_HDR.jpg)
 
-This is one of the lower quality parts. New ones have much lower porosity; image forthcoming.
 
-Despite having tried numerous binders, I cannot say with any confidence that this is an ideal process; it is merely sufficient for my needs.
+If you don't feel like perusing my prolonged prose (I don't blame you):
 
-The recipe below is overly detailed: rest assured that the process only takes ~10 minutes plus a few hours of drying, and all materials and the required kiln can be procured for <$100.
+1.  Gel-cast PVA-bound alumina in machinable wax.
+2. $30 "hot surface igniters" for gas heaters are made from silicon carbide, and can hit ~1800c - perfect for sintering.
 
-If you're interested in trying this, I highly recommend skimming through the references. This process was taken almost verbatim from *Cross-linked Polyvinyl Alcohol as a Binder for Gelcasting and Green Machining*, with a few simplifications; a few minutes reading of the papers linked will probably be more enlightening than this purely empirical nonsense.
+
+
+A few months ago, it became apparent that a certain something would require several thousand high-temperature vacuum-safe ceramic insulators with strange geometries; and the economics would only work out if the parts could later be produced in-house for less than $0.03 each.
+
+![20190518_142932_HDR](assets/20190518_142932_HDR.jpg)
+
+
+
+I cannot say with any confidence that this is an ideal process; it is merely sufficient for my needs. 
+
+The recipe below is overcomplicated to a level previously only found in college statistics textbooks: rest assured that the process only takes ~10 minutes, plus a few hours of drying; and all materials and the required kiln can be procured for <$100. It's essentially baking, but with a slightly hotter oven and off-limits confectioneries [^baking].  
+
+
+
+![Screenshot from 2019-06-03 20-11-28](assets/Screenshot from 2019-06-03 20-11-28.png)
+
+
+
+No, seriously. It's just baking.
+
+
+
+If you're interested in trying this, I highly recommend skimming through the references. This gel-cast process was taken almost verbatim from *Cross-linked Polyvinyl Alcohol as a Binder for Gelcasting and Green Machining*, with a few minor simplifications; a few minutes' reading of the papers linked will probably be more enlightening than this purely empirical nonsense.
+
+
 
 #### The recipe
 
-Add 70 or 90% fine (calcined) Alumina powder to 30 or 10% Kaolin powder by weight, then mix 'til homogeneous. Add 4% by weight PVA white glue (*LePage general purpose white glue* known to work, 45 to 70% solids), then 14% water. 
+Add 70 or 90% fine Alumina powder (*"Calcined" Alumina*, \$12/kg, *Tucker's Pottery*) to 30 or 10% by weight Kaolin powder (\$20/kg, *Amazon.ca*), then mix 'til homogeneous. Add 4% by weight PVA white glue (*LePage general purpose white glue/wood glue* known to work, 45 to 70% solids), then 10% water by weight. 
 
-Mix thoroughly until *cursed Parmesan* texture attained, then alternate adding water and mixing until the solution becomes a very thick putty. 30g batches suitable for manual mixing. 
+Mix thoroughly until *cursed Parmesan* texture attained, then alternate adding water and mixing until the solution becomes a very thick putty. 30g batches are suitable for manual mixing. The liquid seems to evaporate very rapidly; the putty is only workable for a few minutes.
 
-Unlike reference, crosslinker not found to be required. Do not inhale dust; wear a respirator.
+Unlike @chabert2008cross, a cross-linker was not found to be required. 
+
+Do not inhale dust; wear a respirator.
+
+According to @chabert2008cross, the delicate green is now machinable "if due care is taken". Unfortunately, due care appears to include not machining. This is a thoroughly annoying process; 
 
 Molding with pressure is preferable to prevent voids. A three-piece mold of this style:
 
 ![CIMG6681](assets/CIMG6681.JPG)
 
-is required for reliable ejection: the green is too weak to eject with pins. This mold uses two aluminum dies and replaceable 40mm PVC pipe inserts for parallel drying without Amdahl; produces consistent 25g 1/4" thick wafers suitable for CNC milling. ~0.4 MPa pressure required for homogeneity; an 8 ton hydraulic press was used for these parts.
+is required for reliable ejection: the green is too weak to eject with pins. This mold uses two aluminium dies and replaceable 40mm PVC pipe inserts for parallel drying without Amdahl, producing consistent 25g 6mm thick wafers suitable for CNC milling. ~0.4 MPa pressure required for homogeneity; a hydraulic press was used for these parts, but that isn't strictly necessary. See @nptelpressing for die guidelines.
 
-Beware granular jamming.
+Beware granular jamming; hardened dies seemed to seize easily. I'm not sure how to prevent this.
 
 ![CIMG6679](assets/CIMG6679.JPG)
 
-Wax paper effective for mold release.
+Wax paper is effective for mold release.
 
-Molding can produce a near-net-shape part, but green binder shrinkage will affect final dimensions. Machining dried green stock nulls out this shrinkage, and avoids the nuisance of unreliable molds.
+Molding can produce a near-net-shape part, but green binder shrinkage (1.2% typ.) will affect final dimensions. Machining dried green stock nulls out this shrinkage, and avoids the nuisance of unreliable molds.
 
 Previous green binders were sensitive to variations in cross section; differential drying and shrinkage across thin geometries would cause cracking. PVA seems insensitive to these issues. 
 
-Dry for 3-5 hours at ambient. The green is delicate, handle carefully. Machine at high rpm at ~100 m/min surface speed, expect very low cutting force. *Do not inhale dust.* Dust is highly abrasive, so ensure that axis guards are in place.
+Dry for 3-5 hours at ambient. The green is delicate, handle carefully. CNC machine at essentially any reasonable feed/speed; machining properties seem to be similar to graphite. Cutting forces can be surprisingly high at >400m/min surface speeds, so a PLA clamp was used to hold the wafer.
 
-PVA hardens by dehydration, so failed mold shots or mill tailings can be reconstituted with water and added to future batch. 
+![20190528_210001_HDR](assets/20190528_210001_HDR.jpg)
 
-Sinter at ~1450 C. 70% alumina requires ~10 minutes, 90%, ~30 minutes to a strength suitable for most applications. Do not move green after PLA burnout; it has zero strength. Parts with volume $<5mm^3$ can be unreliably but rapidly sintered via propane torch; very frustrating, not at all recommended. 
+*Do not inhale dust.* Dust is highly abrasive, so ensure that axis guards are in place if available and expect dulled tooling.
 
-These temperatures are difficult to achieve via conventional ceramic kilns; *Hot Surface Ignitors* for central heating and gas stoves are an excellent commodity source of SiC elements for ultra-high temp furnaces. SiC and SiNi HSIs available; SiC greatly preferred due to higher temperature resistance. SiNi HSIs also often specify an 80v DC supply for reasons unknown.
+PVA hardens by dehydration, so failed mold shots or tailings can be reconstituted with water and added to future batches. 
 
-SiC HSIs are mechanically delicate, but can tolerate ceramic spall and contamination. 
+
+
+Sinter at ~1450 C. 70% alumina requires ~10 minutes, 90%, ~30 minutes to a strength suitable for most applications. Do not move green after binder burnout; it has zero strength. Parts with volume $<5mm^3$ can be unreliably but rapidly sintered via propane torch; very frustrating, not at all recommended. 
+
+These temperatures are difficult to achieve with conventional ceramic kilns; *Hot Surface Ignitors* for central heating and gas stoves are an excellent commodity source of SiC elements for ultra-high-temp furnaces. SiC and SiNi HSIs are available; SiC greatly preferred due to higher temperature resistance. SiNi HSIs also often specify an 80v DC supply for reasons unknown.
+
+SiC HSIs are mechanically delicate, but seem to tolerate ceramic spall and contamination. 
 
 Use CoorsTek 271N (or Emerson 767A-372) SiC HSI ($33 CAD, Amazon) or equivalent with fiberglass wire insulation, Steatite C220 or Alumina body, nichrome wire. Beware Teflon insulation. 
 
 Typical ratings: a chilly 980 C at 102v to a positively balmy 1705 C at 132v (@coorstek2017). Expect consistent 3.7A draw over entire temperature range.
 
-![Screenshot from 2019-05-26 01-10-51](../../ion_printer/media/Screenshot from 2019-05-26 01-10-51.png)
+![kiln](assets/kiln.png)
 
-Kiln built using single Amaco 28035N 9" by 4-1/2" by 2-1/2"  firebrick ($15, Amazon) cut using wet tile saw; element then mounted with fire-cement (*Imperial High-Temp Stove and Furnace Cement*). Wait ~12 hours for cement to dry, then slowly raise temperature over course of ~30 minutes. 
+Kiln built using single Amaco 28035N 9" by 4-1/2" by 2-1/2" firebrick ($15, Amazon) cut using wet tile saw; element then mounted with fire-cement (*Imperial High-Temp Stove and Furnace Cement*). Wait ~12 hours for cement to dry, then slowly raise temperature over course of ~30 minutes. 
 
-Depending on local line voltage and alumina purity, a variac may be required to raise voltage ~15% to reach suitable sinter temperature. 
+Depending on local line voltage and alumina purity, a variac may be required to raise voltage ~15% to reach a suitable sinter temperature. 
 
-I have a crush on this furnace. It's sinfully powerful. It typically reaches 1000c in one minute, and 1450c in the next two, allowing for very rapid iterative testing. It can also toast bread in 2.4 seconds. Some green binders were sensitive to temperature ramp rate; PVA seems unfazed by these crazy dT/dts. 
+I have a serious crush on this furnace. It typically reaches 1000c in one minute, and ~1400c in the next two, allowing for very rapid iterative testing (useful for my crude, blunderbuss style of R&D). It can also toast bread in 2.4 seconds. Some green binders (gelatine, specifically) were sensitive to temperature ramp rate; PVA seems unfazed by these crazy dT/dts. 
 
-Expect element lifespan of ~10 30-minute cycles at 140v: degradation occurs via fascinating oxidation reaction that evolves carbon monoxide and inflates bubbles of SiO2:
+Bread is not unfazed.
 
-![my_photo-bubble4](../../ion_printer/media/my_photo-bubble4.jpg)
+![kiln2](assets/kiln2.png)
+
+Expect element lifespan of ~200 minutes at 130v: degradation occurs via fascinating oxidation reaction that evolves carbon monoxide and inflates bubbles of SiO2 (if I'm understanding @raj2015 correctly - unlikely, given my chemistry prowess):
+
+![my_photo-bubble4](assets/my_photo-bubble4.jpg)
 
 A PID control system can be added with an SSR: P: 1, I: 1, D: 2 to 6 based on thermocouple response, and integral windup limits of -300, 300 seems to be an acceptable starting point.
 
-Simple k-type thermocouples can operate briefly at 1300c; McMaster-Carr's #3859K44 thermocouples survive 1400c for a few seconds before being incinerated. A thin tungsten wire works well as a thermistor, but is rapidly oxidized. Nichrome also works well as a thermistor, though some brands have a strange bijective resistivity curve. It is also destroyed in short order. 
 
-Non-contact temperature measurement is more suitable, though all bolometers begin to whimper at these temperatures. A disappearing-filament pyrometer is trivial to build; if a spectrometer is available, fitting the pleasant glow of the furnace to the Stefan-Boltzmann law can get you within a few hundred degrees. 
 
-A ratio pyrometer built from two photodiodes (or phototransistors, depending on your bias) with IR-cut and IR-pass filters may also work. These techniques are somewhat complicated by the alumina's selective radiation: the spectral emissivity curve looks like someone put overcooked pasta into Matplotlib. Worse still, it varies with temperature by about half an order of magnitude.  
+![test_2](assets/test_2.png)
 
 
 
-This process is not ideal for production: FAST/SPS has several advantages, including full-density sintering at only 1150c, and *there's no consensus as to how it works*. It is *magic*. Thanks to @ice9 on Twitter for the tip!
+Simple K-type thermocouple wire can operate briefly at 1300c; McMaster-Carr's #3859K44 thermocouples survive 1400c for a few seconds before being incinerated, though the high thermal mass leads to a ~200 C offset in this application (seen in the graph above).
 
-Expect extremely low outgassing (even to LIGO standards), low permeability, continuous service temp ~1500c (with 90% mix), strength comparable to aluminum, 20 MV/m breakdown at ambient, hardness Mohs ~9. 
+A thin tungsten wire works well as a thermistor, but is rapidly oxidized. Nichrome also works well as a thermistor, though some brands seem to have a strange bijective resistivity curve. It is also destroyed in short order. 
+
+Non-contact temperature measurement is more suitable, though all COTS bolometers begin to whimper at these temperatures. A disappearing-filament pyrometer is trivial to build; if a spectrometer is available, fitting the pleasant glow of the furnace to the Stefan-Boltzmann law can get you within a few hundred degrees. 
+
+A ratio pyrometer built from two photodiodes (or phototransistors, depending on your bias) with IR-cut and IR-pass filters may also work. These techniques are complicated somewhat by alumina's selective radiation: the spectral emissivity curve looks like someone put overcooked pasta into Matplotlib. Worse still, it varies with temperature by about half an order of magnitude.  
+
+All of this is for naught, however, since active control does not appear to be required with PVA. It appears that parts with repeatable properties can be made as long as the temperature is greater than the sinter point for sufficient time. The pause at 350c for binder burnout mentioned in @chabert2008cross did not seem to be necessary.
+
+
+
+This process is not ideal for production: FAST/SPS has several advantages, including full-density sintering at only 1150c, and *as yet there's no consensus as to how it works*. It is *magic*. See @guillon2014field. Thanks to @ice9 for the tip! 
+
+Expect extremely low outgassing (even to LIGO standards), low permeability, continuous service temp ~1500c (with 90% mix - 70% mix became brittle at ~1600c), strength comparable to aluminum (with 70% mix - 90% mix is a little weaker), 20 MV/m breakdown at ambient, hardness Mohs ~9. 
+
+At low temperatures, you can expect extremely low outgassing (even to LIGO standards).
+
+The alumina itself is not an outgassing concern; if you have success with purer alumina compositions, you can expect good vacuum performance all the way to ~1700c. 
+
+The clay binder is a somewhat different story. While pure Kaolin becomes Mullite above 1400c, which is as stable as alumina at low temperatures, silica impurities in the Kaolin may begin to sublimate to SiO at above 1300c. See @krieger1965thermodynamics for details; but in general, operation at above ~1400c is contraindicated.
 
 Fired shrinkage values will be added soon.
 
-Serves 12: bake till golden brown, then turn over.
+
+
+![temperature](assets/temperature-1559057994888.png)
+
+> *Serves 12: bake till golden brown, then turn over.*
 
 
 
-A few thousand words used to be here, but it was largely garbage; a few months of inane, uninformative mistakes. Apologies for the terse and hasty wording; I must now learn all of Verilog in 3 hours for midterms. Apologies for the informal style: experimented with first-person, third-person scientific, etc, but everything sounded stilted and egomaniacal.
+A few thousand words used to be here, but it was largely garbage; a few months of inane, uninformative mistakes. Apologies for the terse and hasty verbiage.
 
 
 
-Post comments or improvements at <https://github.com/0xDBFB7/ceramic>, or hit me up @0xDBFB7 on Twitter.
+Post improvements at <https://github.com/0xDBFB7/ceramic>, or hit me up @0xDBFB7 on Twitter!
 
-♥
+❤
+
+<3
+
+
+
+
 
 
 
 #### Tonsil 1: Brazing
 
-Alumina can be readily brazed by the "active metal" process. In essence, this merely requires a titanium intermetallic layer; the titanium adheres strongly to the alumina when molten, after which standard filler rods and brazing techniques can be used. The whole process must take place in high vacuum or pure argon atmosphere. See  
+Alumina can be readily brazed by the "active metal" process. In essence, this merely requires a titanium interface layer; the titanium adheres strongly to the alumina when molten, after which standard filler rods and brazing techniques can be used. The process must take place in a high vacuum or exceptionally clean argon atmosphere, else inert titanium oxides and nitrides will form. 
 
-#### Tonsil 2: Alternative binders
+A soft copper or Kovar interface layer is often used to prevent differing thermal coefficients from cracking the ceramic when the weld is cooled. 
+
+See @hammond1988brazing and *Is it possible to braze ceramics?* *P.M.Roberts/Delphi Brazing Consultants* for details.
+
+#### Tonsil 2: $MnO_2$
+
+*Vitreous high alumina porcelain*, @luks1942vitreous, describes how Manganese Dioxide can be used to depress the sinter point of pure alumina to more reasonable temperatures, sometimes without the use of silica. An impure, graphite-contaminated $MnO_2$ can be obtained from alkaline batteries; unfortunately, I was not able to reproduce this effect to any degree.
+
+#### Tonsil 3: Cataphoresis
+
+The initial solution can be thinned considerably, and various objects can be dipped to form hard coatings. Attempts with graphite and aluminium have been successful; however, obtaining a uniform, tight-tolerance layer is somewhat difficult. If such a layer is required, a variant of electrophoresis can be used; see @lazic2004influence for details. This technique is often used to insulate indirectly heated cathodes.
+
+#### Tonsil 4: Beta-alumina
+
+Alumina comes in two main allotropes: alpha-, and beta-. (well, and sapphire, but whatever).
+
+To my (surely flawed) understanding, the chief difference lies in the ionic conductivity, which allows for hermetic low-temperature anodic bonds to some materials using the esoteric Johnsen–Rahbek effect. See Field-Assisted Bonding of Beta-Alumina to Metals, @dunn1979field.
+
+#### Tonsil 5: Foam
+
+If a thin gelatine binder is used, the solution can be beaten like egg white into a low density foam. I don't know what this is useful for, but it's neat.
+
+#### Tonsil 6: Fire
+
+![temperature](assets/propane.png)
+
+> not sufficiently hot
+
+![acetylene](assets/acetylene-1559058051640.png)
+
+> barely sufficiently hot
 
 
 
-#### Tonsil 2: Cataphoresis
-
-The initial solution can be thinned considerably, and various objects can be dipped to form hard coatings.
+[^baking]: Is that how baking works? I don't know. I once substituted 3 cups of salt for sugar in a cake.
 
 
 
-#### Tonsil 3: Beta-alumina
+#### Tonsil 7: Applied failure
 
-Alumina comes in two allotropes: alpha-alumina, and beta-alumina. 
+I think a bit of meta-analysis is in order. This process is very well-described in the literature, so why did it take several months to get a usable part? 
 
-To my (surely flawed) understanding, the chief difference lies in the ionic conductivity. The beta form can be produced by adding 9.6% Na2O, 0.25% Li2O  
+And yet obtaining a usable part 
 
-See Field-Assisted Bonding of Beta-Alumina to Metals, @ dunn1979field. 
+That's a great question. I think this is attributable to two things: first, my overall incompetence, and second, there's a certain baseline of equipment that you need in each field to be able to pinpoint issues. 
+
+In electronics, for instance, if you only have a $5 multimeter, it's extremely difficult to make a precision voltage regulator; you'd have to maybe characterize the multimeter fully first, etc. And when you encounter a problem, you can't isolate the equipment from the process. 
+
+As an example, I encountered issues early on with cracking as the temperature ramped.
+
+
+
+Here are some condensed notes on failures.
+
+
 
