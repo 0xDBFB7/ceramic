@@ -18,9 +18,7 @@ Molding with pressure preferable to prevent voids. Dry for 3-5 hours at ambient.
 
 <video src="../media/20181211_152721.mp4"></video>
 
-> An early propane Bunsen test with gelatine binder, lost-PLA mold, tungsten supports. The A,B,C, and D mixtures shown were 100% alumina, 20% MnO2, 3% porcelain slip, and 10% porcelain slip, respectively.
->
-> This was a complete failure on all counts.
+> 
 
 Very small parts ($<5  mm^3$) with simple geometries (component lead insulators, for instance) can be fired with nothing but a propane torch or Bunsen burner. There's a distinctive white glow that seems to indicate when the proper sinter temperature has been reached; I think this is due to the increased translucency of solid alumina compared to the powder form.
 
