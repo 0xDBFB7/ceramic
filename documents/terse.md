@@ -19,13 +19,12 @@ If you don't feel like perusing my prolonged prose (I don't blame you):
 - Test argon-graphite.
 - Test UV crosslinking.
 
+
+
 <hr>
 
 
 
-A few months ago, it became apparent that a certain something would require several thousand ultra-high-temperature vacuum-safe ceramic insulators with arbitrary geometries; and the economics would only work out if the parts could later be produced in-house for less than $0.05 each. 
-
-Moreover, I needed a reliable process with rapid turnaround for prototyping, especially without specialized tooling. Also, I had a budget of $300.
 
 
 
@@ -38,7 +37,7 @@ Moreover, I needed a reliable process with rapid turnaround for prototyping, esp
 
 I cannot say with any confidence that this is an ideal process; it is merely sufficient for the needs of this device.
 
-The recipe below is overcomplicated to a level previously only found in college statistics textbooks: rest assured that the process only takes ~10 minutes, plus a few hours of drying; and all materials and the required kiln can be procured for <$100. It's essentially baking, but with a slightly hotter oven and off-limits confectioneries [^baking].  
+The recipe below is overcomplicated to a level previously only found in college statistics textbooks: rest assured that the process only takes ~10 minutes, plus a few hours of drying; and all materials and the required kiln can be procured for <$100. It's essentially baking, but with a slightly hotter oven and off-limits confectioneries.
 
 
 
@@ -54,13 +53,26 @@ If you're interested in trying this, I highly recommend skimming through the ref
 
 
 
-#### The recipe
+#### The base recipe
+
+| % by mass | Material (Supplier)                                          |
+| --------- | ------------------------------------------------------------ |
+| 86.5      | Alumina powder (*Calcined Alumina*, \$12/kg, *Tucker's Pottery*) |
+| 9         | Kaolin powder (\$20/kg, *Amazon.ca*)                         |
+|           |                                                              |
+| 0.75      | Borax                                                        |
+| 3.5       | Lepage White Glue                                            |
+| +20-40%   | Water                                                        |
+
+
 
 Add 70 or 90% fine Alumina powder (*Calcined Alumina*, \$12/kg, *Tucker's Pottery*) to 30 or 10% by weight Kaolin powder (\$20/kg, *Amazon.ca*), then mix 'til homogeneous. Add 4% by weight PVA white glue (*LePage general purpose white glue/wood glue* known to work, 45 to 70% solids), then 10% water by weight. 
 
-Mix thoroughly until *cursed Parmesan* texture attained, then alternate adding water and mixing until the solution becomes a very thick putty. 30g batches are suitable for manual mixing. The liquid seems to evaporate very rapidly; the putty is only workable for a few minutes.
+Mix thoroughly until *cursed Parmesan* texture attained, then alternate adding water and mixing until the solution becomes a thick putty. 30g batches are suitable for manual mixing. The liquid seems to evaporate very rapidly; the putty is only workable for a few minutes.
 
 The green is barely usable without a crosslinker; any handling will break it. @chabert suggest 2,5-dimethoxy 2,5-dihydrofuran, but Borax is more readily available - with the downside that thermal decomposition may emit highly toxic boron vapor.
+
+Unfortunately, borate crosslinks are reversed as soon as the solution dries.
 
 
 
@@ -122,11 +134,11 @@ Bread is not unfazed.
 
 ![kiln2](assets/kiln2.png)
 
-Expect element lifespan on the order of ~500 minutes at 130v: degradation occurs via fascinating oxidation reaction that evolves carbon monoxide and inflates bubbles of SiO2 (if I'm understanding @raj2015 correctly - unlikely, given my chemistry prowess):
+Expect element lifespan on the order of ~500 minutes at 130v: degradation occurs via a fascinating two-step interfacial oxidation reaction that evolves carbon monoxide and inflates large bubbles of SiO2 (if I'm understanding @raj2015 correctly - unlikely, given my chemistry prowess):
 
 ![my_photo-bubble4](assets/my_photo-bubble4.jpg)
 
-Interestingly, the same "bubbling" failure mode is seen on the reinforced-carbon-carbon panels on the  leading edges of the space shuttle, which are coated with silica and carbide for oxidation protection. 
+Interestingly, the same "bubbling" failure mode is seen on the reinforced-carbon-carbon panels on the  leading edges of the space shuttle, which are coated with SiO and SiC for oxidation protection. 
 
 This carbon-carbide conversion coating seems to be easy to perform in a furnace such as this one; see Tonsil 5 for details. SiC elements are also used on the ALQ-144 IR missile jammer, so it's unlikely that my laboratory will be hit with a missile in the near future.
 
@@ -188,6 +200,8 @@ Post improvements or replication at <https://github.com/0xDBFB7/ceramic>, or hit
 
 Alumina can be readily brazed by the "active metal" process. In essence, this merely requires a titanium interface layer; the titanium adheres strongly to the alumina when molten, after which standard filler rods and brazing techniques can be used. The entire process must take place in a high vacuum or exceptionally clean argon atmosphere, else inert titanium oxides and nitrides will form. 
 
+A low-melting-point titanium alloy is usually used, as pure Ti melts at some 1800 C. 
+
 A soft copper or Kovar interface layer is often used to prevent differing thermal coefficients from cracking the ceramic when the weld cools. 
 
 See @hammond1988brazing and *Is it possible to braze ceramics?* *P.M.Roberts/Delphi Brazing Consultants* for details.
@@ -195,6 +209,14 @@ See @hammond1988brazing and *Is it possible to braze ceramics?* *P.M.Roberts/Del
 #### Tonsil 2: $MnO_2$
 
 *Vitreous high alumina porcelain*, @luks1942vitreous, describes how Manganese Dioxide can be used to depress the sinter point of pure alumina to more reasonable temperatures, sometimes without the use of silica. An impure, graphite-contaminated $MnO_2$ can be obtained from alkaline batteries; unfortunately, I was not able to reproduce this effect to any degree.
+
+#### Tonsil 3: Alternative binders
+
+Almost any organic binder can be used.
+
+#### Tonsil 4: Conductive graphite-impregnated 
+
+
 
 #### Tonsil 3: Cataphoresis
 
@@ -204,7 +226,7 @@ If such a layer is required, a variant of electrophoresis can be used; see @lazi
 
 #### Tonsil 4: Beta-alumina
 
-Alumina comes in two main allotropes: alpha-, and beta-. (well, and sapphire, but whatever).
+Alumina can be found in two main allotropes: alpha-, and beta-. (well, and sapphire, but whatever).
 
 To my (surely flawed) understanding, the chief difference lies in the ionic conductivity, which allows for hermetic low-temperature anodic bonds to some materials using the esoteric Johnsen–Rahbek effect. See Field-Assisted Bonding of Beta-Alumina to Metals, @dunn1979field.
 
@@ -217,8 +239,6 @@ If a thin gelatine binder is used in a sol-gel, the solution can be beaten like 
 ![temperature](assets/propane.png)
 
 > not sufficiently hot
-
-
 
 ![acetylene](assets/acetylene-1559058051640.png)
 
@@ -236,7 +256,7 @@ If a thin gelatine binder is used in a sol-gel, the solution can be beaten like 
 
 #### Tonsil 7: Applied failure
 
-Almost 8 months of trial and error was required to obtain a usable part by this process. Gel-casting is very well described in the literature and commonly applied in industry; the only conclusion I can draw is that I'm *dumb*. Here are a few notable failures.
+Almost 8 months of trial and error was required to obtain a usable part by this process. Gel-casting is very well described in the literature and commonly applied in industry.  Here are a few notable failures.
 
 
 
