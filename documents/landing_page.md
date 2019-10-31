@@ -6,7 +6,7 @@
 
 A few months ago, it became apparent that a certain something would require several thousand ultra-high-temperature vacuum-safe ceramic insulators with arbitrary geometries, and the economics could only work out if the parts could later be produced in-house for less than $0.05 each. 
 
-Moreover, I needed a reliable process with 30-minute turnaround for prototyping, without requiring specialized tooling. 
+Moreover, I needed a reliable process with 30-minute turnaround for prototyping, without requiring specialized tooling beyond a PLA FDM 3d printer. 
 
 Also, I had a budget of $300.
 
@@ -39,3 +39,11 @@ You may wonder why this is being published in parts. Despite note-taking, the au
 - Previous iterations of this report spanned ~10k words; this becomes quite unwieldy.
 
 It's an experiment. Let me know what you think!
+
+
+
+I certainly don't deserve any money for this drivel (the process is its own reward); however, the \$300 Mk2 furnace seems to be of sufficient utility that others may want one.  The break-even point is about 50 units. Please note that the kiln could be easily built yourself for \$70 and a few hours.
+
+
+
+> Not that you would be inclined to do so anyhow, but author asks that you please not complement him; he already is a total bigheaded ass with an ego that would make Zaphod blush, and needs all the internal motivation he can get to complete the next stage of the project.
