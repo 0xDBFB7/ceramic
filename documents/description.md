@@ -3,8 +3,22 @@ Dan's Vacuum Wine-Tumbler Furnace
 Just over a year ago, it became apparent that a certain project would require a custom ceramic composite. 
 
 Proper technical ceramics all require sintering at above 1300c, and most fun applications require 1600C+. 
-Unfortunately, the last 500c requires what I consider to be some nifty materials science because of \sigma A T^4 and all that.
-For instance, conventional heating element materials like nichrome and kanthal just give up above ~1300 C - Kanthal very spectacularly so.
+Unfortunately, the last 500c requires what I consider to be some nifty materials science because of Boltzmann's \sigma A T^4 and all that.
+For instance, conventional heating element materials like nichrome and kanthal just give up around about ~1300 C - Kanthal very spectacularly so:
+
+> The next factor investigated was the suitability of Kanthal A-1
+> as heater material. Although this material is suitable for use to
+> 1325 0 C in air, at least one reference does not recommend its use in
+> vacuum at temperatures over 1000°C. This warning is founded in the
+> rapid evaporation of a component (chromium?) from the alloy and verified
+> by tests we performed on bare wires in ultra-high vacuum. Sample
+> filaments burned out after two hours or less at a surface temperature
+> of 1200°C.
+
+<https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19760003136.pdf>
+
+<https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20080013560.pdf>
+
 
 I therefore find myself in the very strange and somewhat enviable position of having incidentally built a 1700 C furnace which costs a miniscule fraction that of
 existing solutions. 
@@ -16,6 +30,8 @@ Considering that commercial kilns cost about $(1000 + T^3), I figured this
 
 The idea is primarily "if Mr. Musk can sell flamethrowers to fund a tunnel, maybe I can sell a furnace to fund a particle accelerator", 
 but don't buy it for that.
+
+I would greatly prefer to do this when all is said and done and I have some pretty pictures of the product to show. Unfortunately, university dicates that I cannot spend time polishing this to a commercial level if nobody would be interested.
 
 Specs: 
 
@@ -30,7 +46,7 @@ Specs:
 - Pressure measurement through penning-style thermal resistance.
 - D-shaped bore, 30 mm ID x 200mm long (40 mm bore minus heating element volume). 
 - Practice for some techniques which will be used by the [].
-- Insulation based on satillite multi-layer insulation, using in-situ-sintered concentric non-fiberous alumina shells.
+- Insulation based on satillite multi-layer insulation, using hard in-situ-sintered concentric non-fiberous alumina shells.
 		If square, can self-sinter; probably useful.
 - Programmable temperature profiles and ramp-rates.   
 - Entirely open-source; plans, notes, recipes for all ceramics used, etc can be found on the github.
@@ -54,6 +70,9 @@ Applications:
 Limitations:
 
 - You can build a 1300 C furnace
+
+- I don't urgently need the money. Please don't sign up
+	I feel kind of weird making money off this, since it's pretty simple to build. On the other hand, it costs $300 where everything else costs >>$1000.
 - There are better, faster, cheaper techniques to create ceramic parts, like cheap microwave sintering or field-assisted/spark-plasma [thanks ice9!]
 		[To date, science has not figured out how FAST is so effective.] sintering.
 	I needed a general-purpose >1500c multi-atmosphere sintering setup, but if you have specific requirements you can almost certainly do better than this.
@@ -67,8 +86,8 @@ Limitations:
 	Don't! I forbid it. I don't deserve it. Build it yourself and give the money to charity or whatever.
 	Please only purchase this if you think the marginal value of a pre-built furnace
 - The silicon-carbide element degrades to carbon monoxide bubbles rapidly with operation at above 1400c in atmosphere; high temperatures require an argon or nitrogen backfill
- 	(which isn't difficult). This failure mode is the same as that seen on the silica-conversion-coated 
- 	reinforced-carbon-carbon panels on the leading edges of the Space Shuttle. 
+	 	(which isn't difficult). This failure mode is the same as that seen on the silica-conversion-coated 
+	 	reinforced-carbon-carbon panels on the leading edges of the Space Shuttle. 
 - Safety concerns:
 	High temperatures can hurt.
 	If you put something into the chamber that pyrolyzes to something toxic (Borax -> boron gas), you will die.
@@ -83,17 +102,16 @@ Limitations:
 		Titanium dioxide has recently been re-classified as a carcinogen.
 			This has only been demonstrated in nano-scale titania, or by 
 		Silica fume from kaolin. 
-		
+	
 - I am an *idiot*. I wasted *weeks* thinking poly(vinyl acetate) was the same as poly(vinyl alcohol). I wasted an equal *weeks* trying to make jello.
 
 What am I getting into?
 
 - I have some experience in the difficulties of production design from my last business (SafeSump Inc.). This won't be a simple affair. 
-- This is practice in logistics for when the real deal is finished, hopefully 1 to 2 years from now.
+- This is practice in logistics for when *the real deal* is finished, hopefully 1 to 2 years from now.
 
-Timeline:
 
-Machining and assembly will be done by some good friends at Kesti Engineering.
+Machining and assembly will be done by some good friends at Kesti Machining. They need the work.
 
 
 

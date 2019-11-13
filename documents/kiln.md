@@ -112,7 +112,7 @@ A variac was used to raise the voltage a few percent over the 115v typical.
 
 This kiln has performed beyond my wildest expectations. It heats to absurd temperatures ridiculously quickly; at 130v, it reaches 1000c in the first minute, and 1400c in the next, allowing for very rapid iterative testing. 
 
-To risk stating the obvious, I've often observed that the time that each experiment cycle takes is a strong predictor for success in my crude, blunderbuss style of empirical research; if each new mystery is seperated by an interminable wait, it becomes difficult to maintain interest over months. 
+To risk stating the obvious, I've often observed that the time that each experiment cycle takes is a strong predictor for success in my crude, blunderbuss style of empirical research; if each new mystery is seperated by an interminable wait, it becomes difficult to maintain interest over years. 
 
 <video src="../../ion_printer/media/20190518_135832.mp4"></video>
 
