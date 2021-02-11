@@ -1,0 +1,280 @@
+
+
+\usepackage[left=2cm,right=2cm,
+			top=1.25cm,
+			bottom=2.25cm,%
+			headheight=11pt,%
+			letterpaper]{geometry}
+			
+\frenchspacing			
+
+\nonstopmode
+
+
+
+
+
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[sfdefault]{roboto}
+\fontseries{t}\selectfont
+
+\usepackage{noweb}
+
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{blindtext,graphicx}
+\usepackage[absolute]{textpos}
+%\usepackage[parfill]{parskip}
+\usepackage{parskip}
+\setlength{\parskip}{\baselineskip}
+
+\usepackage[colorlinks=true,citecolor=brown]{hyperref}
+\usepackage{gensymb}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{fontawesome}
+\usepackage{orcidlink}
+\usepackage{standalone}
+\usepackage{pdfpages}
+\usepackage{subfiles}
+\usepackage{svg}
+\listfiles
+% it would be best if this was a list of directories 
+\svgpath{{../biology/simulation/GROMACS/BUMPy_bilayer/data/}{../electronics/propagation/} {../math/mathematica/output/}}
+
+\usepackage{sidecap}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{lettrine}
+
+\usepackage{subfig}
+
+
+
+% This allows the endnote and reference footnotes to float with the text.
+%\usepackage{enotez}
+%\let\footnote\endnote
+%\let\footnotetext\endnotetext
+%\let\footnotemark\endnotemark
+
+\usepackage{soul} % strikethrough \st
+
+
+\usepackage{draftwatermark}
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{0.25}
+
+\usepackage{booktabs,caption}
+\usepackage[flushleft]{threeparttable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%CITATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\setlength{\footnotesep}{0.7\baselineskip}
+
+
+
+%\usepackage{biblatex}
+\usepackage[backend=bibtex8, sorting=none, style=phys]{biblatex}
+% style=chem-angew
+\let\cite\footfullcite
+
+%--------------------------------------------------------
+% No duplicate footcites
+\usepackage{xparse}% for multiple optional parameters
+\usepackage{ifoddpage}% get correct page number
+
+\makeatletter
+\let\oldfootcite=\footcite
+\RenewDocumentCommand{\footcite}{O{}O{}m}{\checkoddpage
+	\@ifundefined{citepage@#3}{}%
+	{\ifnum\csname citepage@#3\endcsname<\oddpage@page\relax
+		\global\expandafter\let\csname repeatcite@#3\endcsname=\relax
+		\fi}%
+	\@ifundefined{repeatcite@#3}%
+	{\oldfootcite[#1][#2]{#3}%
+		\expandafter\xdef\csname repeatcite@#3\endcsname{\thefootnote}%
+		\expandafter\xdef\csname citepage@#3\endcsname{\arabic{page}}}%
+	{\footnotemark[\csname repeatcite@#3\endcsname]}}
+\makeatother
+%--------------------------------------------------------
+
+
+
+
+
+%\let\cite\footcite
+
+\addbibresource{references.bib}
+%biblatex has a zoterordfxml
+% might avoid the need for python bibtex_collections.py
+
+
+
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\small}
+
+
+
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+
+\newcommand{\wikinote}[1]{\textsuperscript{[\color{blue}{\textit{\textbf{#1}}}]}}
+\newcommand{\citationneeded}[1][]{\textsuperscript{[\color{blue}{\it \bf{citation needed}#1}]}}
+\newcommand{\dubiousdiscuss}[1][]{\textsuperscript{\color{blue} [{\it \bf{dubious-discuss}}]} }
+
+\newcommand{\light}[1]{\textcolor{gray}{#1}}
+
+\newcommand{\ntilde}{\char`~}
+
+%
+%
+\usepackage{titlesec}
+%
+%% custom section
+
+
+\titleformat{\section}
+{\normalfont\LARGE\bfseries}{\thesection}{1em}{}
+%\titleformat{\section}
+%{\normalfont\LARGE\bfseries\PRLsep}
+%{{{{\itshape \thesection\hskip 9pt\textpipe\hskip 9pt}}}}{0pt}{}
+
+%% custom section
+%\titleformat{\subsection}
+%{\normalfont\Large\bfseries\PRLsep}
+%{{{{\itshape \thesection\hskip 9pt\textpipe\hskip 9pt}}}}{0pt}{}
+%
+%
+%
+
+
+\newcommand{\Wsqm}{$\text{ W/m}^2$}
+
+\newcommand{\ghfile}[1]{\href{https://github.com/0xDBFB7/covidinator/tree/master/#1}{\faGithub/\url{#1} }}
+
+%\newcommand{\supercite}[1]{}
+%\newcommand{\supercollect}[1]{}
+
+
+\newlength{\PRLlen}
+\newcommand*\PRLsep[1]{{\itshape \Large\settowidth{\PRLlen}{#1}\advance\PRLlen by -\textwidth\divide\PRLlen by -2\noindent\makebox[\the\PRLlen]{\resizebox{\the\PRLlen}{1pt}{$\blacktriangleleft$}}\raisebox{-.5ex}{#1}\makebox[\the\PRLlen]{\resizebox{\the\PRLlen}{1pt}{$\blacktriangleright$}}\bigskip}}
+
+
+\renewcommand{\thefootnote}{\textcolor{blue}{[\arabic{footnote}]}}
+
+\usepackage{multirow}
+
+
+
+\usepackage{graphicx}
+\graphicspath{ {../media/} 
+			{assets/}
+			}
+
+
+\usepackage{tcolorbox}
+\newtcolorbox{protocol}{colback=yellow!5!white,colframe=yellow!75!black}
+\newtcolorbox{equipment}{colback=orange!5!white,colframe=orange!75!black}
+\newtcolorbox{autem}{colback=red!5!white,colframe=red!75!black}
+\newtcolorbox{toolchain}{colback=blue!5!white,colframe=blue!40!black!40}
+\newtcolorbox{sidenote}{colback=cyan!5!white,colframe=blue!40!black!40}
+%https://tex.stackexchange.com/questions/66154/how-to-construct-a-coloured-box-with-rounded-corners
+
+%\usepackage[sfdefault,light]{roboto}
+
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+
+
+
+
+%%%%********************************************************************
+% fancy quotes
+\definecolor{quotemark}{gray}{0.7}
+\makeatletter
+\def\fquote{%
+	\@ifnextchar[{\fquote@i}{\fquote@i[]}%]
+}%
+\def\fquote@i[#1]{%
+	\def\tempa{#1}%
+	\@ifnextchar[{\fquote@ii}{\fquote@ii[]}%]
+}%
+\def\fquote@ii[#1]{%
+	\def\tempb{#1}%
+	\@ifnextchar[{\fquote@iii}{\fquote@iii[]}%]
+}%
+\def\fquote@iii[#1]{%
+	\def\tempc{#1}%
+	\vspace{1em}%
+	\noindent%
+	\begin{list}{}{%
+			\setlength{\leftmargin}{0.05\textwidth}%
+			\setlength{\rightmargin}{0.05\textwidth}%
+		}%
+		\item[]%
+		\begin{picture}(0,0)%
+		\put(-15,-5){\makebox(0,0){\scalebox{3}{\textcolor{quotemark}{``}}}}%
+		\end{picture}%
+		\begingroup\itshape}%
+	%%%%********************************************************************
+	\def\endfquote{%
+		\endgroup\par%
+		\makebox[0pt][l]{%
+			\hspace{0.8\textwidth}%
+			\begin{picture}(0,0)(0,0)%
+			\put(15,15){\makebox(0,0){%
+					\scalebox{3}{\color{quotemark}''}}}%
+			\end{picture}}%
+		\ifx\tempa\empty%
+		\else%
+		\ifx\tempc\empty%
+		\hfill\rule{100pt}{0.5pt}\\\mbox{}\hfill\tempa,\ \emph{\tempb}%
+		\else%
+		\hfill\rule{100pt}{0.5pt}\\\mbox{}\hfill\tempa,\ \emph{\tempb},\ \tempc%
+		\fi\fi\par%
+		\vspace{0.5em}%
+	\end{list}%
+}%
+\makeatother
+
+
+
+
+
+
+
+%%%%********************************************************************
+%title link to doi
+\newbibmacro{string+doiurlisbn}[1]{%
+	\iffieldundef{doi}{%
+		\iffieldundef{url}{%
+			\iffieldundef{isbn}{%
+				\iffieldundef{issn}{%
+					#1%
+				}{%
+					\href{http://books.google.com/books?vid=ISSN\thefield{issn}}{#1}%
+				}%
+			}{%
+				\href{http://books.google.com/books?vid=ISBN\thefield{isbn}}{#1}%
+			}%
+		}{%
+			\href{\thefield{url}}{#1}%
+		}%
+	}{%
+		\href{https://doi.org/\thefield{doi}}{#1}%
+	}%
+}
+
+\DeclareFieldFormat{journaltitle}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}

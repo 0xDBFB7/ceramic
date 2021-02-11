@@ -1,6 +1,12 @@
 # Ceramics as she is spoke
 
-[References](./references.pdf) | [BibTeX](./bibtex.bib) 
+<!---
+
+pandoc --filter pandoc-citeproc --bibliography=references.bib -s terse.md -o paper.html
+
+-->
+
+[References](./references.pdf) | [BibTeX](./bibtex.bib) | [BibTeX](./bibtex.bib)
 
 
 
@@ -28,7 +34,7 @@ If you don't feel like perusing my prolonged prose (I don't blame you):
 
 
 
-![20190518_142932_HDR](assets/20190518_142932_HDR.jpg)
+![20190518_142932_HDR](assets/20190518_142932_HDR.jpg){ width=50% }
 
 > This is a poor-quality part; much better quality ones have been produced by this method.
 >
@@ -41,7 +47,7 @@ The recipe below is overcomplicated to a level previously only found in college 
 
 
 
-![Screenshot from 2019-06-03 20-11-28](assets/Screenshot from 2019-06-03 20-11-28.png)
+![Screenshot from 2019-06-03 20-11-28](assets/Screenshot from 2019-06-03 20-11-28.png){ width=50% }
 
 
 
@@ -66,7 +72,7 @@ If you're interested in trying this, I highly recommend skimming through the ref
 
 
 
-Add 70 or 90% fine Alumina powder (*Calcined Alumina*, \$12/kg, *Tucker's Pottery*) to 30 or 10% by weight Kaolin powder (\$20/kg, *Amazon.ca*), then mix 'til homogeneous. Add 4% by weight PVA white glue (*LePage general purpose white glue/wood glue* known to work, 45 to 70% solids), then 10% water by weight. 
+Add 70 or 90% fine Alumina powder (*Calcined Alumina*, \$12/kg, *Tucker's Pottery*) to 30 or 10% by weight Kaolin powder (\$20/kg, *Amazon.ca*), then mix 'til homogeneous. Add 4% by weight PVA white glue (*LePage general purpose white glue/wood glue* known to work, 45 to 70% solids), then 10% water by weight.
 
 Mix thoroughly until *cursed Parmesan* texture attained, then alternate adding water and mixing until the solution becomes a thick putty. 30g batches are suitable for manual mixing. The liquid seems to evaporate very rapidly; the putty is only workable for a few minutes.
 
@@ -78,7 +84,7 @@ Unfortunately, borate crosslinks are reversed as soon as the solution dries.
 
 Do not inhale dust; wear a respirator.
 
-According to @chabert2008cross, the delicate green is machinable "if due care is taken". Unfortunately, due care appears to include not machining. This is a thoroughly annoying process; 
+According to @chabert2008cross, the delicate green is machinable "if due care is taken". Unfortunately, due care appears to include not machining. This is a thoroughly annoying process;
 
 Molding with pressure is preferable to prevent voids. A three-piece mold of this style:
 
@@ -96,7 +102,7 @@ Wax paper is effective for mold release.
 
 Molding can produce a near-net-shape part, but green binder shrinkage (1.2% typ.) will affect final dimensions. Machining dried green stock nulls out this shrinkage, and avoids the nuisance of unreliable molds.
 
-Previous green binders were sensitive to variations in cross section; differential drying and shrinkage across thin geometries would cause cracking. PVA seems insensitive to these issues. 
+Previous green binders were sensitive to variations in cross section; differential drying and shrinkage across thin geometries would cause cracking. PVA seems insensitive to these issues.
 
 Dry for 3-5 hours at ambient. The green is delicate, handle carefully. CNC machine at essentially any reasonable feed/speed; machining properties seem to be similar to graphite. Cutting forces can be surprisingly high at >400m/min surface speeds, so a PLA clamp was used to hold the wafer.
 
@@ -104,31 +110,31 @@ Dry for 3-5 hours at ambient. The green is delicate, handle carefully. CNC machi
 
 *Do not inhale dust.* There is some evidence that it will give you Alzheimer's. Dust is highly abrasive, so ensure that axis guards are in place if available and expect dulled tooling.
 
-Uncrosslinked PVA hardens purely by dehydration, so failed mold shots or tailings can be reconstituted with water and added to future batches. 
+Uncrosslinked PVA hardens purely by dehydration, so failed mold shots or tailings can be reconstituted with water and added to future batches.
 
 
 
-Sinter at >1450 C. 70% alumina requires ~10 minutes, 90%, ~30 minutes to a strength suitable for most applications. Do not move green after binder burnout; it has zero strength. Parts with volume $<5mm^3$ can be unreliably but rapidly sintered via propane torch; very frustrating, not at all recommended. 
+Sinter at >1450 C. 70% alumina requires ~10 minutes, 90%, ~30 minutes to a strength suitable for most applications. Do not move green after binder burnout; it has zero strength. Parts with volume $<5mm^3$ can be unreliably but rapidly sintered via propane torch; very frustrating, not at all recommended.
 
 
 
 These temperatures are difficult to achieve with conventional ceramic kilns. *Hot Surface Ignitors* for central heating and gas stoves are an excellent commodity source of SiC elements for ultra-high-temp furnaces. Both SiC and SiNi HSIs are available; SiC greatly preferred due to higher temperature resistance. SiNi HSIs also often specify an 80v DC supply for reasons unknown.
 
-SiC HSIs are mechanically delicate, but seem to tolerate ceramic spall and contamination. 
+SiC HSIs are mechanically delicate, but seem to tolerate ceramic spall and contamination.
 
-Use `CoorsTek 271N` (or `Emerson 767A-372`) SiC HSI ($33 CAD, Amazon) or equivalent with fiberglass wire insulation, Steatite C220 or Alumina body, nichrome wire. Beware Teflon insulation. 
+Use `CoorsTek 271N` (or `Emerson 767A-372`) SiC HSI ($33 CAD, Amazon) or equivalent with fiberglass wire insulation, Steatite C220 or Alumina body, nichrome wire. Beware Teflon insulation.
 
 Typical ratings: a tepid 980 C at 102v to a positively balmy 1705 C at 132v (@coorstek2017). Expect consistent 3.7A draw over entire temperature range.
 
 ![kiln](assets/kiln.png)
 
-Kiln built using single Amaco `28035N` 9" by 4-1/2" by 2-1/2" firebrick ($15, Amazon) cut and pocketed using a wet tile saw; the element was then mounted with fire-cement (*Imperial High-Temp Stove and Furnace Cement*). Let cement dry overnight, then slowly raise temperature over course of ~30 minutes. 
+Kiln built using single Amaco `28035N` 9" by 4-1/2" by 2-1/2" firebrick ($15, Amazon) cut and pocketed using a wet tile saw; the element was then mounted with fire-cement (*Imperial High-Temp Stove and Furnace Cement*). Let cement dry overnight, then slowly raise temperature over course of ~30 minutes.
 
 The alumina-foam firebrick is quite delicate, and the end-cap to which the element was mounted later broke during handling. Mounting with threaded rods and large washers is recommended.
 
-Depending on local line voltage and alumina purity, a variac may be required to raise voltage ~15% to reach a suitable sinter temperature. 
+Depending on local line voltage and alumina purity, a variac may be required to raise voltage ~15% to reach a suitable sinter temperature.
 
-I have a serious crush on this furnace. It typically reaches 1000c in one minute, and ~1400c in the next two, allowing for very rapid iterative testing (useful for my crude, blunderbuss style of R&D). It can also toast bread in 2.4 seconds. Some green binders (gelatine, specifically) were sensitive to temperature ramp rate; PVA seems unfazed by these crazy dT/dts. 
+I have a serious crush on this furnace. It typically reaches 1000c in one minute, and ~1400c in the next two, allowing for very rapid iterative testing (useful for my crude, blunderbuss style of R&D). It can also toast bread in 2.4 seconds. Some green binders (gelatine, specifically) were sensitive to temperature ramp rate; PVA seems unfazed by these crazy dT/dts.
 
 Bread is not unfazed.
 
@@ -138,7 +144,7 @@ Expect element lifespan on the order of ~500 minutes at 130v: degradation occurs
 
 ![my_photo-bubble4](assets/my_photo-bubble4.jpg)
 
-Interestingly, the same "bubbling" failure mode is seen on the reinforced-carbon-carbon panels on the  leading edges of the space shuttle, which are coated with SiO and SiC for oxidation protection. 
+Interestingly, the same "bubbling" failure mode is seen on the reinforced-carbon-carbon panels on the  leading edges of the space shuttle, which are coated with SiO and SiC for oxidation protection.
 
 This carbon-carbide conversion coating seems to be easy to perform in a furnace such as this one; see Tonsil 5 for details. SiC elements are also used on the ALQ-144 IR missile jammer, so it's unlikely that my laboratory will be hit with a missile in the near future.
 
@@ -154,9 +160,9 @@ A PID control system can be added with an SSR: P: 1, I: 1, D: 2 to 6 based on th
 
 Simple K-type thermocouple wire can operate briefly at 1300c; McMaster-Carr's #3859K44 thermocouples survive 1400c for a few seconds before being incinerated, though the high thermal mass leads to a ~200 C offset in this application (seen in the graph above).
 
-A thin tungsten wire works well as a thermistor, but is rapidly oxidized. Nichrome also works well as a thermistor, though some brands seem to have a strange bijective resistivity curve. It is also destroyed in short order. 
+A thin tungsten wire works well as a thermistor, but is rapidly oxidized. Nichrome also works well as a thermistor, though some brands seem to have a strange bijective resistivity curve. It is also destroyed in short order.
 
-Non-contact temperature measurement is more suitable, though all COTS bolometers begin to whimper at these temperatures. A disappearing-filament pyrometer is trivial to build; if a spectrometer is available, fitting the pleasant glow of the furnace to the Stefan-Boltzmann law can get you within a few hundred degrees. 
+Non-contact temperature measurement is more suitable, though all COTS bolometers begin to whimper at these temperatures. A disappearing-filament pyrometer is trivial to build; if a spectrometer is available, fitting the pleasant glow of the furnace to the Stefan-Boltzmann law can get you within a few hundred degrees.
 
 A ratio pyrometer built from two photodiodes (or phototransistors, depending on your bias) with IR-cut and IR-pass filters may also work. These techniques are complicated somewhat by alumina's selective radiation: the spectral emissivity curve looks like someone put overcooked pasta into Matplotlib.[^2] Worse still, it varies with temperature by about half an order of magnitude.  
 
@@ -164,15 +170,15 @@ All of this is for naught, however, since active control does not appear to be r
 
 
 
-This process is not ideal for production: FAST/SPS has several advantages, including full-density sintering at only 1150c, and *as yet there's no consensus as to how it works*. It is *magic*. See @guillon2014field. Thanks to @ice9 for the tip! 
+This process is not ideal for production: FAST/SPS has several advantages, including full-density sintering at only 1150c, and *as yet there's no consensus as to how it works*. It is *magic*. See @guillon2014field. Thanks to @ice9 for the tip!
 
 
 
-Expect extremely low outgassing (even to LIGO standards), low permeability, continuous service temp ~1500c (with 90% mix - 70% mix became brittle at ~1600c), strength comparable to aluminum (with 70% mix - 90% mix is a little weaker), 20 MV/m breakdown at ambient, hardness Mohs ~9. 
+Expect extremely low outgassing (even to LIGO standards), low permeability, continuous service temp ~1500c (with 90% mix - 70% mix became brittle at ~1600c), strength comparable to aluminum (with 70% mix - 90% mix is a little weaker), 20 MV/m breakdown at ambient, hardness Mohs ~9.
 
 At low temperatures, you can expect extremely low outgassing (even to LIGO standards).
 
-The alumina itself is not an outgassing concern; if you have success with purer alumina compositions, you can expect good vacuum performance all the way to ~1700c. 
+The alumina itself is not an outgassing concern; if you have success with purer alumina compositions, you can expect good vacuum performance all the way to ~1700c.
 
 The clay binder is a somewhat different story. Pure Kaolin becomes Mullite above 1400c, which is as stable as alumina at low temperatures. However, silica impurities in the Kaolin may begin to sublimate to SiO at above 1300c. See @krieger1965thermodynamics for details; but in general, operation at above ~1400c is contraindicated.
 
@@ -198,11 +204,11 @@ Post improvements or replication at <https://github.com/0xDBFB7/ceramic>, or hit
 
 #### Tonsil 1: Brazing
 
-Alumina can be readily brazed by the "active metal" process. In essence, this merely requires a titanium interface layer; the titanium adheres strongly to the alumina when molten, after which standard filler rods and brazing techniques can be used. The entire process must take place in a high vacuum or exceptionally clean argon atmosphere, else inert titanium oxides and nitrides will form. 
+Alumina can be readily brazed by the "active metal" process. In essence, this merely requires a titanium interface layer; the titanium adheres strongly to the alumina when molten, after which standard filler rods and brazing techniques can be used. The entire process must take place in a high vacuum or exceptionally clean argon atmosphere, else inert titanium oxides and nitrides will form.
 
-A low-melting-point titanium alloy is usually used, as pure Ti melts at some 1800 C. 
+A low-melting-point titanium alloy is usually used, as pure Ti melts at some 1800 C.
 
-A soft copper or Kovar interface layer is often used to prevent differing thermal coefficients from cracking the ceramic when the weld cools. 
+A soft copper or Kovar interface layer is often used to prevent differing thermal coefficients from cracking the ceramic when the weld cools.
 
 See @hammond1988brazing and *Is it possible to braze ceramics?* *P.M.Roberts/Delphi Brazing Consultants* for details.
 
@@ -214,13 +220,13 @@ See @hammond1988brazing and *Is it possible to braze ceramics?* *P.M.Roberts/Del
 
 Almost any organic binder can be used.
 
-#### Tonsil 4: Conductive graphite-impregnated 
+#### Tonsil 4: Conductive graphite-impregnated
 
 
 
 #### Tonsil 3: Cataphoresis
 
-The initial solution can be thinned considerably, and various objects can be dipped to form hard coatings. Attempts with graphite and aluminum have been successful; however, obtaining a uniform, tight-tolerance layer is somewhat difficult. 
+The initial solution can be thinned considerably, and various objects can be dipped to form hard coatings. Attempts with graphite and aluminum have been successful; however, obtaining a uniform, tight-tolerance layer is somewhat difficult.
 
 If such a layer is required, a variant of electrophoresis can be used; see @lazic2004influence for details. This technique is often used to insulate indirectly heated cathodes.
 
@@ -266,7 +272,7 @@ Almost 8 months of trial and error was required to obtain a usable part by this 
 
 ![20181122_212237_HDR](assets/20181122_212237_HDR.jpg)
 
-> A lost-PLA test with alternate high-temp sol-gel gelatine binder. The mold was filled 
+> A lost-PLA test with alternate high-temp sol-gel gelatine binder. The mold was filled
 
 
 
@@ -293,4 +299,3 @@ Almost 8 months of trial and error was required to obtain a usable part by this 
 ![20190528_210001_HDR](assets/20190528_210001_HDR-1561693380584.jpg)
 
 Anyhow, suffice it to say that I fucked up a lot.
-

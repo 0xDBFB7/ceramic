@@ -1,0 +1,37 @@
+
+
+
+	<style>
+		body {
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizelegibility;
+		}
+
+		.text-muted { color: #999999 !important; }
+
+		.text-title { font-size:30px;!important; }
+
+	 	redacted {
+			background-color: #000000;
+		  color:transparent;
+		}
+
+		body{margin:40px
+				auto;max-width:800px;line-height:1.6;font-size:20px;color:#444;padding:0
+				10px}
+
+		h1,h2,h3{line-height:1.2}
+
+    body, p
+    {
+        font-family: 'Roboto';
+        font-weight: 400;
+				-webkit-font-smoothing: antialiased;
+				text-rendering: optimizelegibility;
+    }
+
+		div.a {
+  		text-align: center;
+		}
+
+	</style>
