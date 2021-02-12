@@ -1,3 +1,7 @@
+---
+link-citations: true
+...
+
 # Attempts at an inexpensive 1500 C furnace
 
 <!---
@@ -9,7 +13,7 @@ scp -r images/furnace/ blog:/media/blog/src/images/
 had to apt-cache clean to get back some space
 -->
 
-[Repository](https://github.com/0xDBFB7/ceramic/) | [References](references.html) | [Zotero](https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/ceramics.rdf) | [BibTeX](references.bib) 
+[Repository](https://github.com/0xDBFB7/ceramic/) | [References](https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/references.html) | [Zotero](https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/ceramics.rdf) | [BibTeX](https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/references.bib)
 
 
 #### Standard safety disclaimer:
@@ -29,17 +33,21 @@ A few years ago ago I was lucky enough to have some time to tinker with high-tem
 
 Many of the Vacuum Hackers (among others) have much more expertise on ceramic blends, and you should probably talk to them instead.
 
+<hr>
+
 #### ~$40 "hot surface igniters", commonly used in gas furnaces for central heating, are a fantastic commodity source of pre-terminated silicon carbide heating elements. They appear to be usable at 1400 C continuously with 20 minute bursts to ~1600 C in air, and probably well over ~2000 C in inert gas or vacuum.
+
+<hr>
 
 It's relatively easy to get to 800 C or so with standard heating elements, microwave susceptors, or gas torches, sufficient for some low-fired >30% kaolin ceramic blends. With care in heating element support, termination, and insulation, commercial "high-fire" ceramics kilns can usually reach about 1300 C.
 
-However, a very useful class of techniques demand a minimum of 1450 C, including the most common high-purity oxide ceramics like $\text{Al}_2\text{O}_3$ and $\text{MgO}$ and $\text{AlN}$, even if sinter-point-depressing additives are used (see awesome data from @Sintering1957a and @Vitreous1942). Furnaces that can reach such temperatures are usually quite expensive. Small zirconia sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. There are a few sources of surplus high-temperature elements.
+However, a very useful class of techniques practically demand a minimum of about 1400 C, including the most common high-purity oxide ceramics like $\text{Al}_2\text{O}_3$, $\text{MgO}$ and $\text{AlN}$, even if sinter-point-depressing additives are used (see awesome data from @Sintering1957a and @Vitreous1942). Furnaces that can reach such temperatures are usually quite expensive. Small zirconia sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. There are a few sources of surplus high-temperature elements.
 
 Acetylene torches do not appear to offer the required control over temperature ramp rate and produce strong thermal gradients that crack the green during burnout.
 
 Some alternative techniques can often be used in specific circumstances, such as field-assisted sintering (thanks @ice9). However, a general-purpose desktop furnace for small parts seemed like a pretty useful piece of equipment.
 
-More critically, if a vacuum furnace is desired, standard Nichrome and Kanthal heater wire degrades very rapidly. See, for instance, this striking quote from @mazelsky1974multipurpose :
+More critically, if a vacuum furnace is desired, standard Nichrome or Kanthal heater wire degrades very rapidly. See, for instance, this striking quote from @mazelsky1974multipurpose :
 
 > The next factor investigated was the suitability of Kanthal A-1 as heater material. Although this material is suitable for use to 1325 C in air, at least one reference does not recommend its use in vacuum at temperatures over 1000°C. This warning is founded in the rapid evaporation of a component (chromium?) from the alloy and verified by tests we performed on bare wires in ultra-high vacuum. Sample filaments burned out after two hours or less at a surface temperature of 1200°C.
 
@@ -61,7 +69,7 @@ Getting above ~1500c involved increasing the 115V line voltage to about 135 V us
 
 You can expect an element lifespan probably on the order of about 500 minutes at 130v in air.
 
-Degradation occurs via a *fascinating* multi-step oxidation reaction described in detail by @Bubble2015 that evolves carbon monoxide and inflates large bubbles of reduced silicon stuck to SiO2 (if I'm understanding correctly - unlikely, given poor chemistry prowess!):
+Degradation occurs via a *fascinating* multi-step oxidation reaction described in detail by @Bubble2015 that evolves carbon monoxide and inflates large bubbles of $\text{SiO}_2$ mixed with SiC (if I'm understanding correctly - unlikely, given poor chemistry prowess!):
 
 ![](images/furnace/my_photo-bubble4.jpg){ width=100% }
 
@@ -76,11 +84,11 @@ Such a carbon-carbide "conversion coating" seems to be relatively easy to perfor
 
 This kiln was built using a single Amaco `28035N` 9" by 4-1/2" by 2-1/2" aluminosilicate firebrick ($15 pre-pandemic, Amazon) cut and pocketed using a wet tile saw (although a hacksaw would work fine); the element was then mounted with fire-cement (*Imperial High-Temp Stove and Furnace Cement*). The element was inserted through a slit in the firebrick to shield the terminals somewhat. Let cement dry overnight, then slowly raise temperature over course of ~30 minutes.
 
-The firebrick does begin to degrade over the course of a few hours when running at 1500 C.
+Fissures appear in the firebrick over the course of a few hours when running at 1500 C, but this doesn't seem to be a serious issue.
 
 The alumina-foam firebrick is quite delicate, and the end-cap to which the element was mounted later broke during handling. Mounting with threaded rods and large washers is recommended.
 
-I really like this furnace. It typically reaches 1000c in one minute, and ~1400c in the next five to ten, allowing for very rapid iterative testing (useful for my crude, blunderbuss style of R&D). It can also toast bread in 2.4 seconds. Some green binders (gelatine, for instance) are sensitive to temperature ramp rate. PVA seemed unfazed by these crazy dT/dts.
+I really like this furnace. It typically reaches 1000 C in one minute, and 1400 C in the next five to ten, allowing for very rapid iterative testing (useful for my crude, blunderbuss style of R&D). It can also toast bread in 2.4 seconds. Some green binders (gelatine, for instance) are sensitive to temperature ramp rate. PVAc seemed unfazed by these crazy dT/dts.
 
 ![Bread is not unfazed.](images/furnace/kiln2.png){ width=100% }
 
@@ -90,7 +98,7 @@ Typical ratings range from a tepid 980 C at 102v to a positively balmy 1705 C at
 
 ![Flat-out temperature profile. Note that the MAX31855 thermocouple transducer stopped reading at about 1700 seconds and only recovered at 2200 seconds.](images/furnace/test_2.png){ width=100% }
 
-Standard thin K-type thermocouple wire can operate briefly at 1400c; McMaster-Carr's #3859K44 thermocouples survive 1400c for a few seconds before being incinerated, though the high thermal mass leads to a ~200 C offset in this application (seen in the graph above).
+Standard thin K-type thermocouple wire can operate briefly at 1400 C; McMaster-Carr's #3859K44 thermocouples survive a bit higher for a few minutes before being incinerated, though the high thermal mass leads to a ~200 C offset in this application (seen in the graph above).
 
 Non-contact temperature measurement is more suitable, though all COTS bolometers begin to whimper at these temperatures.
 
@@ -109,7 +117,7 @@ These techniques are complicated somewhat by alumina's selective radiation: the 
  - Many interesting techniques require an inert or nitriding atmosphere.
  - In a rough vacuum, it should be possible to exceed 1,700 C continuously, probably limited only by the temperature at the nichrome termination.
 
-Most insulating materials that can withstand such temperatures are expensive or difficult to work with. Because of the $\text{P}\approx \text{T}^4$ nature of the Stefan-Boltzmann law vs the approximately linear dependence of conduction, at such high temperatures radiative insulation is the primary concern. For this reason, many layers of multi-layer insulation may suffice.
+Most insulating materials that can withstand such temperatures are expensive or difficult to work with. Because of the $\text{P}\approx \text{T}^4$ nature of the Stefan-Boltzmann law vs the approximately linear dependence of conduction, at such high temperatures radiative insulation is the primary concern. For this reason, many concentric shells of multi-layer insulation may suffice.
 
 The advantage here is that the efficiency of MLI depends only weakly on the emissivity and conductivity of the insulation. For this reason, a stack of machined graphite may be sufficient.
 
@@ -118,9 +126,9 @@ The advantage here is that the efficiency of MLI depends only weakly on the emis
 ![](images/furnace/wtf.JPG){ width=50% }
 
 
-### Thanks for reading!
+## Thanks for reading!
 
-Suggest improvements on the github issues page at <https://github.com/0xDBFB7/ceramic>, or hit me up @0xDBFB7 on Twitter!
+Suggest improvements on the GitHub issues page at <https://github.com/0xDBFB7/ceramic>, or hit me up \@0xDBFB7 on Twitter!
 
 ❤
 
@@ -136,11 +144,11 @@ However, aqueous gel-casting has a notable drawback in that most common binders 
 
 (Note that, confusingly, both PVAc, poly(vinyl acetate), and PVOH, poly(vinyl alcohol), are each often referred to as 'PVA', despite having completely different properties. Standard white glues are an emulsion of primarily PVAc and some PVOH).
 
-Alginates are a pretty neat tunable binder; the molecules cross-link together whenever a Ca+ or Mg+ ion is present in solution, meaning that the viscosity and trigger can be tuned with various chelators or solvents @Fabrication2003.
+Alginates are a pretty neat tunable binder; the molecules cross-link together whenever a $\text{Ca}^{2+}$ or $\text{Mg}^{2+}$ ion is present in solution, meaning that the viscosity and trigger can be tuned with various chelators or ionic salts @Fabrication2003.
 
 Glutinous rice flour @Study2014 is the strongest readily-available gel-casting binder that I'm aware of.
 
-I have, however, had much better results from low-pressure injection molding with a paraffin wax binder. Several suitable binders are discussed in @EVALUATION1965. A plastic syringe suffices for injection.
+I have, however, had much better results from so-called low-pressure injection molding with a 15\% paraffin wax binder. Several suitable binders are discussed in @EVALUATION1965. A plastic syringe suffices for injection.
 
 ![](images/furnace/Screenshot from 2019-06-03 20-11-28.png){ width=50% }
 
@@ -153,11 +161,11 @@ A soft copper or Kovar interface layer is often used to prevent the differing th
 
 See @Brazing1988 and @it2009 for details.
 
-#### Tonsil 2: $MnO_2$
+#### Tonsil 2: $\text{MnO}_2$
 
-@Vitreous1942 describe how Manganese Dioxide can be used to depress the sinter point of pure alumina to more reasonable temperatures, sometimes without the use of silica. An impure, graphite-contaminated $\text{MnO}_2$ can be obtained from alkaline batteries; unfortunately, I have not yet been able to reproduce this effect to any degree.
+@Vitreous1942 describe how Manganese Dioxide can be used to depress the sinter point of pure alumina to more reasonable temperatures, sometimes without the use of silica. An impure, graphite-contaminated $\text{MnO}_2$ can be obtained from alkaline batteries; unfortunately, I have not yet been able to reproduce this effect.
 
-The effects of sintering additives on the development of the crystalline structure are very interesting and counterintuitive (@Controlled1976 @Bulk2009). It would be interesting to see if these effects can be predicted with some fidelity by modern molecular dynamics procedures. I have done no research in this area - this may already be common practice.
+The effects of sintering additives on the development of the crystalline structure are very interesting and counterintuitive (@Controlled1976 @Bulk2009). It would be interesting to see if these effects can be predicted with some accuracy by modern molecular dynamics procedures - something like DFT or Q ESPRESSO or HOOMD-Blue. I have done no research into this field - this is almost certainly already common practice.
 
 #### Tonsil 3: Cataphoresis
 
@@ -183,12 +191,36 @@ Attempts at acetylene sintering.
 
 ![Screenshot from 2019-02-10 15-27-45](images/furnace/Screenshot from 2019-02-10 15-27-45.png){ width=50% }
 
-
-
-
-
-
 > Acetylene-sintered with 3% slip.
+
+
+#### Tonsil 7: Lessons Learned
+
+(pardon the self-indulgent philosophizing here)
+
+Perhaps it is useful to think about the test coupons that you use when optimizing processes. It seems like they should be as small, fast, and easy as possible while still reflecting the desired end product.
+
+For instance, if you use an oversimplified test coupon, you might start overfitting your process to get good results on the coupon, rather than the final product you need. Don't overthink it though.
+
+Perhaps there is some information in the design-of-experiments literature on this topic that may be of some use.
+
+For some reason, the tests that I ran were largely sequential; run one mixture, observe the effects, modify the mixture slightly, etc. Parallelizing and pipelining may have made this go faster.
+
+A very, very large number of idiotic mistakes were made regarding mixture compositions. I tried a gelatin process very early on, but made a very dumb mistake in the mixture ratios (adding far too much water), which lead to binder migration, which lead me to believe that gelatine was ineffective. Don't do that, I guess?
+
+It seems to be something of a common theme for me to start with a solution that *almost* works, provides 80% of the required functionality, then do rote, menial work for months - only to end up with a product that is almost identical to the starting point.
+
+I don't know what meta changes can be made to break out of this cycle. Just abandoning everything for a new startpoint wouldn't be very helpful, I don't think. Maybe it's something like you can't fix deep-set issues by just changing minor details. Maybe that's just the way science works.
+
+##### Constrained resources
+
+On one hand, not having $2000 to drop on a high-temp kiln was greatly beneficial, for it forced
+learning all about high-temp kiln design. On the other hand, much time was wasted trying to troubleshoot sintering something
+which could never have worked with the kilns that I had, thinking the problem was the binder when it really was the kiln.
+
+Testing and characterizing each section sequentially with known-good equipment, then applying optimizations might have been more effective than this 'all-up' test. On the other hand, it worked out okay, so I think I'll stay with this method.
+
+
 
 
 ## Bibliography:
