@@ -9253,4 +9253,340 @@ Publisher: Nature Publishing Group</dc:description>
         <dc:title>19760003136.pdf</dc:title>
         <link:type>application/pdf</link:type>
     </z:Attachment>
+    <z:Collection rdf:about="#collection_109">
+        <dc:title>AlN</dc:title>
+        <dcterms:hasPart rdf:resource="#item_1233"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/0921509389905959"/>
+        <dcterms:hasPart rdf:resource="http://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/j.1151-2916.1959.tb14066.x"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_33">
+        <dc:title>binder</dc:title>
+        <dcterms:hasPart rdf:resource="#collection_66"/>
+        <dcterms:hasPart rdf:resource="#collection_73"/>
+        <dcterms:hasPart rdf:resource="#collection_67"/>
+        <dcterms:hasPart rdf:resource="#collection_61"/>
+        <dcterms:hasPart rdf:resource="#collection_65"/>
+        <dcterms:hasPart rdf:resource="#collection_80"/>
+        <dcterms:hasPart rdf:resource="#collection_126"/>
+        <dcterms:hasPart rdf:resource="#collection_112"/>
+        <dcterms:hasPart rdf:resource="#collection_64"/>
+        <dcterms:hasPart rdf:resource="#collection_146"/>
+        <dcterms:hasPart rdf:resource="#collection_69"/>
+        <dcterms:hasPart rdf:resource="#collection_76"/>
+        <dcterms:hasPart rdf:resource="#collection_72"/>
+        <dcterms:hasPart rdf:resource="#collection_62"/>
+        <dcterms:hasPart rdf:resource="#collection_60"/>
+        <dcterms:hasPart rdf:resource="#collection_95"/>
+        <dcterms:hasPart rdf:resource="#item_267"/>
+        <dcterms:hasPart rdf:resource="#item_873"/>
+        <dcterms:hasPart rdf:resource="#item_1185"/>
+        <dcterms:hasPart rdf:resource="http://www.osti.gov/servlets/purl/4588054/"/>
+        <dcterms:hasPart rdf:resource="https://www.mdpi.com/2073-4360/3/4/1972"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_66">
+        <dc:title>Acrylamide</dc:title>
+        <dcterms:hasPart rdf:resource="https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/j.1151-2916.1991.tb04068.x"/>
+        <dcterms:hasPart rdf:resource="https://www.osti.gov/servlets/purl/86933"/>
+        <dcterms:hasPart rdf:resource="https://patents.google.com/patent/US5028362A/en"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_73">
+        <dc:title>Acrylic</dc:title>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0955221997001155"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_67">
+        <dc:title>Agar</dc:title>
+        <dcterms:hasPart rdf:resource="http://fiestafarms.ca/13347/food/agar-agar-the-vegan-gelatin-alternative"/>
+        <dcterms:hasPart rdf:resource="http://doi.wiley.com/10.1111/j.1551-2916.2006.01040.x"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0167577X00002585"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_61">
+        <dc:title>Alginate</dc:title>
+        <dcterms:hasPart rdf:resource="#collection_100"/>
+        <dcterms:hasPart rdf:resource="#item_263"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-981-10-6086-1"/>
+        <dcterms:hasPart rdf:resource="https://pubs.acs.org/doi/10.1021/ma990514m"/>
+        <dcterms:hasPart rdf:resource="#item_511"/>
+        <dcterms:hasPart rdf:resource="http://xlink.rsc.org/?DOI=C8RA01302K"/>
+        <dcterms:hasPart rdf:resource="https://www.kulzer.com/media/webmedia_local/downloads_new/further_products_2/xantalgin_3/Guideline_for_taking_perfect_Situation_Impressions_GB.pdf?utm_source=Flexitime0Tips6Tricks&amp;utm_medium=print"/>
+        <dcterms:hasPart rdf:resource="#item_1291"/>
+        <dcterms:hasPart rdf:resource="https://www.deanza.edu/chemistry/documents/1c/experiments/Experiment%20C3-%20Common%20Ion.pdf"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0167577X0201306X"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0272884208001909"/>
+        <dcterms:hasPart rdf:resource="http://xlink.rsc.org/?DOI=C4SM00411F"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_100">
+       <dc:title>photoacid</dc:title>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_65">
+        <dc:title>Chitosan</dc:title>
+        <dcterms:hasPart rdf:resource="https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/j.1151-2916.2002.tb00338.x"/>
+        <dcterms:hasPart rdf:resource="#item_869"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_80">
+        <dc:title>DMAA</dc:title>
+        <dcterms:hasPart rdf:resource="http://link.springer.com/10.1007/s11664-014-3112-7"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_126">
+        <dc:title>EggWhite</dc:title>
+        <dcterms:hasPart rdf:resource="http://doi.wiley.com/10.1111/j.1151-2916.2001.tb01137.x"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_112">
+        <dc:title>freeze_casting</dc:title>
+        <dcterms:hasPart rdf:resource="https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/j.1151-2916.2001.tb00860.x"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_64">
+        <dc:title>Gelatin</dc:title>
+        <dcterms:hasPart rdf:resource="#item_287"/>
+        <dcterms:hasPart rdf:resource="#item_307"/>
+        <dcterms:hasPart rdf:resource="https://us.vwr.com/assetsvc/asset/en_US/id/17976164/contents"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-3-527-31548-2%20978-3-527-61096-9"/>
+        <dcterms:hasPart rdf:resource="http://arxiv.org/abs/1010.5971"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0955221998002015"/>
+        <dcterms:hasPart rdf:resource="https://doi.org/10.1080/19476337.2010.523902"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0924013602008622"/>
+        <dcterms:hasPart rdf:resource="http://www.sciencedirect.com/science/article/pii/S1742706110002461"/>
+        <dcterms:hasPart rdf:resource="http://www.sciencedirect.com/science/article/pii/S0955221999000898"/>
+        <dcterms:hasPart rdf:resource="https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/j.1151-2916.2001.tb00860.x"/>
+        <dcterms:hasPart rdf:resource="https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/ijag.12060"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_146">
+        <dc:title>GRF</dc:title>
+        <dcterms:hasPart rdf:resource="https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/ijag.12060"/>
+        <dcterms:hasPart rdf:resource="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1745-4603.2008.00140.x"/>
+        <dcterms:hasPart rdf:resource="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4990194/"/>
+        <dcterms:hasPart rdf:resource="https://doi.org/10.1007/s10854-020-03096-1"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_69">
+        <dc:title>Isobam</dc:title>
+        <dcterms:hasPart rdf:resource="https://www.cambridge.org/core/product/identifier/S0884291413001325/type/journal_article"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0272884214001333"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_76">
+        <dc:title>Methacrylamide</dc:title>
+        <dcterms:hasPart rdf:resource="https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/j.1151-2916.1998.tb02377.x"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_72">
+        <dc:title>other</dc:title>
+        <dcterms:hasPart rdf:resource="#item_267"/>
+        <dcterms:hasPart rdf:resource="#item_942"/>
+        <dcterms:hasPart rdf:resource="https://en.wikipedia.org/w/index.php?title=Starch_gelatinization&amp;oldid=927676171"/>
+        <dcterms:hasPart rdf:resource="#item_951"/>
+        <dcterms:hasPart rdf:resource="https://woelen.homescience.net/science/chem/exps/rules.html"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0955221908003798"/>
+        <dcterms:hasPart rdf:resource="https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/j.1551-2916.2011.04557.x"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_62">
+        <dc:title>PEOX (aquazol)</dc:title>
+        <dcterms:hasPart rdf:resource="#item_272"/>
+        <dcterms:hasPart rdf:resource="https://www.polychemistry.com/wp-content/uploads/2019/05/Aquazol-Compressive-Strength-Density-of-Alumina-Mix.pdf"/>
+        <dcterms:hasPart rdf:resource="https://cool.conservation-us.org/waac/wn/wn25/wn25-2/wn25-205.pdf"/>
+        <dcterms:hasPart rdf:resource="https://www.scientific.net/AST.45.453"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_60">
+        <dc:title>PVOH</dc:title>
+        <dcterms:hasPart rdf:resource="#collection_68"/>
+        <dcterms:hasPart rdf:resource="https://www.researchgate.net/figure/Tensile-strength-of-PVA-fiber-at-various-temperatures-9_fig1_317622528"/>
+        <dcterms:hasPart rdf:resource="#item_517"/>
+        <dcterms:hasPart rdf:resource="#item_518"/>
+        <dcterms:hasPart rdf:resource="#item_522"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0167577X13011932"/>
+        <dcterms:hasPart rdf:resource="https://onlinelibrary.wiley.com/doi/abs/10.1002/bit.260390411"/>
+        <dcterms:hasPart rdf:resource="#item_533"/>
+        <dcterms:hasPart rdf:resource="http://link.springer.com/10.1007/s10965-005-9023-9"/>
+        <dcterms:hasPart rdf:resource="https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/j.1551-2916.2008.02534.x"/>
+        <dcterms:hasPart rdf:resource="https://onlinelibrary.wiley.com/doi/abs/10.1002/app.2023"/>
+        <dcterms:hasPart rdf:resource="https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/j.1151-2916.1984.tb18852.x"/>
+        <dcterms:hasPart rdf:resource="http://journals.sagepub.com/doi/10.1177/0307174X0303001120"/>
+        <dcterms:hasPart rdf:resource="#item_556"/>
+        <dcterms:hasPart rdf:resource="https://doi.org/10.1007/s10965-009-9362-z"/>
+        <dcterms:hasPart rdf:resource="http://doi.wiley.com/10.1002/app.45324"/>
+        <dcterms:hasPart rdf:resource="#item_946"/>
+        <dcterms:hasPart rdf:resource="https://en.wikipedia.org/w/index.php?title=Polyvinyl_acetate&amp;oldid=935891510"/>
+        <dcterms:hasPart rdf:resource="#item_1221"/>
+        <dcterms:hasPart rdf:resource="http://stacks.iop.org/0031-9155/50/i=14/a=N01?key=crossref.c582392861323ebdbe1f383782f6a4bb"/>
+        <dcterms:hasPart rdf:resource="https://doi.org/10.1007/s00396-002-0691-2"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_68">
+        <dc:title>photocrosslinking</dc:title>
+        <dcterms:hasPart rdf:resource="https://onlinelibrary.wiley.com/doi/abs/10.1002/app.1965.070091001"/>
+        <dcterms:hasPart rdf:resource="#item_693"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_95">
+        <dc:title>Wax</dc:title>
+        <dcterms:hasPart rdf:resource="#item_1297"/>
+        <dcterms:hasPart rdf:resource="#item_2229"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_37">
+        <dc:title>brazing</dc:title>
+        <dcterms:hasPart rdf:resource="#item_99"/>
+        <dcterms:hasPart rdf:resource="http://www.tandfonline.com/doi/full/10.1179/174328006X102501"/>
+        <dcterms:hasPart rdf:resource="https://en.wikipedia.org/w/index.php?title=Glass-to-metal_seal&amp;oldid=931117448"/>
+        <dcterms:hasPart rdf:resource="#item_1199"/>
+        <dcterms:hasPart rdf:resource="#item_1249"/>
+        <dcterms:hasPart rdf:resource="http://doi.wiley.com/10.1111/j.1151-2916.1979.tb12726.x"/>
+        <dcterms:hasPart rdf:resource="#item_3652"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_59">
+       <dc:title>degassing</dc:title><dcterms:hasPart rdf:resource="#item_833"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_90">
+        <dc:title>dispersant</dc:title>
+        <dcterms:hasPart rdf:resource="https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/j.1151-2916.1996.tb08006.x"/>
+        <dcterms:hasPart rdf:resource="https://nshosting.dow.com/doc-archive/business/pmat/duramax/duramax_d-3005/tds/duramax_d-3005.pdf"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_58">
+        <dc:title>doping</dc:title>
+        <dcterms:hasPart rdf:resource="https://pubs.acs.org/doi/abs/10.1021/ja01656a008"/>
+        <dcterms:hasPart rdf:resource="http://www.sciencemadness.org/talk/viewthread.php?tid=62218"/>
+        <dcterms:hasPart rdf:resource="#item_1163"/>
+        <dcterms:hasPart rdf:resource="#item_1168"/>
+        <dcterms:hasPart rdf:resource="https://patents.google.com/patent/US2290107A/en"/>
+        <dcterms:hasPart rdf:resource="https://casinoqmc.net/esdg_slides/hine030609.pdf"/>
+        <dcterms:hasPart rdf:resource="#item_1677"/>
+        <dcterms:hasPart rdf:resource="#item_1678"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_177">
+        <dc:title>drying</dc:title>
+        <dcterms:hasPart rdf:resource="http://www.sciencedirect.com/science/article/pii/S0955221903000451"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_124">
+        <dc:title>electrophoresis</dc:title>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0955221996001136"/>
+        <dcterms:hasPart rdf:resource="http://www.doiserbia.nb.rs/Article.aspx?ID=0352-51390403239L"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_70">
+        <dc:title>FAST-SPS</dc:title>
+        <dcterms:hasPart rdf:resource="#item_1195"/>
+        <dcterms:hasPart rdf:resource="#item_1212"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_123">
+       <dc:title>freeze</dc:title><dcterms:hasPart rdf:resource="#item_1226"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_117">
+       <dc:title>MgO</dc:title>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_31">
+        <dc:title>Mk2_furnace</dc:title>
+        <dcterms:hasPart rdf:resource="#collection_75"/>
+        <dcterms:hasPart rdf:resource="#collection_74"/>
+        <dcterms:hasPart rdf:resource="https://patents.google.com/patent/US3926602A/en"/>
+        <dcterms:hasPart rdf:resource="#item_498"/>
+        <dcterms:hasPart rdf:resource="#item_504"/>
+        <dcterms:hasPart rdf:resource="#item_879"/>
+        <dcterms:hasPart rdf:resource="https://ntrs.nasa.gov/api/citations/19760003136/downloads/19760003136.pdf"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_75">
+        <dc:title>electronics</dc:title>
+        <dcterms:hasPart rdf:resource="https://www.directplastics.co.uk/about_plastics/post/fire-ratings-of-engineering-plastics"/>
+        <dcterms:hasPart rdf:resource="#item_326"/>
+        <dcterms:hasPart rdf:resource="#item_328"/>
+        <dcterms:hasPart rdf:resource="#item_329"/>
+        <dcterms:hasPart rdf:resource="#item_426"/>
+        <dcterms:hasPart rdf:resource="#item_474"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_74">
+        <dc:title>MLI</dc:title>
+        <dcterms:hasPart rdf:resource="https://pp.bme.hu/me/article/view/5600"/>
+        <dcterms:hasPart rdf:resource="http://link.springer.com/10.1007/s12613-012-0535-0"/>
+        <dcterms:hasPart rdf:resource="#item_302"/>
+        <dcterms:hasPart rdf:resource="#item_504"/>
+        <dcterms:hasPart rdf:resource="#item_1002"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_35">
+        <dc:title>mold</dc:title>
+        <dcterms:hasPart rdf:resource="#collection_77"/>
+        <dcterms:hasPart rdf:resource="#collection_81"/>
+        <dcterms:hasPart rdf:resource="http://www.ceramicsmadeeasy.com/cme-articles/about-ceramic-molds/how-to-cast-wax-in-a-plaster-mold/172/index.html"/>
+        <dcterms:hasPart rdf:resource="#item_343"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_77">
+        <dc:title>PLA</dc:title>
+        <dcterms:hasPart rdf:resource="http://doi.wiley.com/10.1002/jsfa.2391"/>
+        <dcterms:hasPart rdf:resource="http://link.springer.com/10.1007/s12289-008-0329-0"/>
+        <dcterms:hasPart rdf:resource="https://downloads.makerbot.com/legal/MakerBot_R__PLA_and_ABS_Strength_Data.pdf"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_81">
+        <dc:title>solvent</dc:title>
+        <dcterms:hasPart rdf:resource="http://macro.lsu.edu/howto/solvents/Polarity%20index.htm"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_52">
+        <dc:title>nitriding</dc:title>
+        <dcterms:hasPart rdf:resource="#item_297"/>
+        <dcterms:hasPart rdf:resource="http://link.springer.com/10.1007/s40145-016-0213-1"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/0921509389905959"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_127">
+       <dc:title>pressing</dc:title><dcterms:hasPart rdf:resource="#item_1247"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_34">
+        <dc:title>safety</dc:title>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0300483X06004628"/>
+        <dcterms:hasPart rdf:resource="#item_341"/>
+        <dcterms:hasPart rdf:resource="www.jstor.org/stable/4582584"/>
+        <dcterms:hasPart rdf:resource="http://www.sciencedirect.com/science/article/pii/S0735675707005384"/>
+        <dcterms:hasPart rdf:resource="#item_639"/>
+        <dcterms:hasPart rdf:resource="#item_835"/>
+        <dcterms:hasPart rdf:resource="#item_1295"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_113">
+        <dc:title>sapphire</dc:title>
+        <dcterms:hasPart rdf:resource="#item_1145"/>
+        <dcterms:hasPart rdf:resource="#item_1202"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_43">
+        <dc:title>SiC</dc:title>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0261306914006505"/>
+        <dcterms:hasPart rdf:resource="#item_834"/>
+        <dcterms:hasPart rdf:resource="https://www.iue.tuwien.ac.at/phd/ayalew/node61.html"/>
+        <dcterms:hasPart rdf:resource="#item_1159"/>
+        <dcterms:hasPart rdf:resource="#item_1290"/>
+        <dcterms:hasPart rdf:resource="http://link.springer.com/10.1007/s11595-015-1141-6"/>
+        <dcterms:hasPart rdf:resource="https://onlinelibrary.wiley.com/doi/abs/10.1111/jace.13613"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0022311502009509"/>
+        <dcterms:hasPart rdf:resource="http://doi.wiley.com/10.1111/j.1151-2916.2001.tb00636.x"/>
+        <dcterms:hasPart rdf:resource="http://www.osti.gov/servlets/purl/4265033/"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0257897208008475"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-0-470-90983-6%20978-0-470-88936-7"/>
+        <dcterms:hasPart rdf:resource="http://ecee.colorado.edu/~bart/book/book/chapter2/ch2_3.htm"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_71">
+        <dc:title>sintering</dc:title>
+        <dcterms:hasPart rdf:resource="https://www.mri.psu.edu/sites/default/files/file_attach/068.pdf"/>
+        <dcterms:hasPart rdf:resource="https://ntrs.nasa.gov/search.jsp?R=19880001457"/>
+        <dcterms:hasPart rdf:resource="#item_1406"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-0-444-51650-3"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/0377042788902750"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-0-12-341809-8"/>
+        <dcterms:hasPart rdf:resource="http://arxiv.org/abs/1401.3951"/>
+        <dcterms:hasPart rdf:resource="http://stacks.iop.org/0964-1726/16/i=5/a=034?key=crossref.eca8e938cf35cd6b3476740ae8783190"/>
+        <dcterms:hasPart rdf:resource="http://www.bap.mu.edu.tr/icerik/metalurji.mu.edu.tr/Sayfa/Kalemtas_A_Sintering_2014.pdf"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_111">
+        <dc:title>tapecasting</dc:title>
+        <dcterms:hasPart rdf:resource="#item_1134"/>
+        <dcterms:hasPart rdf:resource="http://www.nhehs.org.uk/chemistry/_Carbon_(charcoal)_Copper_oxide.html"/>
+        <dcterms:hasPart rdf:resource="https://www.emerald.com/insight/content/doi/10.1108/MI-09-2013-0041/full/html"/>
+        <dcterms:hasPart rdf:resource="https://www.mdpi.com/2072-666X/10/6/401"/>
+        <dcterms:hasPart rdf:resource="http://www.sciencedirect.com/science/article/pii/S0169433202012394"/>
+        <dcterms:hasPart rdf:resource="http://aip.scitation.org/doi/10.1063/1.347417"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0955221905001664"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S1876610214012764"/>
+        <dcterms:hasPart rdf:resource="https://pubs.acs.org/doi/10.1021/nn400432z"/>
+        <dcterms:hasPart rdf:resource="https://www.nature.com/articles/srep19696"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_99">
+        <dc:title>temperature_measurement</dc:title>
+        <dcterms:hasPart rdf:resource="#collection_87"/>
+        <dcterms:hasPart rdf:resource="https://www.jstor.org/stable/10.2307/25138616?origin=crossref"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_87">
+        <dc:title>spectroscope</dc:title>
+        <dcterms:hasPart rdf:resource="#item_1082"/>
+        <dcterms:hasPart rdf:resource="https://kristilynglass.com/2016/07/22/creations/the-best-way-to-cut-a-cd-or-dvd/"/>
+        <dcterms:hasPart rdf:resource="https://www.cs.cmu.edu/~zhuxj/astro/html/spectrometer.html"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_94">
+        <dc:title>vacuum_safety</dc:title>
+        <dcterms:hasPart rdf:resource="#item_1228"/>
+    </z:Collection>
 </rdf:RDF>

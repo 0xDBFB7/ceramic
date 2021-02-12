@@ -1,4 +1,4 @@
-# An inexpensive 1500 C furnace
+# Attempts at an inexpensive 1500 C furnace
 
 <!---
 
@@ -9,7 +9,7 @@ scp -r images/furnace/ blog:/media/blog/src/images/
 had to apt-cache clean to get back some space
 -->
 
-[References](references.html) | [Zotero](references.rdf) | [BibTeX](references.bib)
+[Repository](https://github.com/0xDBFB7/ceramic/) | [References](references.html) | [Zotero](https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/ceramics.rdf) | [BibTeX](references.bib) 
 
 
 #### Standard safety disclaimer:
@@ -25,23 +25,25 @@ had to apt-cache clean to get back some space
 
 
 
-A few years ago ago I was lucky enough to have some time to tinker with high-temperature ceramics. Little of value was determined, primarily just empirical nonsense, but I figured I would quickly dump the most useful facts into this document. Nothing reported is even slightly novel; many of the Vacuum Hackers have much more expertise on ceramic blends, and you should probably talk to them instead.
+A few years ago ago I was lucky enough to have some time to tinker with high-temperature ceramics. Very little of value was determined, primarily just empirical nonsense; I have not managed to figure out a consistent protocol for high-alumina parts. I figured I would quickly post the most useful fact in this document for the time being. I am certain that nothing here is even slightly novel.
 
-#### ~$30 "hot surface igniters", commonly used in gas furnaces for central heating, are a fantastic commodity source of pre-terminated silicon carbide heating elements. They appear to be usable at 1400 C continuously with 20 minute bursts to ~1600 C in air, and probably well over ~2000 C in inert gas or vacuum.
+Many of the Vacuum Hackers (among others) have much more expertise on ceramic blends, and you should probably talk to them instead.
+
+#### ~$40 "hot surface igniters", commonly used in gas furnaces for central heating, are a fantastic commodity source of pre-terminated silicon carbide heating elements. They appear to be usable at 1400 C continuously with 20 minute bursts to ~1600 C in air, and probably well over ~2000 C in inert gas or vacuum.
 
 It's relatively easy to get to 800 C or so with standard heating elements, microwave susceptors, or gas torches, sufficient for some low-fired >30% kaolin ceramic blends. With care in heating element support, termination, and insulation, commercial "high-fire" ceramics kilns can usually reach about 1300 C.
 
-However, a very useful class of techniques demand a minimum of 1450 C, including the most common high-purity oxide ceramics like $\text{Al}_2\text{O}_3$ and $\text{MgO}$ and $\text{AlN}$, even if sinter-point-depressing additives are used (see awesome data from @Sintering1957a and @Vitreous1942). Furnaces which can reach such temperatures are usually quite expensive. Small zirconia sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. There are a few sources of surplus high-temperature elements.
+However, a very useful class of techniques demand a minimum of 1450 C, including the most common high-purity oxide ceramics like $\text{Al}_2\text{O}_3$ and $\text{MgO}$ and $\text{AlN}$, even if sinter-point-depressing additives are used (see awesome data from @Sintering1957a and @Vitreous1942). Furnaces that can reach such temperatures are usually quite expensive. Small zirconia sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. There are a few sources of surplus high-temperature elements.
 
 Acetylene torches do not appear to offer the required control over temperature ramp rate and produce strong thermal gradients that crack the green during burnout.
 
 Some alternative techniques can often be used in specific circumstances, such as field-assisted sintering (thanks @ice9). However, a general-purpose desktop furnace for small parts seemed like a pretty useful piece of equipment.
 
-More critically, if a vacuum furnace is desired, standard chromium-based heating elements degrade very rapidly. See @mazelsky1974multipurpose :
+More critically, if a vacuum furnace is desired, standard Nichrome and Kanthal heater wire degrades very rapidly. See, for instance, this striking quote from @mazelsky1974multipurpose :
 
 > The next factor investigated was the suitability of Kanthal A-1 as heater material. Although this material is suitable for use to 1325 C in air, at least one reference does not recommend its use in vacuum at temperatures over 1000°C. This warning is founded in the rapid evaporation of a component (chromium?) from the alloy and verified by tests we performed on bare wires in ultra-high vacuum. Sample filaments burned out after two hours or less at a surface temperature of 1200°C.
 
-If a high vacuum or inert atmosphere is available, sufficiently pure graphite or W, Ta or Mo boats can be made into acceptable heating elements, but it takes some effort to work around the low resistance of these materials.
+If a suitably high vacuum or inert atmosphere is available, sufficiently pure graphite or W, Ta or Mo boats can be made into acceptable heating elements, but it takes some effort to work around the low resistance of these materials.
 
 ![Sparkly!](images/furnace/hsi.JPG){ width=100% }
 
@@ -59,7 +61,7 @@ Getting above ~1500c involved increasing the 115V line voltage to about 135 V us
 
 You can expect an element lifespan probably on the order of about 500 minutes at 130v in air.
 
-Degradation occurs via a *fascinating* multi-step oxidation reaction described in detail by @Bubble2015 that evolves carbon monoxide and inflates large bubbles of carbothermally reduced silicon stuck to SiO2 (if I'm understanding correctly - unlikely, given my poor chemistry prowess!):
+Degradation occurs via a *fascinating* multi-step oxidation reaction described in detail by @Bubble2015 that evolves carbon monoxide and inflates large bubbles of reduced silicon stuck to SiO2 (if I'm understanding correctly - unlikely, given poor chemistry prowess!):
 
 ![](images/furnace/my_photo-bubble4.jpg){ width=100% }
 
@@ -142,6 +144,7 @@ I have, however, had much better results from low-pressure injection molding wit
 
 ![](images/furnace/Screenshot from 2019-06-03 20-11-28.png){ width=50% }
 
+
 #### Tonsil 1: Brazing
 
 Alumina can be readily brazed using titanium @Sealing1957. This requires only a titanium interface layer; several fancy intermetallics are formed and the titanium adheres strongly to the alumina. The entire process must take place in a high vacuum or exceptionally clean argon atmosphere, else inert titanium oxides and nitrides will form.
@@ -152,7 +155,7 @@ See @Brazing1988 and @it2009 for details.
 
 #### Tonsil 2: $MnO_2$
 
-*Vitreous high alumina porcelain*, @Vitreous1942, describes how Manganese Dioxide can be used to depress the sinter point of pure alumina to more reasonable temperatures, sometimes without the use of silica. An impure, graphite-contaminated $MnO_2$ can be obtained from alkaline batteries; unfortunately, I have note yet been able to reproduce this effect to any degree.
+@Vitreous1942 describe how Manganese Dioxide can be used to depress the sinter point of pure alumina to more reasonable temperatures, sometimes without the use of silica. An impure, graphite-contaminated $\text{MnO}_2$ can be obtained from alkaline batteries; unfortunately, I have not yet been able to reproduce this effect to any degree.
 
 The effects of sintering additives on the development of the crystalline structure are very interesting and counterintuitive (@Controlled1976 @Bulk2009). It would be interesting to see if these effects can be predicted with some fidelity by modern molecular dynamics procedures. I have done no research in this area - this may already be common practice.
 
