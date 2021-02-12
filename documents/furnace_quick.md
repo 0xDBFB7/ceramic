@@ -1,15 +1,18 @@
-# Ceramics as she is spoke
+# An inexpensive 1500 C furnace
 
 <!---
 
 pandoc --filter pandoc-citeproc --bibliography=references.bib -s furnace_quick.md -o paper.html -H style.css
+scp paper.html blog:/media/blog/src/furnace.html
+scp -r images/furnace/ blog:/media/blog/src/images/
 
+had to apt-cache clean to get back some space
 -->
 
-[References](references.html) | [Zotero](bibtex.bib) | [BibTeX](references.bib)
+[References](references.html) | [Zotero](references.rdf) | [BibTeX](references.bib)
 
 
-#### Safety note:
+#### Standard safety disclaimer:
 
  - At these temperatures, you can expect everything to be on fire. Wearing clothes that burn rather than melt is recommended, particularly when working with large commercial furnaces.
  - Parts with wet binders often explode on burnout, spraying superheated ceramic spall in all directions. A face shield is recommended.
@@ -18,7 +21,7 @@ pandoc --filter pandoc-citeproc --bibliography=references.bib -s furnace_quick.m
  - Working with aluminosilicate firebrick and fine alumina powders presents a risk of various pulmonary diseases and some (unsubstantiated) risk of neurological damage. Wear a respirator.
  - Some techniques discussed may involve the formation of titanium oxides, risking metal fume fever (see the case report of @Acute2008).
 
-![*Bake till golden brown, then turn over.*](assets/20190518_142932_HDR.jpg){ width=40% }![](assets/temperature-1559057994888.png){ width=40% }
+![*Bake till golden brown, then turn over.*](images/furnace/20190518_142932_HDR.jpg){ width=40% }![](images/furnace/temperature-1559057994888.png){ width=40% }
 
 
 
@@ -28,19 +31,19 @@ A few years ago ago I was lucky enough to have some time to tinker with high-tem
 
 It's relatively easy to get to 800 C or so with standard heating elements, microwave susceptors, or gas torches, sufficient for some low-fired >30% kaolin ceramic blends. With care in heating element support, termination, and insulation, commercial "high-fire" ceramics kilns can usually reach about 1300 C.
 
-However, a very useful class of techniques demand a minimum of 1400 C, including the most useful high-purity oxide ceramics (see awesome data from @Sintering1957a and @Vitreous1942), even if sinter-point-depressing additives are used. Furnaces which can reach such temperatures are usually quite expensive. Small zirconium sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. Acetylene torches do not offer the required control over temperature ramp rate and produce strong thermal gradients.
+However, a very useful class of techniques demand a minimum of 1450 C, including the most common high-purity oxide ceramics like $\text{Al}_2\text{O}_3$ and $\text{MgO}$ and $\text{AlN}$, even if sinter-point-depressing additives are used (see awesome data from @Sintering1957a and @Vitreous1942). Furnaces which can reach such temperatures are usually quite expensive. Small zirconia sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. There are a few sources of surplus high-temperature elements.
 
-Some alternative techniques can often be used in specific circumstances, such as field-assisted sintering (thanks @ice9).
+Acetylene torches do not appear to offer the required control over temperature ramp rate and produce strong thermal gradients that crack the green during burnout.
 
-However, a general-purpose desktop furnace for small parts seemed like a pretty useful piece of equipment.
+Some alternative techniques can often be used in specific circumstances, such as field-assisted sintering (thanks @ice9). However, a general-purpose desktop furnace for small parts seemed like a pretty useful piece of equipment.
 
 More critically, if a vacuum furnace is desired, standard chromium-based heating elements degrade very rapidly. See @mazelsky1974multipurpose :
 
 > The next factor investigated was the suitability of Kanthal A-1 as heater material. Although this material is suitable for use to 1325 C in air, at least one reference does not recommend its use in vacuum at temperatures over 1000°C. This warning is founded in the rapid evaporation of a component (chromium?) from the alloy and verified by tests we performed on bare wires in ultra-high vacuum. Sample filaments burned out after two hours or less at a surface temperature of 1200°C.
 
-If a high vacuum or inert atmosphere is available, sufficiently pure graphite or tungsten boats can be an acceptable heating elements, but it takes some effort to work around the low resistance of these materials.
+If a high vacuum or inert atmosphere is available, sufficiently pure graphite or W, Ta or Mo boats can be made into acceptable heating elements, but it takes some effort to work around the low resistance of these materials.
 
-![Sparkly!](../media/hsi.JPG){ width=100% }
+![Sparkly!](images/furnace/hsi.JPG){ width=100% }
 
 I recommend a `CoorsTek 271N` (equivalent to `Emerson 767A-372`) SiC HSI ($33 CAD pre-pandemic on Amazon) or equivalent with fiberglass wire insulation, Steatite C220 or Alumina body and nichrome wire. Beware elements with Teflon insulation. Both recrystallized SiC and SiN HSIs are available. The SiC elements are preferable due to the higher temperature resistance of SiC and a more rugged construction overall. SiN HSIs also often specify an 80v DC supply for reasons unknown.
 
@@ -58,7 +61,7 @@ You can expect an element lifespan probably on the order of about 500 minutes at
 
 Degradation occurs via a *fascinating* multi-step oxidation reaction described in detail by @Bubble2015 that evolves carbon monoxide and inflates large bubbles of carbothermally reduced silicon stuck to SiO2 (if I'm understanding correctly - unlikely, given my poor chemistry prowess!):
 
-![](assets/my_photo-bubble4.jpg){ width=100% }
+![](images/furnace/my_photo-bubble4.jpg){ width=100% }
 
 Interestingly, a very similar "bubbling" failure mode was seen (@Oxidation2008 @NDE2010) on the reinforced-carbon-carbon panels on the leading edges of the space shuttle, which were coated with SiO and SiC for oxidation protection.
 
@@ -67,7 +70,7 @@ Such a carbon-carbide "conversion coating" seems to be relatively easy to perfor
 
 ## Kiln 1
 
-![](assets/kiln.png){ width=100% }
+![](images/furnace/kiln.png){ width=100% }
 
 This kiln was built using a single Amaco `28035N` 9" by 4-1/2" by 2-1/2" aluminosilicate firebrick ($15 pre-pandemic, Amazon) cut and pocketed using a wet tile saw (although a hacksaw would work fine); the element was then mounted with fire-cement (*Imperial High-Temp Stove and Furnace Cement*). The element was inserted through a slit in the firebrick to shield the terminals somewhat. Let cement dry overnight, then slowly raise temperature over course of ~30 minutes.
 
@@ -77,13 +80,13 @@ The alumina-foam firebrick is quite delicate, and the end-cap to which the eleme
 
 I really like this furnace. It typically reaches 1000c in one minute, and ~1400c in the next five to ten, allowing for very rapid iterative testing (useful for my crude, blunderbuss style of R&D). It can also toast bread in 2.4 seconds. Some green binders (gelatine, for instance) are sensitive to temperature ramp rate. PVA seemed unfazed by these crazy dT/dts.
 
-![Bread is not unfazed.](assets/kiln2.png){ width=100% }
+![Bread is not unfazed.](images/furnace/kiln2.png){ width=100% }
 
 A PID control system can be added with an SSR: P: 1, I: 1, D: 2 to 6 based on thermocouple response, and integral windup limits of -300, 300 seems to be an acceptable starting point.
 
 Typical ratings range from a tepid 980 C at 102v to a positively balmy 1705 C at 132v (@HighPerformance2017). Expect consistent 3.7A draw over entire temperature range.
 
-![Flat-out temperature profile. Note that the MAX31855 thermocouple transducer stopped reading at about 1700 seconds and only recovered at 2200 seconds.](assets/test_2.png){ width=100% }
+![Flat-out temperature profile. Note that the MAX31855 thermocouple transducer stopped reading at about 1700 seconds and only recovered at 2200 seconds.](images/furnace/test_2.png){ width=100% }
 
 Standard thin K-type thermocouple wire can operate briefly at 1400c; McMaster-Carr's #3859K44 thermocouples survive 1400c for a few seconds before being incinerated, though the high thermal mass leads to a ~200 C offset in this application (seen in the graph above).
 
@@ -110,6 +113,9 @@ The advantage here is that the efficiency of MLI depends only weakly on the emis
 
 20 oz vacuum-insulated wine tumblers seem to make excellent chambers for this purpose.
 
+![](images/furnace/wtf.JPG){ width=50% }
+
+
 ### Thanks for reading!
 
 Suggest improvements on the github issues page at <https://github.com/0xDBFB7/ceramic>, or hit me up @0xDBFB7 on Twitter!
@@ -134,7 +140,7 @@ Glutinous rice flour @Study2014 is the strongest readily-available gel-casting b
 
 I have, however, had much better results from low-pressure injection molding with a paraffin wax binder. Several suitable binders are discussed in @EVALUATION1965. A plastic syringe suffices for injection.
 
-![](assets/Screenshot from 2019-06-03 20-11-28.png){ width=50% }
+![](images/furnace/Screenshot from 2019-06-03 20-11-28.png){ width=50% }
 
 #### Tonsil 1: Brazing
 
@@ -152,7 +158,7 @@ The effects of sintering additives on the development of the crystalline structu
 
 #### Tonsil 3: Cataphoresis
 
-A PVA-bound alumina solution can be thinned considerably, and various objects can be dipped to form hard coatings. Attempts with graphite and aluminum have been successful; however, obtaining a uniform, tight-tolerance layer is somewhat difficult.
+A PVAc-bound alumina solution can be thinned considerably, and various objects can be dipped to form hard coatings. Attempts with graphite and aluminum have been successful; however, obtaining a uniform, tight-tolerance layer is somewhat difficult.
 
 If such a layer is required, a variant of electrophoresis can be used; see @Electrophoretic1997 and @influence2004 for details. This technique is apparently often used to insulate indirectly heated cathodes.
 
@@ -168,11 +174,11 @@ If a thin gelatine binder is used in a sol-gel, the solution can be beaten like 
 
 #### Tonsil 6: Fire
 
-![](assets/acetylene-1559058051640.png){ width=50% }
+![](images/furnace/acetylene-1559058051640.png){ width=50% }
 
 Attempts at acetylene sintering.
 
-![Screenshot from 2019-02-10 15-27-45](assets/Screenshot from 2019-02-10 15-27-45.png){ width=50% }
+![Screenshot from 2019-02-10 15-27-45](images/furnace/Screenshot from 2019-02-10 15-27-45.png){ width=50% }
 
 
 
@@ -180,3 +186,6 @@ Attempts at acetylene sintering.
 
 
 > Acetylene-sintered with 3% slip.
+
+
+## Bibliography:
