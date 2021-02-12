@@ -35,7 +35,7 @@
   		}
 
   		body{margin:40px
-  				auto;max-width:800px;line-height:1.6;font-size:20px;color:#444;padding:0
+  				auto;max-width:1000px;line-height:1.6;font-size:16px;color:#444;padding:0
   				10px}
 
   		h1,h2,h3{line-height:1.2}
@@ -58,165 +58,103 @@
 <h1 id="ceramics-as-she-is-spoke">Ceramics as she is spoke</h1>
 <!---
 
-pandoc --filter pandoc-citeproc --bibliography=references.bib -s furnace_quick.md -o paper.html
+pandoc --filter pandoc-citeproc --bibliography=references.bib -s furnace_quick.md -o paper.html -H style.css
 
 -->
-<p><a href="./references.pdf">References</a> | <a href="./bibtex.bib">BibTeX</a> | <a href="./bibtex.bib">BibTeX</a></p>
-<p>Safety note: At 1700 C, you can expect everything to be on fire. Parts with wet binders often explode, spraying superheated ceramic spall. Binder decomposition products can be pretty nasty. SiC elements have no insulation and present an electrocution hazard and also emit carbon monoxide. Working with aluminosilicate firebrick presents a risk of various pulmonology diseases and some (unsubstantiated) risk of neurological damage. Wear a respirator. Some techniques I’ll mention eventually involve titanium, risking metal fume fever (see <span class="citation" data-cites="Acute2008">Otani, Ishimatsu, and Mochizuki (2008)</span>).</p>
-<p>A few months ago I was lucky enough to</p>
-<ol type="1">
-<li>$30 “hot surface igniters” for gas heaters a really nice commodity source of silicon carbide heating elements, perfect for sintering high-temperature ceramics.</li>
-</ol>
-<p>It’s relatively easy to get to 800 C or so with standard heating elements or gas torches, which is sufficient for some low-fired &gt;30% kaolin ceramic blends. With care in element support, termination, and insulation, commercial “high-fire” ceramics kilns can usually reach about 1300 C.</p>
-<p>However, a very useful class of ceramics and techniques require a minimum of 1450 C, including sintering high-purity oxide ceramics, even if sinter-point-depressing additives are used. Furnaces which can reach such temperatures are extremely expensive. Small zirconium sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but usually cost over $1500. Some alternative techniques include microwave sintering, field-assisted sintering (thanks <span class="citation" data-cites="ice9">(<span class="citeproc-not-found" data-reference-id="ice9"><strong>???</strong></span>)</span>); but these are not typically general-purpose.</p>
-<p>More critically, if techniques require use in vacuum, standard chromium-based heating elements degrade very rapidly <span class="citation" data-cites="mazelsky1974multipurpose">Mazelsky et al. (1974)</span> :</p>
+<p><a href="./references.pdf">References</a> | <a href="./bibtex.bib">Zotero</a> | <a href="./references.bib">BibTeX</a></p>
+<h4 id="safety-note">Safety note:</h4>
+<ul>
+<li>At these temperatures, you can expect everything to be on fire. Wearing clothes that burn rather than melt is recommended, particularly when working with large commercial furnaces.</li>
+<li>Parts with wet binders often explode on burnout, spraying superheated ceramic spall in all directions. A face shield is recommended.</li>
+<li>Binder decomposition products can be quite noxious.</li>
+<li>SiC elements are uninsulated and present an electrocution hazard and also emit carbon monoxide.</li>
+<li>Working with aluminosilicate firebrick and fine alumina powders presents a risk of various pulmonary diseases and some (unsubstantiated) risk of neurological damage. Wear a respirator.</li>
+<li>Some techniques discussed may involve the formation of titanium oxides, risking metal fume fever (see the case report of <span class="citation" data-cites="Acute2008">Otani, Ishimatsu, and Mochizuki (2008)</span>).</li>
+</ul>
+<p><img src="assets/20190518_142932_HDR.jpg" style="width:40.0%" alt="Bake till golden brown, then turn over." /><img src="assets/temperature-1559057994888.png" style="width:40.0%" /></p>
+<p>A few years ago ago I was lucky enough to have some time to tinker with high-temperature ceramics. Little of value was determined, primarily just empirical nonsense, but I figured I would quickly dump the most useful facts into this document. Nothing reported is even slightly novel; many of the Vacuum Hackers have much more expertise on ceramic blends, and you should probably talk to them instead.</p>
+<h4 id="hot-surface-igniters-commonly-used-in-gas-furnaces-for-central-heating-are-a-fantastic-commodity-source-of-pre-terminated-silicon-carbide-heating-elements.-they-appear-to-be-usable-at-1400-c-continuously-with-20-minute-bursts-to-1600-c-in-air-and-probably-well-over-2000-c-in-inert-gas-or-vacuum.">~$30 “hot surface igniters”, commonly used in gas furnaces for central heating, are a fantastic commodity source of pre-terminated silicon carbide heating elements. They appear to be usable at 1400 C continuously with 20 minute bursts to ~1600 C in air, and probably well over ~2000 C in inert gas or vacuum.</h4>
+<p>It’s relatively easy to get to 800 C or so with standard heating elements, microwave susceptors, or gas torches, sufficient for some low-fired &gt;30% kaolin ceramic blends. With care in heating element support, termination, and insulation, commercial “high-fire” ceramics kilns can usually reach about 1300 C.</p>
+<p>However, a very useful class of techniques demand a minimum of 1400 C, including the most useful high-purity oxide ceramics (see awesome data from <span class="citation" data-cites="Sintering1957a">Cutler et al. (1957)</span> and <span class="citation" data-cites="Vitreous1942">Luks (1942)</span>), even if sinter-point-depressing additives are used. Furnaces which can reach such temperatures are usually quite expensive. Small zirconium sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. Acetylene torches do not offer the required control over temperature ramp rate and produce strong thermal gradients.</p>
+<p>Some alternative techniques can often be used in specific circumstances, such as field-assisted sintering (thanks <span class="citation" data-cites="ice9">(<span class="citeproc-not-found" data-reference-id="ice9"><strong>???</strong></span>)</span>).</p>
+<p>However, a general-purpose desktop furnace for small parts seemed like a pretty useful piece of equipment.</p>
+<p>More critically, if a vacuum furnace is desired, standard chromium-based heating elements degrade very rapidly. See <span class="citation" data-cites="mazelsky1974multipurpose">Mazelsky et al. (1974)</span> :</p>
 <blockquote>
 <p>The next factor investigated was the suitability of Kanthal A-1 as heater material. Although this material is suitable for use to 1325 C in air, at least one reference does not recommend its use in vacuum at temperatures over 1000°C. This warning is founded in the rapid evaporation of a component (chromium?) from the alloy and verified by tests we performed on bare wires in ultra-high vacuum. Sample filaments burned out after two hours or less at a surface temperature of 1200°C.</p>
 </blockquote>
-<p>If you’re in a high vacuum or inert atmosphere, sufficiently pure graphite or tungsten boats can be an acceptable elements, but it takes some effort to work around the low resistance of these materials.</p>
-<p><img src="assets/20190518_142932_HDR.jpg" style="width:100.0%" /></p>
+<p>If a high vacuum or inert atmosphere is available, sufficiently pure graphite or tungsten boats can be an acceptable heating elements, but it takes some effort to work around the low resistance of these materials.</p>
 <figure>
 <img src="../media/hsi.JPG" style="width:100.0%" alt="" /><figcaption>Sparkly!</figcaption>
 </figure>
-<p>Note that 220V elements seem to be super rare: it seems to be hard to fabricate something with a sufficiently high resistance.</p>
-<p>Aqueous gel-casting has a notable drawback for hobbyist use: almost all crosslinkers tend to entrain water, which takes many hours properly dry.</p>
-<p>LPIM</p>
-<p><img src="assets/Screenshot%20from%202019-06-03%2020-11-28.png" style="width:50.0%" /></p>
-<p>No, seriously. It’s just baking.</p>
-<p>If you’re interested in trying this, I highly recommend skimming through the references. This gel-cast process was taken almost verbatim from <em>Cross-linked Polyvinyl Alcohol as a Binder for Gelcasting and Green Machining</em>, with a few minor simplifications; a few minutes’ reading of the papers linked will probably be more enlightening than this purely empirical nonsense.</p>
-<h4 id="the-base-recipe">The base recipe</h4>
-<table>
-<thead>
-<tr class="header">
-<th>% by mass</th>
-<th>Material (Supplier)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>86.5</td>
-<td>Alumina powder (<em>Calcined Alumina</em>, $12/kg, <em>Tucker’s Pottery</em>)</td>
-</tr>
-<tr class="even">
-<td>9</td>
-<td>Kaolin powder ($20/kg, <em>Amazon.ca</em>)</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>3.5</td>
-<td>Lepage White Glue</td>
-</tr>
-<tr class="odd">
-<td>+20-40%</td>
-<td>Water</td>
-</tr>
-</tbody>
-</table>
-<p>Add 70 or 90% fine Alumina powder (<em>Calcined Alumina</em>, $12/kg, <em>Tucker’s Pottery</em>) to 30 or 10% by weight Kaolin powder ($20/kg, <em>Amazon.ca</em>), then mix ’til homogeneous. Add 4% by weight PVA white glue (<em>LePage general purpose white glue/wood glue</em> known to work, 45 to 70% solids), then 10% water by weight.</p>
-<p>Mix thoroughly until <em>cursed Parmesan</em> texture attained, then alternate adding water and mixing until the solution becomes a thick putty. 30g batches are suitable for manual mixing. The liquid seems to evaporate very rapidly; the putty is only workable for a few minutes.</p>
-<p>The green is barely usable without a crosslinker; any handling will break it. <span class="citation" data-cites="chabert">(<span class="citeproc-not-found" data-reference-id="chabert"><strong>???</strong></span>)</span> suggest 2,5-dimethoxy 2,5-dihydrofuran, but Borax is more readily available - with the downside that thermal decomposition may emit highly toxic boron vapor.</p>
-<p>Unfortunately, borate crosslinks are reversed as soon as the solution dries.</p>
-<p>Do not inhale dust; wear a respirator.</p>
-<p>According to <span class="citation" data-cites="chabert2008cross">(<span class="citeproc-not-found" data-reference-id="chabert2008cross"><strong>???</strong></span>)</span>, the delicate green is machinable “if due care is taken”. Unfortunately, due care appears to include not machining. This is a thoroughly annoying process;</p>
-<p>Molding with pressure is preferable to prevent voids. A three-piece mold of this style:</p>
-<h4 id="pressing">Pressing</h4>
-<figure>
-<img src="assets/CIMG6681.JPG" style="width:50.0%" alt="" /><figcaption>CIMG6681</figcaption>
-</figure>
-<p>is required for reliable ejection: the green is too weak to eject with pins. This mold uses two aluminium dies and replaceable 40mm PVC pipe inserts for parallel drying without Amdahl, producing consistent 25g 6mm thick wafers suitable for CNC milling. ~0.4 MPa pressure required for homogeneity; a hydraulic press was used for these parts, but that isn’t strictly necessary. See <span class="citation" data-cites="nptelpressing">(<span class="citeproc-not-found" data-reference-id="nptelpressing"><strong>???</strong></span>)</span> for die guidelines.</p>
-<p>Beware granular jamming; hardened dies seemed to seize easily. I’m not sure how to prevent this.</p>
-<figure>
-<img src="assets/CIMG6679.JPG" style="width:50.0%" alt="" /><figcaption>CIMG6679</figcaption>
-</figure>
-<p>Wax paper is effective for mold release.</p>
-<p>Molding can produce a near-net-shape part, but green binder shrinkage (1.2% typ.) will affect final dimensions. Machining dried green stock nulls out this shrinkage, and avoids the nuisance of unreliable molds.</p>
-<p>Previous green binders were sensitive to variations in cross section; differential drying and shrinkage across thin geometries would cause cracking. PVA seems insensitive to these issues.</p>
-<p>Dry for 3-5 hours at ambient. The green is delicate, handle carefully. CNC machine at essentially any reasonable feed/speed; machining properties seem to be similar to graphite. Cutting forces can be surprisingly high at &gt;400m/min surface speeds, so a PLA clamp was used to hold the wafer.</p>
-<figure>
-<img src="assets/20190528_210001_HDR.jpg" style="width:50.0%" alt="" /><figcaption>20190528_210001_HDR</figcaption>
-</figure>
-<p><em>Do not inhale dust.</em> There is some evidence that it will give you Alzheimer’s. Dust is highly abrasive, so ensure that axis guards are in place if available and expect dulled tooling.</p>
-<p>Uncrosslinked PVA hardens purely by dehydration, so failed mold shots or tailings can be reconstituted with water and added to future batches.</p>
-<p>Sinter at &gt;1450 C. 70% alumina requires ~10 minutes, 90%, ~30 minutes to a strength suitable for most applications. Do not move green after binder burnout; it has zero strength. Parts with volume <span class="math inline"> &lt; 5<em>m</em><em>m</em><sup>3</sup></span> can be unreliably but rapidly sintered via propane torch; very frustrating, not at all recommended.</p>
-<p>These temperatures are difficult to achieve with conventional ceramic kilns. <em>Hot Surface Ignitors</em> for central heating and gas stoves are an excellent commodity source of SiC elements for ultra-high-temp furnaces. Both SiC and SiNi HSIs are available; SiC greatly preferred due to higher temperature resistance. SiNi HSIs also often specify an 80v DC supply for reasons unknown.</p>
-<p>SiC HSIs are mechanically delicate, but seem to tolerate ceramic spall and contamination.</p>
-<p>Use <code>CoorsTek 271N</code> (or <code>Emerson 767A-372</code>) SiC HSI ($33 CAD, Amazon) or equivalent with fiberglass wire insulation, Steatite C220 or Alumina body, nichrome wire. Beware Teflon insulation.</p>
-<p>Typical ratings: a tepid 980 C at 102v to a positively balmy 1705 C at 132v (<span class="citation" data-cites="coorstek2017">(<span class="citeproc-not-found" data-reference-id="coorstek2017"><strong>???</strong></span>)</span>). Expect consistent 3.7A draw over entire temperature range.</p>
-<figure>
-<img src="assets/kiln.png" style="width:50.0%" alt="" /><figcaption>kiln</figcaption>
-</figure>
-<p>Kiln built using single Amaco <code>28035N</code> 9" by 4-1/2" by 2-1/2" firebrick ($15, Amazon) cut and pocketed using a wet tile saw; the element was then mounted with fire-cement (<em>Imperial High-Temp Stove and Furnace Cement</em>). Let cement dry overnight, then slowly raise temperature over course of ~30 minutes.</p>
+<p>I recommend a <code>CoorsTek 271N</code> (equivalent to <code>Emerson 767A-372</code>) SiC HSI ($33 CAD pre-pandemic on Amazon) or equivalent with fiberglass wire insulation, Steatite C220 or Alumina body and nichrome wire. Beware elements with Teflon insulation. Both recrystallized SiC and SiN HSIs are available. The SiC elements are preferable due to the higher temperature resistance of SiC and a more rugged construction overall. SiN HSIs also often specify an 80v DC supply for reasons unknown.</p>
+<p>SiC HSIs are mechanically delicate, but seem to tolerate ceramic spall and contamination relatively well.</p>
+<p>Note that 220V elements seem to be quite rare: it appears to be hard to fabricate something with a sufficiently high resistance.</p>
+<p>HSIs are apparently used because sparks do not provide the energy needed to ignite natural gas with perfect reliability over decades.</p>
+<p>Getting above ~1500c involved increasing the 115V line voltage to about 135 V using a Variac. This does speed up element degradation a bit.</p>
+<h3 id="degradation">Degradation</h3>
+<p>You can expect an element lifespan probably on the order of about 500 minutes at 130v in air.</p>
+<p>Degradation occurs via a <em>fascinating</em> multi-step oxidation reaction described in detail by <span class="citation" data-cites="Bubble2015">Raj and Terauds (2015)</span> that evolves carbon monoxide and inflates large bubbles of carbothermally reduced silicon stuck to SiO2 (if I’m understanding correctly - unlikely, given my poor chemistry prowess!):</p>
+<p><img src="assets/my_photo-bubble4.jpg" style="width:100.0%" /></p>
+<p>Interestingly, a very similar “bubbling” failure mode was seen (<span class="citation" data-cites="Oxidation2008">Jacobson et al. (2008)</span> <span class="citation" data-cites="NDE2010">Roth et al. (2010)</span>) on the reinforced-carbon-carbon panels on the leading edges of the space shuttle, which were coated with SiO and SiC for oxidation protection.</p>
+<p>Such a carbon-carbide “conversion coating” seems to be relatively easy to perform in a furnace such as this one; see Tonsil 5 for details. SiC elements are also used on the ALQ-144 IR missile jammer, so it’s unlikely that my lab will be hit with a missile in the near future.</p>
+<h2 id="kiln-1">Kiln 1</h2>
+<p><img src="assets/kiln.png" style="width:100.0%" /></p>
+<p>This kiln was built using a single Amaco <code>28035N</code> 9" by 4-1/2" by 2-1/2" aluminosilicate firebrick ($15 pre-pandemic, Amazon) cut and pocketed using a wet tile saw (although a hacksaw would work fine); the element was then mounted with fire-cement (<em>Imperial High-Temp Stove and Furnace Cement</em>). The element was inserted through a slit in the firebrick to shield the terminals somewhat. Let cement dry overnight, then slowly raise temperature over course of ~30 minutes.</p>
+<p>The firebrick does begin to degrade over the course of a few hours when running at 1500 C.</p>
 <p>The alumina-foam firebrick is quite delicate, and the end-cap to which the element was mounted later broke during handling. Mounting with threaded rods and large washers is recommended.</p>
-<p>Depending on local line voltage and alumina purity, a variac may be required to raise voltage ~15% to reach a suitable sinter temperature.</p>
-<p>I have a serious crush on this furnace. It typically reaches 1000c in one minute, and ~1400c in the next two, allowing for very rapid iterative testing (useful for my crude, blunderbuss style of R&amp;D). It can also toast bread in 2.4 seconds. Some green binders (gelatine, specifically) were sensitive to temperature ramp rate; PVA seems unfazed by these crazy dT/dts.</p>
-<p>Bread is not unfazed.</p>
+<p>I really like this furnace. It typically reaches 1000c in one minute, and ~1400c in the next five to ten, allowing for very rapid iterative testing (useful for my crude, blunderbuss style of R&amp;D). It can also toast bread in 2.4 seconds. Some green binders (gelatine, for instance) are sensitive to temperature ramp rate. PVA seemed unfazed by these crazy dT/dts.</p>
 <figure>
-<img src="assets/kiln2.png" style="width:50.0%" alt="" /><figcaption>kiln2</figcaption>
+<img src="assets/kiln2.png" style="width:100.0%" alt="" /><figcaption>Bread is not unfazed.</figcaption>
 </figure>
-<p>Expect element lifespan on the order of ~500 minutes at 130v: degradation occurs via a fascinating two-step interfacial oxidation reaction that evolves carbon monoxide and inflates large bubbles of SiO2 (if I’m understanding <span class="citation" data-cites="raj2015">(<span class="citeproc-not-found" data-reference-id="raj2015"><strong>???</strong></span>)</span> correctly - unlikely, given my chemistry prowess):</p>
-<figure>
-<img src="assets/my_photo-bubble4.jpg" style="width:50.0%" alt="" /><figcaption>my_photo-bubble4</figcaption>
-</figure>
-<p>Interestingly, the same “bubbling” failure mode is seen on the reinforced-carbon-carbon panels on the leading edges of the space shuttle, which are coated with SiO and SiC for oxidation protection.</p>
-<p>This carbon-carbide conversion coating seems to be easy to perform in a furnace such as this one; see Tonsil 5 for details. SiC elements are also used on the ALQ-144 IR missile jammer, so it’s unlikely that my laboratory will be hit with a missile in the near future.</p>
 <p>A PID control system can be added with an SSR: P: 1, I: 1, D: 2 to 6 based on thermocouple response, and integral windup limits of -300, 300 seems to be an acceptable starting point.</p>
+<p>Typical ratings range from a tepid 980 C at 102v to a positively balmy 1705 C at 132v (<span class="citation" data-cites="HighPerformance2017">Inc (2017)</span>). Expect consistent 3.7A draw over entire temperature range.</p>
 <figure>
-<img src="assets/test_2.png" style="width:50.0%" alt="" /><figcaption>test_2</figcaption>
+<img src="assets/test_2.png" style="width:100.0%" alt="" /><figcaption>Flat-out temperature profile. Note that the MAX31855 thermocouple transducer stopped reading at about 1700 seconds and only recovered at 2200 seconds.</figcaption>
 </figure>
-<p>Simple K-type thermocouple wire can operate briefly at 1300c; McMaster-Carr’s #3859K44 thermocouples survive 1400c for a few seconds before being incinerated, though the high thermal mass leads to a ~200 C offset in this application (seen in the graph above).</p>
-<p>A thin tungsten wire works well as a thermistor, but is rapidly oxidized. Nichrome also works well as a thermistor, though some brands seem to have a strange bijective resistivity curve. It is also destroyed in short order.</p>
-<p>Non-contact temperature measurement is more suitable, though all COTS bolometers begin to whimper at these temperatures. A disappearing-filament pyrometer is trivial to build; if a spectrometer is available, fitting the pleasant glow of the furnace to the Stefan-Boltzmann law can get you within a few hundred degrees.</p>
-<p>A ratio pyrometer built from two photodiodes (or phototransistors, depending on your bias) with IR-cut and IR-pass filters may also work. These techniques are complicated somewhat by alumina’s selective radiation: the spectral emissivity curve looks like someone put overcooked pasta into Matplotlib.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Worse still, it varies with temperature by about half an order of magnitude.</p>
-<p>All of this is for naught, however, since active control does not appear to be required with PVA. It appears that parts with repeatable properties can be made as long as the temperature is greater than the sinter point for sufficient time. The pause at 350c for binder burnout mentioned in <span class="citation" data-cites="chabert2008cross">(<span class="citeproc-not-found" data-reference-id="chabert2008cross"><strong>???</strong></span>)</span> did not seem to be necessary.</p>
-<p>This process is not ideal for production: FAST/SPS has several advantages, including full-density sintering at only 1150c, and <em>as yet there’s no consensus as to how it works</em>. It is <em>magic</em>. See <span class="citation" data-cites="guillon2014field">(<span class="citeproc-not-found" data-reference-id="guillon2014field"><strong>???</strong></span>)</span>. Thanks to <span class="citation" data-cites="ice9">(<span class="citeproc-not-found" data-reference-id="ice9"><strong>???</strong></span>)</span> for the tip!</p>
-<p>Expect extremely low outgassing (even to LIGO standards), low permeability, continuous service temp ~1500c (with 90% mix - 70% mix became brittle at ~1600c), strength comparable to aluminum (with 70% mix - 90% mix is a little weaker), 20 MV/m breakdown at ambient, hardness Mohs ~9.</p>
-<p>At low temperatures, you can expect extremely low outgassing (even to LIGO standards).</p>
-<p>The alumina itself is not an outgassing concern; if you have success with purer alumina compositions, you can expect good vacuum performance all the way to ~1700c.</p>
-<p>The clay binder is a somewhat different story. Pure Kaolin becomes Mullite above 1400c, which is as stable as alumina at low temperatures. However, silica impurities in the Kaolin may begin to sublimate to SiO at above 1300c. See <span class="citation" data-cites="krieger1965thermodynamics">(<span class="citeproc-not-found" data-reference-id="krieger1965thermodynamics"><strong>???</strong></span>)</span> for details; but in general, operation at above ~1400c is contraindicated.</p>
-<p>Fired shrinkage values will be added soon.</p>
-<figure>
-<img src="assets/temperature-1559057994888.png" style="width:50.0%" alt="" /><figcaption>temperature</figcaption>
-</figure>
-<blockquote>
-<p><em>Serves 12: bake till golden brown, then turn over.</em></p>
-</blockquote>
-<p>Apologies for the terse and hasty verbiage.</p>
-<p>Post improvements or replication at <a href="https://github.com/0xDBFB7/ceramic" class="uri">https://github.com/0xDBFB7/ceramic</a>, or hit me up <span class="citation" data-cites="0xDBFB7">(<span class="citeproc-not-found" data-reference-id="0xDBFB7"><strong>???</strong></span>)</span> on Twitter!</p>
+<p>Standard thin K-type thermocouple wire can operate briefly at 1400c; McMaster-Carr’s #3859K44 thermocouples survive 1400c for a few seconds before being incinerated, though the high thermal mass leads to a ~200 C offset in this application (seen in the graph above).</p>
+<p>Non-contact temperature measurement is more suitable, though all COTS bolometers begin to whimper at these temperatures.</p>
+<p>The best option for temperature measurement is probably a <strong>disappearing-filament pyrometer</strong>. These are trivial to build.</p>
+<p>If a Vis spectrometer is available, fitting the pleasant glow of the furnace to the Stefan-Boltzmann law can probably get you within a few hundred degrees.</p>
+<p>A ratio pyrometer built from two photodiodes (or phototransistors, depending on your bias) with IR-cut and IR-pass filters may also work.</p>
+<p>These techniques are complicated somewhat by alumina’s selective radiation: the spectral emissivity curve looks like someone put overcooked pasta into Matplotlib. Worse still, it varies with temperature by about half an order of magnitude. I’m disappointed to find that ‘spectral emissivity’ has nothing to do with ghosts.</p>
+<h2 id="kiln-2-and-speculation-on-next-steps">Kiln 2 and speculation on next steps</h2>
+<ul>
+<li>Firebrick is crumbly and unlikeable.</li>
+<li>Many interesting techniques require an inert or nitriding atmosphere.</li>
+<li>In a rough vacuum, it should be possible to exceed 1,700 C continuously, probably limited only by the temperature at the nichrome termination.</li>
+</ul>
+<p>Most insulating materials that can withstand such temperatures are expensive or difficult to work with. Because of the <span class="math inline">P ≈ T<sup>4</sup></span> nature of the Stefan-Boltzmann law vs the approximately linear dependence of conduction, at such high temperatures radiative insulation is the primary concern. For this reason, many layers of multi-layer insulation may suffice.</p>
+<p>The advantage here is that the efficiency of MLI depends only weakly on the emissivity and conductivity of the insulation. For this reason, a stack of machined graphite may be sufficient.</p>
+<p>20 oz vacuum-insulated wine tumblers seem to make excellent chambers for this purpose.</p>
+<h3 id="thanks-for-reading">Thanks for reading!</h3>
+<p>Suggest improvements on the github issues page at <a href="https://github.com/0xDBFB7/ceramic" class="uri">https://github.com/0xDBFB7/ceramic</a>, or hit me up <span class="citation" data-cites="0xDBFB7">(<span class="citeproc-not-found" data-reference-id="0xDBFB7"><strong>???</strong></span>)</span> on Twitter!</p>
 <p>❤</p>
+<h4 id="tonsil-0-binders">Tonsil 0: Binders</h4>
+<p>‘Gel-casting’ is a technique where a slurry of ceramic powder mixed with a low-viscosity monomer or polymer (prototypically acrylamide, but now various others <span class="citation" data-cites="Development1998">Janney et al. (1998)</span>) and crosslinker is injected into a mold, after which the crosslinker is triggered to form a solid green. This appears to be in vogue for ceramics production. Some advantages include very low binder percentages and correspondingly low green drying and firing shrinkage. Some effort was put into evaluating various gel-casting binders. (<span class="citation" data-cites="Crosslinked2008">Chabert, Dunstan, and Franks (2008)</span>)</p>
+<p>However, aqueous gel-casting has a notable drawback in that most common binders tend to entrain water, meaning that even thin cross sections take many hours to properly dry. A solution of PEG can apparently be used to accelerate this drying <span class="citation" data-cites="Drying2003">Barati, Kokabi, and Famili (2003)</span> - I haven’t tried this. The required crosslinking activators and are also usually difficult to obtain for the hobbyist.</p>
+<p>(Note that, confusingly, both PVAc, poly(vinyl acetate), and PVOH, poly(vinyl alcohol), are each often referred to as ‘PVA’, despite having completely different properties. Standard white glues are an emulsion of primarily PVAc and some PVOH).</p>
+<p>Alginates are a pretty neat tunable binder; the molecules cross-link together whenever a Ca+ or Mg+ ion is present in solution, meaning that the viscosity and trigger can be tuned with various chelators or solvents <span class="citation" data-cites="Fabrication2003">Jia, Kanno, and Xie (2003)</span>.</p>
+<p>Glutinous rice flour <span class="citation" data-cites="Study2014">Wan et al. (2014)</span> is the strongest readily-available gel-casting binder that I’m aware of.</p>
+<p>I have, however, had much better results from low-pressure injection molding with a paraffin wax binder. Several suitable binders are discussed in <span class="citation" data-cites="EVALUATION1965">Teter (1965)</span>. A plastic syringe suffices for injection.</p>
+<p><img src="assets/Screenshot%20from%202019-06-03%2020-11-28.png" style="width:50.0%" /></p>
 <h4 id="tonsil-1-brazing">Tonsil 1: Brazing</h4>
-<p>Alumina can be readily brazed by the “active metal” process. In essence, this merely requires a titanium interface layer; an intermetallic is formed and the titanium adheres strongly to the alumina when molten, after which standard filler rods and brazing techniques can be used. The entire process must take place in a high vacuum or exceptionally clean argon atmosphere, else inert titanium oxides and nitrides will form.</p>
-<p>A low-melting-point titanium alloy is usually used, as pure Ti melts at some 1800 C.</p>
-<p>A soft copper or Kovar interface layer is often used to prevent differing thermal coefficients from cracking the ceramic when the weld cools.</p>
-<p>See <span class="citation" data-cites="hammond1988brazing">(<span class="citeproc-not-found" data-reference-id="hammond1988brazing"><strong>???</strong></span>)</span> and <em>Is it possible to braze ceramics?</em> <em>P.M.Roberts/Delphi Brazing Consultants</em> for details.</p>
+<p>Alumina can be readily brazed using titanium <span class="citation" data-cites="Sealing1957">Beggs (1957)</span>. This requires only a titanium interface layer; several fancy intermetallics are formed and the titanium adheres strongly to the alumina. The entire process must take place in a high vacuum or exceptionally clean argon atmosphere, else inert titanium oxides and nitrides will form.</p>
+<p>A soft copper or Kovar interface layer is often used to prevent the differing thermal coefficients from cracking the ceramic when the weld cools.</p>
+<p>See <span class="citation" data-cites="Brazing1988">Hammond, David, and Santella (1988)</span> and <span class="citation" data-cites="it2009">Consultants (2009)</span> for details.</p>
 <h4 id="tonsil-2-mno_2">Tonsil 2: <span class="math inline"><em>M</em><em>n</em><em>O</em><sub>2</sub></span></h4>
-<p><em>Vitreous high alumina porcelain</em>, <span class="citation" data-cites="luks1942vitreous">(<span class="citeproc-not-found" data-reference-id="luks1942vitreous"><strong>???</strong></span>)</span>, describes how Manganese Dioxide can be used to depress the sinter point of pure alumina to more reasonable temperatures, sometimes without the use of silica. An impure, graphite-contaminated <span class="math inline"><em>M</em><em>n</em><em>O</em><sub>2</sub></span> can be obtained from alkaline batteries; unfortunately, I was not able to reproduce this effect to any degree.</p>
-<h4 id="tonsil-3-alternative-binders">Tonsil 3: Alternative binders</h4>
-<p>Almost any organic binder can be used.</p>
-<h4 id="tonsil-4-conductive-graphite-impregnated">Tonsil 4: Conductive graphite-impregnated</h4>
+<p><em>Vitreous high alumina porcelain</em>, <span class="citation" data-cites="Vitreous1942">Luks (1942)</span>, describes how Manganese Dioxide can be used to depress the sinter point of pure alumina to more reasonable temperatures, sometimes without the use of silica. An impure, graphite-contaminated <span class="math inline"><em>M</em><em>n</em><em>O</em><sub>2</sub></span> can be obtained from alkaline batteries; unfortunately, I have note yet been able to reproduce this effect to any degree.</p>
+<p>The effects of sintering additives on the development of the crystalline structure are very interesting and counterintuitive (<span class="citation" data-cites="Controlled1976">Brook (1976)</span> <span class="citation" data-cites="Bulk2009">Hine et al. (2009)</span>). It would be interesting to see if these effects can be predicted with some fidelity by modern molecular dynamics procedures. I have done no research in this area - this may already be common practice.</p>
 <h4 id="tonsil-3-cataphoresis">Tonsil 3: Cataphoresis</h4>
-<p>The initial solution can be thinned considerably, and various objects can be dipped to form hard coatings. Attempts with graphite and aluminum have been successful; however, obtaining a uniform, tight-tolerance layer is somewhat difficult.</p>
-<p>If such a layer is required, a variant of electrophoresis can be used; see <span class="citation" data-cites="lazic2004influence">(<span class="citeproc-not-found" data-reference-id="lazic2004influence"><strong>???</strong></span>)</span> for details. This technique is often used to insulate indirectly heated cathodes.</p>
+<p>A PVA-bound alumina solution can be thinned considerably, and various objects can be dipped to form hard coatings. Attempts with graphite and aluminum have been successful; however, obtaining a uniform, tight-tolerance layer is somewhat difficult.</p>
+<p>If such a layer is required, a variant of electrophoresis can be used; see <span class="citation" data-cites="Electrophoretic1997">Ferrari and Moreno (1997)</span> and <span class="citation" data-cites="influence2004">Lazic et al. (2004)</span> for details. This technique is apparently often used to insulate indirectly heated cathodes.</p>
 <h4 id="tonsil-4-beta-alumina">Tonsil 4: Beta-alumina</h4>
-<p>Alumina can be found in two main allotropes: alpha-, and beta-. (well, and sapphire, but whatever).</p>
-<p>To my (surely flawed) understanding, the chief difference lies in the ionic conductivity, which allows for hermetic low-temperature anodic bonds to some materials using the esoteric Johnsen–Rahbek effect. See Field-Assisted Bonding of Beta-Alumina to Metals, <span class="citation" data-cites="dunn1979field">(<span class="citeproc-not-found" data-reference-id="dunn1979field"><strong>???</strong></span>)</span>.</p>
+<p>Alumina can be found in two main allotropes: alpha-, and beta-. (and sapphire).</p>
+<p>To my (surely flawed) understanding, the chief difference lies in the ionic conductivity, which allows for hermetic low-temperature anodic bonds to some materials using the esoteric Johnsen–Rahbek effect. See <span class="citation" data-cites="FieldAssisted1979">Dunn (1979)</span>.</p>
 <h4 id="tonsil-5-foam">Tonsil 5: Foam</h4>
 <p>If a thin gelatine binder is used in a sol-gel, the solution can be beaten like egg white into a low density insulating foam. I don’t know what this is useful for, but it’s neat.</p>
 <h4 id="tonsil-6-fire">Tonsil 6: Fire</h4>
-<figure>
-<img src="assets/propane.png" style="width:50.0%" alt="" /><figcaption>temperature</figcaption>
-</figure>
-<blockquote>
-<p>not sufficiently hot</p>
-</blockquote>
-<figure>
-<img src="assets/acetylene-1559058051640.png" style="width:50.0%" alt="" /><figcaption>acetylene</figcaption>
-</figure>
-<blockquote>
-<p>barely sufficiently hot</p>
-</blockquote>
+<p><img src="assets/acetylene-1559058051640.png" style="width:50.0%" /></p>
+<p>Attempts at acetylene sintering.</p>
 <figure>
 <img src="assets/Screenshot%20from%202019-02-10%2015-27-45.png" style="width:50.0%" alt="" /><figcaption>Screenshot from 2019-02-10 15-27-45</figcaption>
 </figure>
@@ -224,18 +162,72 @@ pandoc --filter pandoc-citeproc --bibliography=references.bib -s furnace_quick.m
 <p>Acetylene-sintered with 3% slip.</p>
 </blockquote>
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-Drying2003">
+<p>Barati, Abolfazl, Mehrdad Kokabi, and Mohammad Hossein Navid Famili. 2003. “Drying of Gelcast Ceramic Parts via the Liquid Desiccant Method.” <em>Journal of the European Ceramic Society</em> 23 (13): 2265–72. <a href="https://doi.org/10.1016/S0955-2219(03)00045-1">https://doi.org/10.1016/S0955-2219(03)00045-1</a>.</p>
+</div>
+<div id="ref-Sealing1957">
+<p>Beggs, J. 1957. “Sealing Metal and Ceramic Parts by Forming Reactive Alloys.” <em>IRE Transactions on Component Parts</em> 4 (1): 28–31. <a href="https://doi.org/10.1109/TCP.1957.1135908">https://doi.org/10.1109/TCP.1957.1135908</a>.</p>
+</div>
+<div id="ref-Controlled1976">
+<p>Brook, R. J. 1976. “Controlled Grain Growth.” In <em>Treatise on Materials Science &amp; Technology</em>, 9:331–64. Elsevier. <a href="https://doi.org/10.1016/B978-0-12-341809-8.50024-3">https://doi.org/10.1016/B978-0-12-341809-8.50024-3</a>.</p>
+</div>
+<div id="ref-Crosslinked2008">
+<p>Chabert, France, David E. Dunstan, and George V. Franks. 2008. “Cross-Linked Polyvinyl Alcohol as a Binder for Gelcasting and Green Machining.” <em>Journal of the American Ceramic Society</em> 91 (10): 3138–46. <a href="https://doi.org/10.1111/j.1551-2916.2008.02534.x">https://doi.org/10.1111/j.1551-2916.2008.02534.x</a>.</p>
+</div>
+<div id="ref-it2009">
+<p>Consultants, P. M. Roberts/Delphi Brazing. 2009. “Is It Possible to Braze Ceramics?”</p>
+</div>
+<div id="ref-Sintering1957a">
+<p>Cutler, I. B., C. Bradshaw, C. J. Christensen, and E. P. Hyatt. 1957. “Sintering of Alumina at Temperatures of 1400 C. And Below.” <em>Journal of the American Ceramic Society</em> 40 (4): 134–39. <a href="https://doi.org/10.1111/j.1151-2916.1957.tb12589.x">https://doi.org/10.1111/j.1151-2916.1957.tb12589.x</a>.</p>
+</div>
+<div id="ref-FieldAssisted1979">
+<p>Dunn, Bruce. 1979. “Field-Assisted Bonding of Beta-Alumina to Metals.” <em>Journal of the American Ceramic Society</em> 62 (11-12): 545–47. <a href="https://doi.org/10/bp8pbf">https://doi.org/10/bp8pbf</a>.</p>
+</div>
+<div id="ref-Electrophoretic1997">
+<p>Ferrari, B., and R. Moreno. 1997. “Electrophoretic Deposition of Aqueous Alumina Slips.” <em>Journal of the European Ceramic Society</em> 17 (4): 549–56. <a href="https://doi.org/10/d9rd5p">https://doi.org/10/d9rd5p</a>.</p>
+</div>
+<div id="ref-Brazing1988">
+<p>Hammond, J. P., S. A. David, and M. L. Santella. 1988. “Brazing Ceramic Oxides to Metals at Low Temperatures.” <em>Welding J</em> 67 (10): 227–32.</p>
+</div>
+<div id="ref-Bulk2009">
+<p>Hine, Nicholas DM, K. Frensch, W. M. C. Foulkes, M. W. Finnis, and A. H. Heuer. 2009. “Bulk Diffusion in Alumina: Solving the Corundum Conundrum.” <a href="https://casinoqmc.net/esdg_slides/hine030609.pdf">https://casinoqmc.net/esdg_slides/hine030609.pdf</a>.</p>
+</div>
+<div id="ref-HighPerformance2017">
+<p>Inc, CoorsTek. 2017. “High-Performance Heating Igniters.”</p>
+</div>
+<div id="ref-Oxidation2008">
+<p>Jacobson, Nathan S., Don J. Roth, Richard W. Rauser, James D. Cawley, and Donald M. Curry. 2008. “Oxidation Through Coating Cracks of SiC-Protected Carbon/Carbon.” <em>Surface and Coatings Technology</em> 203 (3-4): 372–83. <a href="https://doi.org/10/b24jw5">https://doi.org/10/b24jw5</a>.</p>
+</div>
+<div id="ref-Development1998">
+<p>Janney, Mark A., Ogbemi O. Omatete, Claudia A. Walls, Stephen D. Nunn, Randy J. Ogle, and Gary Westmoreland. 1998. “Development of Low-Toxicity Gelcasting Systems.” <em>Journal of the American Ceramic Society</em> 81 (3): 581–91. <a href="https://doi.org/10.1111/j.1151-2916.1998.tb02377.x">https://doi.org/10.1111/j.1151-2916.1998.tb02377.x</a>.</p>
+</div>
+<div id="ref-Fabrication2003">
+<p>Jia, Yu, Yoshinori Kanno, and Zhi-Peng Xie. 2003. “Fabrication of Alumina Green Body Through Gelcasting Process Using Alginate.” <em>Materials Letters</em> 57 (16-17): 2530–4. <a href="https://doi.org/10/bkf4fb">https://doi.org/10/bkf4fb</a>.</p>
+</div>
+<div id="ref-influence2004">
+<p>Lazic, Marija, Kornelija Simovic, Vesna Miskovic-Stankovic, Predrag Jovanic, and Dusan Kicevic. 2004. “The Influence of the Deposition Parameters on the Porosity of Thin Alumina Films on Steel.” <em>Journal of the Serbian Chemical Society</em> 69 (3): 239–49. <a href="https://doi.org/10.2298/JSC0403239L">https://doi.org/10.2298/JSC0403239L</a>.</p>
+</div>
+<div id="ref-Vitreous1942">
+<p>Luks, D. W. 1942. Vitreous high alumina porcelain, issued 1942. <a href="https://patents.google.com/patent/US2290107A/en">https://patents.google.com/patent/US2290107A/en</a>.</p>
+</div>
 <div id="ref-mazelsky1974multipurpose">
 <p>Mazelsky, R, CS Duncan, RG Seidensticker, RA Johnson, JP Mchugh, HC Foust, and PA Piotrowski. 1974. “Multipurpose Electric Furnace System.[for Use in Apollo-Soyuz Test Program].” <a href="https://ntrs.nasa.gov/api/citations/19760003136/downloads/19760003136.pdf">https://ntrs.nasa.gov/api/citations/19760003136/downloads/19760003136.pdf</a>.</p>
 </div>
 <div id="ref-Acute2008">
 <p>Otani, Norio, Shinichi Ishimatsu, and Toshiaki Mochizuki. 2008. “Acute Group Poisoning by Titanium Dioxide: Inhalation Exposure May Cause Metal Fume Fever.” <em>The American Journal of Emergency Medicine</em> 26 (5): 608–11. <a href="https://doi.org/10.1016/j.ajem.2007.08.018">https://doi.org/10.1016/j.ajem.2007.08.018</a>.</p>
 </div>
+<div id="ref-Bubble2015">
+<p>Raj, Rishi, and Kalvis Terauds. 2015. “Bubble Nucleation During Oxidation of SiC.” Edited by Avi Zangvil. <em>Journal of the American Ceramic Society</em> 98 (8): 2579–86. <a href="https://doi.org/10/f7k4b5">https://doi.org/10/f7k4b5</a>.</p>
 </div>
-<section class="footnotes" role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1" role="doc-endnote"><p>Disappointed that ‘spectral emissivity’ has nothing to do with ghosts.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
+<div id="ref-NDE2010">
+<p>Roth, Don J., Richard W. Rauser, Nathan S. Jacobson, Russell A. Wincheski, James L. Walker, and Laura A. Cosgriff. 2010. “NDE for Characterizing Oxidation Damage in Reinforced Carbon-Carbon.” In <em>Ceramic Transactions Series</em>, edited by Dileep Singh, Dongming Zhu, Yanchun Zhou, and Mrityunjay Singh, 167–80. Hoboken, NJ, USA: John Wiley &amp; Sons, Inc. <a href="https://doi.org/10.1002/9780470909836.ch15">https://doi.org/10.1002/9780470909836.ch15</a>.</p>
+</div>
+<div id="ref-EVALUATION1965">
+<p>Teter, A. R. 1965. “EVALUATION OF BINDERS FOR MACHINABLE UNFIRED CERAMICS,” December, RFP–659, 4588054. <a href="https://doi.org/10.2172/4588054">https://doi.org/10.2172/4588054</a>.</p>
+</div>
+<div id="ref-Study2014">
+<p>Wan, Wei, Chun-e Huang, Jian Yang, and Tai Qiu. 2014. “Study on Gelcasting of Fused Silica Glass Using Glutinous Rice Flour as Binder.” <em>International Journal of Applied Glass Science</em> 5 (4): 401–9. <a href="https://doi.org/10.1111/ijag.12060">https://doi.org/10.1111/ijag.12060</a>.</p>
+</div>
+</div>
 </body>
 </html>
