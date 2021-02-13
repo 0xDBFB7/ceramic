@@ -55,7 +55,7 @@
   	</style>
 </head>
 <body>
-<h1 id="attempts-at-an-inexpensive-1500-c-furnace">Attempts at an inexpensive 1500 C furnace</h1>
+<h1 id="musings-on-an-inexpensive-1500-c-furnace">Musings on an inexpensive 1500 C furnace</h1>
 <!---
 
 pandoc --filter pandoc-citeproc --bibliography=references.bib -s furnace_quick.md -o paper.html -H style.css
@@ -64,25 +64,26 @@ scp -r images/furnace/ blog:/media/blog/src/images/
 
 had to apt-cache clean to get back some space
 -->
-<p><a href="https://github.com/0xDBFB7/ceramic/">Repository</a> | <a href="https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/references.html">References</a> | <a href="https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/ceramics.rdf">Zotero</a> | <a href="https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/references.bib">BibTeX</a></p>
+<p><a href="https://github.com/0xDBFB7/ceramic/">Repository</a> | <a href="https://htmlpreview.github.io/?https://github.com/0xDBFB7/ceramic/master/documents/references.html">References</a> | <a href="https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/ceramics.rdf">Zotero</a> | <a href="https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/references.bib">BibTeX</a></p>
+<p><img src="images/furnace/20190518_142932_HDR.jpg" style="width:40.0%" alt="Bake till golden brown, then turn over." /><img src="images/furnace/temperature-1559057994888.png" style="width:40.0%" /></p>
+<p>A few years ago ago I was lucky enough to have some time to tinker with high-temperature ceramics. Very little of value was determined, primarily just empirical nonsense; I have not managed to figure out a consistent protocol for high-alumina parts. I figured I would quickly post the most useful fact in this document for the time being. I am certain that nothing here is even slightly novel.</p>
+<p>Many of the Vacuum Hackers (among others) have much more expertise on ceramic blends, and you should probably talk to them instead.</p>
+<hr>
+<h4 id="hot-surface-igniters-commonly-used-in-gas-furnaces-for-central-heating-are-a-fantastic-commodity-source-of-pre-terminated-silicon-carbide-heating-elements.-they-appear-to-be-usable-to-at-least-1400-c-continuously-with-20-minute-bursts-to-1600-c-in-air-and-probably-well-over-2000-c-in-inert-gas-or-vacuum.">~$40 “hot surface igniters”, commonly used in gas furnaces for central heating, are a fantastic commodity source of pre-terminated silicon carbide heating elements. They appear to be usable to at least 1400 C continuously with 20 minute bursts to ~1600 C in air, and probably well over ~2000 C in inert gas or vacuum.</h4>
+<hr>
 <h4 id="standard-safety-disclaimer">Standard safety disclaimer:</h4>
 <ul>
 <li>At these temperatures, you can expect everything to be on fire. Wearing clothes that burn rather than melt is recommended, particularly when working with large commercial furnaces.</li>
 <li>Parts with wet binders often explode on burnout, spraying superheated ceramic spall in all directions. A face shield is recommended.</li>
 <li>Binder decomposition products can be quite noxious.</li>
-<li>SiC elements are uninsulated and present an electrocution hazard and also emit carbon monoxide.</li>
-<li>Working with aluminosilicate firebrick and fine alumina powders presents a risk of various pulmonary diseases and some (unsubstantiated) risk of neurological damage. Wear a respirator.</li>
+<li>SiC elements are uninsulated and present an electrocution hazard (and also emit carbon monoxide, but that’s hardly a risk).</li>
+<li>Regularly working with aluminosilicate firebrick and fine alumina powders presents a risk of various pulmonary diseases and some (unsubstantiated) risk of neurological damage. Wear a respirator.</li>
 <li>Some techniques discussed may involve the formation of titanium oxides, risking metal fume fever (see the case report of <span class="citation" data-cites="Acute2008">Otani, Ishimatsu, and Mochizuki (<a href="#ref-Acute2008" role="doc-biblioref">2008</a>)</span>).</li>
 </ul>
-<p><img src="images/furnace/20190518_142932_HDR.jpg" style="width:40.0%" alt="Bake till golden brown, then turn over." /><img src="images/furnace/temperature-1559057994888.png" style="width:40.0%" /></p>
-<p>A few years ago ago I was lucky enough to have some time to tinker with high-temperature ceramics. Very little of value was determined, primarily just empirical nonsense; I have not managed to figure out a consistent protocol for high-alumina parts. I figured I would quickly post the most useful fact in this document for the time being. I am certain that nothing here is even slightly novel.</p>
-<p>Many of the Vacuum Hackers (among others) have much more expertise on ceramic blends, and you should probably talk to them instead.</p>
-<hr>
-<h4 id="hot-surface-igniters-commonly-used-in-gas-furnaces-for-central-heating-are-a-fantastic-commodity-source-of-pre-terminated-silicon-carbide-heating-elements.-they-appear-to-be-usable-at-1400-c-continuously-with-20-minute-bursts-to-1600-c-in-air-and-probably-well-over-2000-c-in-inert-gas-or-vacuum.">~$40 “hot surface igniters”, commonly used in gas furnaces for central heating, are a fantastic commodity source of pre-terminated silicon carbide heating elements. They appear to be usable at 1400 C continuously with 20 minute bursts to ~1600 C in air, and probably well over ~2000 C in inert gas or vacuum.</h4>
 <hr>
 <p>It’s relatively easy to get to 800 C or so with standard heating elements, microwave susceptors, or gas torches, sufficient for some low-fired &gt;30% kaolin ceramic blends. With care in heating element support, termination, and insulation, commercial “high-fire” ceramics kilns can usually reach about 1300 C.</p>
 <p>However, a very useful class of techniques practically demand a minimum of about 1400 C, including the most common high-purity oxide ceramics like <span class="math inline">Al<sub>2</sub>O<sub>3</sub></span>, <span class="math inline">MgO</span> and <span class="math inline">AlN</span>, even if sinter-point-depressing additives are used (see awesome data from <span class="citation" data-cites="Sintering1957a">Cutler et al. (<a href="#ref-Sintering1957a" role="doc-biblioref">1957</a>)</span> and <span class="citation" data-cites="Vitreous1942">Luks (<a href="#ref-Vitreous1942" role="doc-biblioref">1942</a>)</span>). Furnaces that can reach such temperatures are usually quite expensive. Small zirconia sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. There are a few sources of surplus high-temperature elements.</p>
-<p>Acetylene torches do not appear to offer the required control over temperature ramp rate and produce strong thermal gradients that crack the green during burnout.</p>
+<p>Acetylene torches do not appear to offer the required control over temperature ramp rate and produce strong thermal gradients that crack the green during burnout. Carbon-arc furnaces are pretty popular now but suffer from the same issues.</p>
 <p>Some alternative techniques can often be used in specific circumstances, such as field-assisted sintering (thanks <span class="citation" data-cites="ice9">(<span class="citeproc-not-found" data-reference-id="ice9"><strong>???</strong></span>)</span>). However, a general-purpose desktop furnace for small parts seemed like a pretty useful piece of equipment.</p>
 <p>More critically, if a vacuum furnace is desired, standard Nichrome or Kanthal heater wire degrades very rapidly. See, for instance, this striking quote from <span class="citation" data-cites="mazelsky1974multipurpose">Mazelsky et al. (<a href="#ref-mazelsky1974multipurpose" role="doc-biblioref">1974</a>)</span> :</p>
 <blockquote>
@@ -97,8 +98,9 @@ had to apt-cache clean to get back some space
 <p>Note that 220V elements seem to be quite rare: it appears to be hard to fabricate something with a sufficiently high resistance.</p>
 <p>HSIs are apparently used because sparks do not provide the energy needed to ignite natural gas with perfect reliability over decades.</p>
 <p>Getting above ~1500c involved increasing the 115V line voltage to about 135 V using a Variac. This does speed up element degradation a bit.</p>
+<p>Of course, the element temperature must be higher than the furnace cavity; but they appeared to be sufficiently similar that I only report the temperature measured by thermocouple at the surface of the base.</p>
 <h3 id="degradation">Degradation</h3>
-<p>You can expect an element lifespan probably on the order of about 500 minutes at 130v in air.</p>
+<p>I’ve consistently broken elements in idiotic ways before they burned out, so I have no data on lifespan; but you can probably expect on the order of a dozen hours at 1400 C in air.</p>
 <p>Degradation occurs via a <em>fascinating</em> multi-step oxidation reaction described in detail by <span class="citation" data-cites="Bubble2015">Raj and Terauds (<a href="#ref-Bubble2015" role="doc-biblioref">2015</a>)</span> that evolves carbon monoxide and inflates large bubbles of <span class="math inline">SiO<sub>2</sub></span> mixed with SiC (if I’m understanding correctly - unlikely, given poor chemistry prowess!):</p>
 <p><img src="images/furnace/my_photo-bubble4.jpg" style="width:100.0%" /></p>
 <p>Interestingly, a very similar “bubbling” failure mode was seen (<span class="citation" data-cites="Oxidation2008">Jacobson et al. (<a href="#ref-Oxidation2008" role="doc-biblioref">2008</a>)</span> <span class="citation" data-cites="NDE2010">Roth et al. (<a href="#ref-NDE2010" role="doc-biblioref">2010</a>)</span>) on the reinforced-carbon-carbon panels on the leading edges of the space shuttle, which were coated with SiO and SiC for oxidation protection.</p>
@@ -132,7 +134,9 @@ had to apt-cache clean to get back some space
 <p>Most insulating materials that can withstand such temperatures are expensive or difficult to work with. Because of the <span class="math inline">P ≈ T<sup>4</sup></span> nature of the Stefan-Boltzmann law vs the approximately linear dependence of conduction, at such high temperatures radiative insulation is the primary concern. For this reason, many concentric shells of multi-layer insulation may suffice.</p>
 <p>The advantage here is that the efficiency of MLI depends only weakly on the emissivity and conductivity of the insulation. For this reason, a stack of machined graphite may be sufficient.</p>
 <p>20 oz vacuum-insulated wine tumblers seem to make excellent chambers for this purpose.</p>
-<p><img src="images/furnace/wtf.JPG" style="width:50.0%" /></p>
+<figure>
+<img src="images/furnace/wtf.JPG" style="width:50.0%" alt="" /><figcaption>An overheated wine tumbler.</figcaption>
+</figure>
 <h2 id="thanks-for-reading">Thanks for reading!</h2>
 <p>Suggest improvements on the GitHub issues page at <a href="https://github.com/0xDBFB7/ceramic" class="uri">https://github.com/0xDBFB7/ceramic</a>, or hit me up @0xDBFB7 on Twitter!</p>
 <p>❤</p>
@@ -169,17 +173,10 @@ had to apt-cache clean to get back some space
 <p>Acetylene-sintered with 3% slip.</p>
 </blockquote>
 <h4 id="tonsil-7-lessons-learned">Tonsil 7: Lessons Learned</h4>
-<p>(pardon the self-indulgent philosophizing here)</p>
 <p>Perhaps it is useful to think about the test coupons that you use when optimizing processes. It seems like they should be as small, fast, and easy as possible while still reflecting the desired end product.</p>
 <p>For instance, if you use an oversimplified test coupon, you might start overfitting your process to get good results on the coupon, rather than the final product you need. Don’t overthink it though.</p>
 <p>Perhaps there is some information in the design-of-experiments literature on this topic that may be of some use.</p>
 <p>For some reason, the tests that I ran were largely sequential; run one mixture, observe the effects, modify the mixture slightly, etc. Parallelizing and pipelining may have made this go faster.</p>
-<p>A very, very large number of idiotic mistakes were made regarding mixture compositions. I tried a gelatin process very early on, but made a very dumb mistake in the mixture ratios (adding far too much water), which lead to binder migration, which lead me to believe that gelatine was ineffective. Don’t do that, I guess?</p>
-<p>It seems to be something of a common theme for me to start with a solution that <em>almost</em> works, provides 80% of the required functionality, then do rote, menial work for months - only to end up with a product that is almost identical to the starting point.</p>
-<p>I don’t know what meta changes can be made to break out of this cycle. Just abandoning everything for a new startpoint wouldn’t be very helpful, I don’t think. Maybe it’s something like you can’t fix deep-set issues by just changing minor details. Maybe that’s just the way science works.</p>
-<h5 id="constrained-resources">Constrained resources</h5>
-<p>On one hand, not having $2000 to drop on a high-temp kiln was greatly beneficial, for it forced learning all about high-temp kiln design. On the other hand, much time was wasted trying to troubleshoot sintering something which could never have worked with the kilns that I had, thinking the problem was the binder when it really was the kiln.</p>
-<p>Testing and characterizing each section sequentially with known-good equipment, then applying optimizations might have been more effective than this ‘all-up’ test. On the other hand, it worked out okay, so I think I’ll stay with this method.</p>
 <h2 class="unnumbered" id="bibliography" class="unnumbered">Bibliography:</h2>
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
 <div id="ref-Drying2003">

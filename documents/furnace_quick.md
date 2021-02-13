@@ -2,7 +2,7 @@
 link-citations: true
 ...
 
-# Attempts at an inexpensive 1500 C furnace
+# Musings on an inexpensive 1500 C furnace
 
 <!---
 
@@ -13,17 +13,9 @@ scp -r images/furnace/ blog:/media/blog/src/images/
 had to apt-cache clean to get back some space
 -->
 
-[Repository](https://github.com/0xDBFB7/ceramic/) | [References](https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/references.html) | [Zotero](https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/ceramics.rdf) | [BibTeX](https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/references.bib)
+[Repository](https://github.com/0xDBFB7/ceramic/) | [References](https://htmlpreview.github.io/?https://github.com/0xDBFB7/ceramic/master/documents/references.html) | [Zotero](https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/ceramics.rdf) | [BibTeX](https://raw.githubusercontent.com/0xDBFB7/ceramic/master/documents/references.bib)
 
 
-#### Standard safety disclaimer:
-
- - At these temperatures, you can expect everything to be on fire. Wearing clothes that burn rather than melt is recommended, particularly when working with large commercial furnaces.
- - Parts with wet binders often explode on burnout, spraying superheated ceramic spall in all directions. A face shield is recommended.
- - Binder decomposition products can be quite noxious.
- - SiC elements are uninsulated and present an electrocution hazard and also emit carbon monoxide.
- - Working with aluminosilicate firebrick and fine alumina powders presents a risk of various pulmonary diseases and some (unsubstantiated) risk of neurological damage. Wear a respirator.
- - Some techniques discussed may involve the formation of titanium oxides, risking metal fume fever (see the case report of @Acute2008).
 
 ![*Bake till golden brown, then turn over.*](images/furnace/20190518_142932_HDR.jpg){ width=40% }![](images/furnace/temperature-1559057994888.png){ width=40% }
 
@@ -35,7 +27,17 @@ Many of the Vacuum Hackers (among others) have much more expertise on ceramic bl
 
 <hr>
 
-#### ~$40 "hot surface igniters", commonly used in gas furnaces for central heating, are a fantastic commodity source of pre-terminated silicon carbide heating elements. They appear to be usable at 1400 C continuously with 20 minute bursts to ~1600 C in air, and probably well over ~2000 C in inert gas or vacuum.
+#### ~$40 "hot surface igniters", commonly used in gas furnaces for central heating, are a fantastic commodity source of pre-terminated silicon carbide heating elements. They appear to be usable to at least 1400 C continuously with 20 minute bursts to ~1600 C in air, and probably well over ~2000 C in inert gas or vacuum.
+
+<hr>
+#### Standard safety disclaimer:
+
+ - At these temperatures, you can expect everything to be on fire. Wearing clothes that burn rather than melt is recommended, particularly when working with large commercial furnaces.
+ - Parts with wet binders often explode on burnout, spraying superheated ceramic spall in all directions. A face shield is recommended.
+ - Binder decomposition products can be quite noxious.
+ - SiC elements are uninsulated and present an electrocution hazard (and also emit carbon monoxide, but that's hardly a risk).
+ - Regularly working with aluminosilicate firebrick and fine alumina powders presents a risk of various pulmonary diseases and some (unsubstantiated) risk of neurological damage. Wear a respirator.
+ - Some techniques discussed may involve the formation of titanium oxides, risking metal fume fever (see the case report of @Acute2008).
 
 <hr>
 
@@ -43,7 +45,7 @@ It's relatively easy to get to 800 C or so with standard heating elements, micro
 
 However, a very useful class of techniques practically demand a minimum of about 1400 C, including the most common high-purity oxide ceramics like $\text{Al}_2\text{O}_3$, $\text{MgO}$ and $\text{AlN}$, even if sinter-point-depressing additives are used (see awesome data from @Sintering1957a and @Vitreous1942). Furnaces that can reach such temperatures are usually quite expensive. Small zirconia sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. There are a few sources of surplus high-temperature elements.
 
-Acetylene torches do not appear to offer the required control over temperature ramp rate and produce strong thermal gradients that crack the green during burnout.
+Acetylene torches do not appear to offer the required control over temperature ramp rate and produce strong thermal gradients that crack the green during burnout. Carbon-arc furnaces are pretty popular now but suffer from the same issues.
 
 Some alternative techniques can often be used in specific circumstances, such as field-assisted sintering (thanks @ice9). However, a general-purpose desktop furnace for small parts seemed like a pretty useful piece of equipment.
 
@@ -65,9 +67,11 @@ HSIs are apparently used because sparks do not provide the energy needed to igni
 
 Getting above ~1500c involved increasing the 115V line voltage to about 135 V using a Variac. This does speed up element degradation a bit.
 
+Of course, the element temperature must be higher than the furnace cavity; but they appeared to be sufficiently similar that I only report the temperature measured by thermocouple at the surface of the base.
+
 ### Degradation
 
-You can expect an element lifespan probably on the order of about 500 minutes at 130v in air.
+I've consistently broken elements in idiotic ways before they burned out, so I have no data on lifespan; but you can probably expect on the order of a dozen hours at 1400 C in air.
 
 Degradation occurs via a *fascinating* multi-step oxidation reaction described in detail by @Bubble2015 that evolves carbon monoxide and inflates large bubbles of $\text{SiO}_2$ mixed with SiC (if I'm understanding correctly - unlikely, given poor chemistry prowess!):
 
@@ -123,7 +127,7 @@ The advantage here is that the efficiency of MLI depends only weakly on the emis
 
 20 oz vacuum-insulated wine tumblers seem to make excellent chambers for this purpose.
 
-![](images/furnace/wtf.JPG){ width=50% }
+![An overheated wine tumbler. ](images/furnace/wtf.JPG){ width=50% }
 
 
 ## Thanks for reading!
@@ -196,8 +200,6 @@ Attempts at acetylene sintering.
 
 #### Tonsil 7: Lessons Learned
 
-(pardon the self-indulgent philosophizing here)
-
 Perhaps it is useful to think about the test coupons that you use when optimizing processes. It seems like they should be as small, fast, and easy as possible while still reflecting the desired end product.
 
 For instance, if you use an oversimplified test coupon, you might start overfitting your process to get good results on the coupon, rather than the final product you need. Don't overthink it though.
@@ -205,21 +207,6 @@ For instance, if you use an oversimplified test coupon, you might start overfitt
 Perhaps there is some information in the design-of-experiments literature on this topic that may be of some use.
 
 For some reason, the tests that I ran were largely sequential; run one mixture, observe the effects, modify the mixture slightly, etc. Parallelizing and pipelining may have made this go faster.
-
-A very, very large number of idiotic mistakes were made regarding mixture compositions. I tried a gelatin process very early on, but made a very dumb mistake in the mixture ratios (adding far too much water), which lead to binder migration, which lead me to believe that gelatine was ineffective. Don't do that, I guess?
-
-It seems to be something of a common theme for me to start with a solution that *almost* works, provides 80% of the required functionality, then do rote, menial work for months - only to end up with a product that is almost identical to the starting point.
-
-I don't know what meta changes can be made to break out of this cycle. Just abandoning everything for a new startpoint wouldn't be very helpful, I don't think. Maybe it's something like you can't fix deep-set issues by just changing minor details. Maybe that's just the way science works.
-
-##### Constrained resources
-
-On one hand, not having $2000 to drop on a high-temp kiln was greatly beneficial, for it forced
-learning all about high-temp kiln design. On the other hand, much time was wasted trying to troubleshoot sintering something
-which could never have worked with the kilns that I had, thinking the problem was the binder when it really was the kiln.
-
-Testing and characterizing each section sequentially with known-good equipment, then applying optimizations might have been more effective than this 'all-up' test. On the other hand, it worked out okay, so I think I'll stay with this method.
-
 
 
 
