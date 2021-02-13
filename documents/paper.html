@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>furnace_quick</title>
+  <title>Musings on an inexpensive 1500 C silicon carbide furnace</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -55,6 +55,9 @@
   	</style>
 </head>
 <body>
+<header id="title-block-header">
+<h1 class="title">Musings on an inexpensive 1500 C silicon carbide furnace</h1>
+</header>
 <h1 id="musings-on-an-inexpensive-1500-c-furnace">Musings on an inexpensive 1500 C furnace</h1>
 <!---
 
@@ -82,9 +85,10 @@ had to apt-cache clean to get back some space
 </ul>
 <hr>
 <p>It’s relatively easy to get to 800 C or so with standard heating elements, microwave susceptors, or gas torches, sufficient for some low-fired &gt;30% kaolin ceramic blends. With care in heating element support, termination, and insulation, commercial “high-fire” ceramics kilns can usually reach about 1300 C.</p>
-<p>However, a very useful class of techniques practically demand a minimum of about 1400 C, including the most common high-purity oxide ceramics like <span class="math inline">Al<sub>2</sub>O<sub>3</sub></span>, <span class="math inline">MgO</span> and <span class="math inline">AlN</span>, even if sinter-point-depressing additives are used (see awesome data from <span class="citation" data-cites="Sintering1957a">Cutler et al. (<a href="#ref-Sintering1957a" role="doc-biblioref">1957</a>)</span> and <span class="citation" data-cites="Vitreous1942">Luks (<a href="#ref-Vitreous1942" role="doc-biblioref">1942</a>)</span>). Furnaces that can reach such temperatures are usually quite expensive. Small zirconia sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. There are a few sources of surplus high-temperature elements.</p>
-<p>Acetylene torches do not appear to offer the required control over temperature ramp rate and produce strong thermal gradients that crack the green during burnout. Carbon-arc furnaces are pretty popular now but suffer from the same issues.</p>
-<p>Some alternative techniques can often be used in specific circumstances, such as field-assisted sintering (thanks <span class="citation" data-cites="ice9">(<span class="citeproc-not-found" data-reference-id="ice9"><strong>???</strong></span>)</span>). However, a general-purpose desktop furnace for small parts seemed like a pretty useful piece of equipment.</p>
+<p>However, a very useful class of techniques practically demand a minimum of about 1400 C, including the most common high-purity oxide ceramics like <span class="math inline">Al<sub>2</sub>O<sub>3</sub></span>, <span class="math inline">MgO</span> and <span class="math inline">AlN</span>, even if sinter-point-depressing additives are used (see awesome data from <span class="citation" data-cites="Sintering1957a">Cutler et al. (<a href="#ref-Sintering1957a" role="doc-biblioref">1957</a>)</span> and <span class="citation" data-cites="Vitreous1942">Luks (<a href="#ref-Vitreous1942" role="doc-biblioref">1942</a>)</span>). I believe this can be partly attributed to a change in regime from “liquid-phase” to diffusion-like “vapor-phase” sintering processes (<span class="citation" data-cites="Sintering">(“Sintering” <a href="#ref-Sintering" role="doc-biblioref">n.d.</a>)</span>).</p>
+<p>Furnaces that can reach such temperatures are usually quite expensive. Small zirconia sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. There are a few sources of surplus high-temperature elements.</p>
+<p>Acetylene torches do not appear to offer the required control over temperature ramp rate and produce strong thermal gradients that crack the green during burnout. Carbon-arc furnaces are pretty popular now but probably suffer from the same issues.</p>
+<p>Some alternative techniques can often be used in specific circumstances, such as field-assisted sintering (<span class="citation" data-cites="Fieldassisted2014">Guillon et al. (<a href="#ref-Fieldassisted2014" role="doc-biblioref">2014</a>)</span>, thanks <span class="citation" data-cites="ice9">(<span class="citeproc-not-found" data-reference-id="ice9"><strong>???</strong></span>)</span>). However, a general-purpose desktop furnace for small parts seemed like a pretty useful piece of equipment.</p>
 <p>More critically, if a vacuum furnace is desired, standard Nichrome or Kanthal heater wire degrades very rapidly. See, for instance, this striking quote from <span class="citation" data-cites="mazelsky1974multipurpose">Mazelsky et al. (<a href="#ref-mazelsky1974multipurpose" role="doc-biblioref">1974</a>)</span> :</p>
 <blockquote>
 <p>The next factor investigated was the suitability of Kanthal A-1 as heater material. Although this material is suitable for use to 1325 C in air, at least one reference does not recommend its use in vacuum at temperatures over 1000°C. This warning is founded in the rapid evaporation of a component (chromium?) from the alloy and verified by tests we performed on bare wires in ultra-high vacuum. Sample filaments burned out after two hours or less at a surface temperature of 1200°C.</p>
@@ -104,7 +108,7 @@ had to apt-cache clean to get back some space
 <p>Degradation occurs via a <em>fascinating</em> multi-step oxidation reaction described in detail by <span class="citation" data-cites="Bubble2015">Raj and Terauds (<a href="#ref-Bubble2015" role="doc-biblioref">2015</a>)</span> that evolves carbon monoxide and inflates large bubbles of <span class="math inline">SiO<sub>2</sub></span> mixed with SiC (if I’m understanding correctly - unlikely, given poor chemistry prowess!):</p>
 <p><img src="images/furnace/my_photo-bubble4.jpg" style="width:100.0%" /></p>
 <p>Interestingly, a very similar “bubbling” failure mode was seen (<span class="citation" data-cites="Oxidation2008">Jacobson et al. (<a href="#ref-Oxidation2008" role="doc-biblioref">2008</a>)</span> <span class="citation" data-cites="NDE2010">Roth et al. (<a href="#ref-NDE2010" role="doc-biblioref">2010</a>)</span>) on the reinforced-carbon-carbon panels on the leading edges of the space shuttle, which were coated with SiO and SiC for oxidation protection.</p>
-<p>Such a carbon-carbide “conversion coating” seems to be relatively easy to perform in a furnace such as this one; see Tonsil 5 for details. SiC elements are also used on the ALQ-144 IR missile jammer, so it’s unlikely that my lab will be hit with a missile in the near future.</p>
+<p>Such a carbon-carbide “conversion coating” seems to be relatively easy to perform in a furnace such as this one; see (<span class="citation" data-cites="CARBIDE1957">Blocher et al. (<a href="#ref-CARBIDE1957" role="doc-biblioref">1957</a>)</span>). SiC heating elements are also used on the ALQ-144 thermal missile jammer, so it’s unlikely that my lab will be hit with a missile in the near future.</p>
 <h2 id="kiln-1">Kiln 1</h2>
 <p><img src="images/furnace/kiln.png" style="width:100.0%" /></p>
 <p>This kiln was built using a single Amaco <code>28035N</code> 9" by 4-1/2" by 2-1/2" aluminosilicate firebrick ($15 pre-pandemic, Amazon) cut and pocketed using a wet tile saw (although a hacksaw would work fine); the element was then mounted with fire-cement (<em>Imperial High-Temp Stove and Furnace Cement</em>). The element was inserted through a slit in the firebrick to shield the terminals somewhat. Let cement dry overnight, then slowly raise temperature over course of ~30 minutes.</p>
@@ -130,6 +134,7 @@ had to apt-cache clean to get back some space
 <li>Firebrick is crumbly and unlikeable.</li>
 <li>Many interesting techniques require an inert or nitriding atmosphere.</li>
 <li>In a rough vacuum, it should be possible to exceed 1,700 C continuously, probably limited only by the temperature at the nichrome termination.</li>
+<li>It may be possible to measure the temperature in the kiln using the SiC element itself. The resistance didn’t seem to change substantially as the element heated, but the bandgap might.</li>
 </ul>
 <p>Most insulating materials that can withstand such temperatures are expensive or difficult to work with. Because of the <span class="math inline">P ≈ T<sup>4</sup></span> nature of the Stefan-Boltzmann law vs the approximately linear dependence of conduction, at such high temperatures radiative insulation is the primary concern. For this reason, many concentric shells of multi-layer insulation may suffice.</p>
 <p>The advantage here is that the efficiency of MLI depends only weakly on the emissivity and conductivity of the insulation. For this reason, a stack of machined graphite may be sufficient.</p>
@@ -185,6 +190,9 @@ had to apt-cache clean to get back some space
 <div id="ref-Sealing1957">
 <p>Beggs, J. 1957. “Sealing Metal and Ceramic Parts by Forming Reactive Alloys.” <em>IRE Transactions on Component Parts</em> 4 (1): 28–31. <a href="https://doi.org/10.1109/TCP.1957.1135908">https://doi.org/10.1109/TCP.1957.1135908</a>.</p>
 </div>
+<div id="ref-CARBIDE1957">
+<p>Blocher, J. M. Jr., C. J. Ish, D. P. Leiter, L. F. Plock, and I. E. Campbell. 1957. “CARBIDE COATINGS ON GRAPHITE.” BMI-1200, 4265033. <a href="https://doi.org/10.2172/4265033">https://doi.org/10.2172/4265033</a>.</p>
+</div>
 <div id="ref-Controlled1976">
 <p>Brook, R. J. 1976. “Controlled Grain Growth.” In <em>Treatise on Materials Science &amp; Technology</em>, 9:331–64. Elsevier. <a href="https://doi.org/10.1016/B978-0-12-341809-8.50024-3">https://doi.org/10.1016/B978-0-12-341809-8.50024-3</a>.</p>
 </div>
@@ -202,6 +210,9 @@ had to apt-cache clean to get back some space
 </div>
 <div id="ref-Electrophoretic1997">
 <p>Ferrari, B., and R. Moreno. 1997. “Electrophoretic Deposition of Aqueous Alumina Slips.” <em>Journal of the European Ceramic Society</em> 17 (4): 549–56. <a href="https://doi.org/10/d9rd5p">https://doi.org/10/d9rd5p</a>.</p>
+</div>
+<div id="ref-Fieldassisted2014">
+<p>Guillon, O., J. Gonzalez-Julian, B. Dargatz, T. Kessel, G. Schierning, J. RÃ?thel, and M. Herrmann. 2014. “Field-Assisted Sintering Technology/Spark Plasma Sintering: Mechanisms, Materials, and Technology Developments.” <em>Advanced Engineering Materials</em> 16 (7): 830–49. <a href="https://doi.org/10.1002/adem.201300409">https://doi.org/10.1002/adem.201300409</a>.</p>
 </div>
 <div id="ref-Brazing1988">
 <p>Hammond, J. P., S. A. David, and M. L. Santella. 1988. “Brazing Ceramic Oxides to Metals at Low Temperatures.” <em>Welding J</em> 67 (10): 227–32.</p>
@@ -238,6 +249,9 @@ had to apt-cache clean to get back some space
 </div>
 <div id="ref-NDE2010">
 <p>Roth, Don J., Richard W. Rauser, Nathan S. Jacobson, Russell A. Wincheski, James L. Walker, and Laura A. Cosgriff. 2010. “NDE for Characterizing Oxidation Damage in Reinforced Carbon-Carbon.” In <em>Ceramic Transactions Series</em>, edited by Dileep Singh, Dongming Zhu, Yanchun Zhou, and Mrityunjay Singh, 167–80. Hoboken, NJ, USA: John Wiley &amp; Sons, Inc. <a href="https://doi.org/10.1002/9780470909836.ch15">https://doi.org/10.1002/9780470909836.ch15</a>.</p>
+</div>
+<div id="ref-Sintering">
+<p>“Sintering.” n.d. Accessed March 11, 2020. <a href="http://www.bap.mu.edu.tr/icerik/metalurji.mu.edu.tr/Sayfa/Kalemtas_A_Sintering_2014.pdf">http://www.bap.mu.edu.tr/icerik/metalurji.mu.edu.tr/Sayfa/Kalemtas_A_Sintering_2014.pdf</a>.</p>
 </div>
 <div id="ref-EVALUATION1965">
 <p>Teter, A. R. 1965. “EVALUATION OF BINDERS FOR MACHINABLE UNFIRED CERAMICS,” December, RFP–659, 4588054. <a href="https://doi.org/10.2172/4588054">https://doi.org/10.2172/4588054</a>.</p>

@@ -1,4 +1,5 @@
 ---
+title: 'Musings on an inexpensive 1500 C silicon carbide furnace'
 link-citations: true
 ...
 
@@ -43,11 +44,13 @@ Many of the Vacuum Hackers (among others) have much more expertise on ceramic bl
 
 It's relatively easy to get to 800 C or so with standard heating elements, microwave susceptors, or gas torches, sufficient for some low-fired >30% kaolin ceramic blends. With care in heating element support, termination, and insulation, commercial "high-fire" ceramics kilns can usually reach about 1300 C.
 
-However, a very useful class of techniques practically demand a minimum of about 1400 C, including the most common high-purity oxide ceramics like $\text{Al}_2\text{O}_3$, $\text{MgO}$ and $\text{AlN}$, even if sinter-point-depressing additives are used (see awesome data from @Sintering1957a and @Vitreous1942). Furnaces that can reach such temperatures are usually quite expensive. Small zirconia sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. There are a few sources of surplus high-temperature elements.
+However, a very useful class of techniques practically demand a minimum of about 1400 C, including the most common high-purity oxide ceramics like $\text{Al}_2\text{O}_3$, $\text{MgO}$ and $\text{AlN}$, even if sinter-point-depressing additives are used (see awesome data from @Sintering1957a and @Vitreous1942). I believe this can be partly attributed to a change in regime from "liquid-phase" to diffusion-like "vapor-phase" sintering processes (@Sintering).
 
-Acetylene torches do not appear to offer the required control over temperature ramp rate and produce strong thermal gradients that crack the green during burnout. Carbon-arc furnaces are pretty popular now but suffer from the same issues.
+Furnaces that can reach such temperatures are usually quite expensive. Small zirconia sintering kilns are available, ostensibly for dental work, usually using MoSi2 heating elements, but these usually cost over $1500. There are a few sources of surplus high-temperature elements.
 
-Some alternative techniques can often be used in specific circumstances, such as field-assisted sintering (thanks @ice9). However, a general-purpose desktop furnace for small parts seemed like a pretty useful piece of equipment.
+Acetylene torches do not appear to offer the required control over temperature ramp rate and produce strong thermal gradients that crack the green during burnout. Carbon-arc furnaces are pretty popular now but probably suffer from the same issues.
+
+Some alternative techniques can often be used in specific circumstances, such as field-assisted sintering (@Fieldassisted2014, thanks @ice9). However, a general-purpose desktop furnace for small parts seemed like a pretty useful piece of equipment.
 
 More critically, if a vacuum furnace is desired, standard Nichrome or Kanthal heater wire degrades very rapidly. See, for instance, this striking quote from @mazelsky1974multipurpose :
 
@@ -79,7 +82,7 @@ Degradation occurs via a *fascinating* multi-step oxidation reaction described i
 
 Interestingly, a very similar "bubbling" failure mode was seen (@Oxidation2008 @NDE2010) on the reinforced-carbon-carbon panels on the leading edges of the space shuttle, which were coated with SiO and SiC for oxidation protection.
 
-Such a carbon-carbide "conversion coating" seems to be relatively easy to perform in a furnace such as this one; see Tonsil 5 for details. SiC elements are also used on the ALQ-144 IR missile jammer, so it's unlikely that my lab will be hit with a missile in the near future.
+Such a carbon-carbide "conversion coating" seems to be relatively easy to perform in a furnace such as this one; see (@CARBIDE1957). SiC heating elements are also used on the ALQ-144 thermal missile jammer, so it's unlikely that my lab will be hit with a missile in the near future.
 
 
 ## Kiln 1
@@ -120,6 +123,7 @@ These techniques are complicated somewhat by alumina's selective radiation: the 
  - Firebrick is crumbly and unlikeable.
  - Many interesting techniques require an inert or nitriding atmosphere.
  - In a rough vacuum, it should be possible to exceed 1,700 C continuously, probably limited only by the temperature at the nichrome termination.
+ - It may be possible to measure the temperature in the kiln using the SiC element itself. The resistance didn't seem to change substantially as the element heated, but the bandgap might.
 
 Most insulating materials that can withstand such temperatures are expensive or difficult to work with. Because of the $\text{P}\approx \text{T}^4$ nature of the Stefan-Boltzmann law vs the approximately linear dependence of conduction, at such high temperatures radiative insulation is the primary concern. For this reason, many concentric shells of multi-layer insulation may suffice.
 
